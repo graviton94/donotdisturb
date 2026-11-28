@@ -397,12 +397,12 @@ input[type=range]{accent-color:var(--m-primary)}
 /* promo tags, all drawn here */
 .pb{position:absolute;z-index:3;display:inline-flex;align-items:center;justify-content:center;gap:4px;white-space:nowrap;font:700 12px/1 var(--font);letter-spacing:-.2px;pointer-events:none}
 .pb-first{left:50%;top:-20px;transform:translateX(-50%);--s:.36;font:900 12.5px/1 var(--font);color:#fff;text-shadow:0 1px 0 rgba(90,0,0,.5)}
-.pb-gain{--s:.46;transform:rotate(10deg);color:#fff;text-shadow:0 1px 0 rgba(90,0,0,.45)}.pb-gain span{display:flex;flex-direction:column;align-items:center;gap:2px;font:900 15px/1 var(--font)}
+.pb-gain{--s:.48;--rot:10deg}.pb-gain span{display:flex;flex-direction:column;align-items:center;gap:2px;font:900 15px/1 var(--font)}
 .pb-gain small{font:700 9.5px/1 var(--font);opacity:.95}
 @keyframes sheen{0%,55%{background-position:120% 0}100%{background-position:-120% 0}}
 .pb-rec{--s:.56;font:800 12px/1 var(--font);color:#4A2600}
-.pb-timer{position:static;--s:.46;padding-left:0;font:800 13px/1 var(--font);color:#fff;font-variant-numeric:tabular-nums;justify-content:flex-start;gap:0}
-.pb-timer svg{position:absolute;left:calc(14px*var(--s)*1.15);top:calc(9px*var(--s));width:calc(40px*var(--s));height:calc(40px*var(--s));color:#4A2A9E}.pb-timer span{padding-left:4px}
+.pb-timer{position:relative;--s:.46;padding-left:0;font:800 13px/1 var(--font);color:#fff;font-variant-numeric:tabular-nums;justify-content:flex-start;gap:0}
+.pb-timer svg{position:absolute;left:calc(-52px*var(--s));top:calc(9px*var(--s));width:calc(40px*var(--s));height:calc(40px*var(--s));color:#3A1D86}.pb-timer span{padding-left:4px}
 .pb-stamp{right:5px;top:5px;width:20px;height:20px;border-radius:50%;color:#fff;font-size:9px;background:linear-gradient(135deg,#34C759,#1E8E3E);
  box-shadow:0 3px 8px rgba(30,142,62,.4);transform:rotate(-10deg)}
 .pb-stamp svg{width:12px;height:12px}
@@ -646,6 +646,21 @@ svg.ic{width:16px;height:16px;flex:none;vertical-align:-3px;margin-right:4px}
 
 /* big gold call-to-action on the UI frame kit (the design system's "gold" skin maps to primary blue) */
 .uf-btn-l.go,.uf-btn-l.cta{--s:.62;width:100%;font:900 17px/1 var(--font);color:#4A2600;text-shadow:0 1px 0 rgba(255,240,190,.6);gap:8px}
+
+/* .uf-fx: emphasis for fixed stickers (x2, value bursts): pop in with a bounce, beat now and then, a light sweep clipped to the shape, sparkles around */
+.uf-fx{isolation:isolate;--rot:0deg;transform:rotate(var(--rot));filter:drop-shadow(0 0 8px rgba(255,214,80,.75)) drop-shadow(0 3px 0 rgba(0,0,0,.25));animation:ufpop .6s cubic-bezier(.2,1.6,.4,1) both,ufbeat 1.6s ease-in-out .7s infinite}
+.uf-fx::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(110deg,transparent 38%,rgba(255,255,255,.9) 50%,transparent 62%) 0 0/300% 100% no-repeat;
+  -webkit-mask:var(--uf-shape) center/100% 100% no-repeat;mask:var(--uf-shape) center/100% 100% no-repeat;animation:ufsweep 1.6s ease-in-out .7s infinite}
+.uf-fx::before{content:"";position:absolute;inset:-22%;z-index:-1;pointer-events:none;
+  background:radial-gradient(circle,#fff 0 2.5px,rgba(255,236,150,.95) 3.5px,transparent 7px) 8% 18%/20% 20% no-repeat,radial-gradient(circle,#fff 0 2px,rgba(255,236,150,.95) 3px,transparent 6px) 90% 10%/16% 16% no-repeat,
+  radial-gradient(circle,#fff 0 2.5px,rgba(255,236,150,.95) 3.5px,transparent 7px) 94% 86%/20% 20% no-repeat,radial-gradient(circle,#fff 0 1.6px,rgba(255,236,150,.95) 2.6px,transparent 5px) 6% 92%/14% 14% no-repeat;animation:ufspark 1.6s ease-in-out .7s infinite}
+.uf-fx>*{position:relative;z-index:2}
+@keyframes ufpop{0%{transform:rotate(calc(var(--rot) - 30deg)) scale(0)}60%{transform:rotate(calc(var(--rot) + 6deg)) scale(1.3)}80%{transform:rotate(var(--rot)) scale(.9)}100%{transform:rotate(var(--rot)) scale(1)}}
+@keyframes ufbeat{0%,55%,100%{transform:rotate(var(--rot)) scale(1)}8%{transform:rotate(calc(var(--rot) - 9deg)) scale(1.16)}16%{transform:rotate(calc(var(--rot) + 7deg)) scale(1.04)}24%{transform:rotate(calc(var(--rot) - 3deg)) scale(1.1)}34%{transform:rotate(var(--rot)) scale(1)}}
+@keyframes ufsweep{0%,30%{background-position:120% 0}60%,100%{background-position:-60% 0}}
+@keyframes ufspark{0%,100%{opacity:0;transform:scale(.6) rotate(0)}12%,30%{opacity:1;transform:scale(1.15) rotate(20deg)}50%{opacity:0;transform:scale(.8) rotate(40deg)}}
+@media (prefers-reduced-motion:reduce){.uf-fx,.uf-fx::after,.uf-fx::before{animation:none}}
+.uf-fx.uf-burst{font:900 15px/1 var(--font);color:#FFF6B0;text-shadow:0 2px 0 #6A0A00,1.5px 0 0 #6A0A00,-1.5px 0 0 #6A0A00,0 -1.5px 0 #6A0A00,0 0 10px rgba(255,120,0,.6)}
 /* best-chain x2 offer: a celebration card over a paused board */
 #bestpop{position:fixed;inset:0;z-index:62;display:grid;place-items:center;padding:24px;background:rgba(6,8,24,.55);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);opacity:0;pointer-events:none;transition:opacity .18s var(--ease-std)}
 #bestpop.on{opacity:1;pointer-events:auto}
@@ -662,8 +677,8 @@ svg.ic{width:16px;height:16px;flex:none;vertical-align:-3px;margin-right:4px}
 #bestpop .amt{position:relative;display:inline-flex;align-items:baseline;gap:6px;margin:10px 0 2px}
 #bestpop .amt b{font:900 44px/1 var(--font);font-variant-numeric:tabular-nums;background:linear-gradient(180deg,#FFF3B0,#FFC23A 55%,#F08A00);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 0 #6A3A00)}
 #bestpop .amt span{font:900 22px/1 var(--font);color:#FFD66B}
-#bestpop .x2{position:absolute;right:-52px;top:-28px;--s:.38;transform:rotate(12deg);animation:bpx2 1.1s ease-in-out infinite}
-#bestpop .x2 b{font:900 18px/1 var(--font);color:#5A2A00;-webkit-text-fill-color:#5A2A00;background:none;filter:none}
+#bestpop .x2{position:absolute;right:-60px;top:-38px;--s:.5;--rot:12deg}
+#bestpop .x2 b{font:900 25px/1 var(--font);color:#FFF6B0;-webkit-text-fill-color:#FFF6B0;background:none;filter:none;letter-spacing:-.02em}
 @keyframes bpx2{0%,100%{transform:rotate(12deg) scale(1)}50%{transform:rotate(4deg) scale(1.12)}}
 #bestpop .sum{margin:8px auto 16px;padding:8px 12px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font:600 13.5px/1.35 var(--font);color:#E8E0FF}
 #bestpop .sum b{color:#FFD66B;font-weight:900}
@@ -676,7 +691,7 @@ svg.ic{width:16px;height:16px;flex:none;vertical-align:-3px;margin-right:4px}
   background:radial-gradient(120% 90% at 85% 0%,#7B4DFF 0%,#3B1F9E 45%,#1A1046 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 10px 28px rgba(40,16,120,.35)}
 .ch2::before{content:"";position:absolute;right:-90px;top:-110px;width:320px;height:320px;z-index:-1;background:repeating-conic-gradient(from 0deg,rgba(190,160,255,.18) 0 7deg,transparent 7deg 20deg);-webkit-mask:radial-gradient(closest-side,#000 20%,transparent 100%);mask:radial-gradient(closest-side,#000 20%,transparent 100%);animation:bkspin 22s linear infinite}
 .ch2 .top{display:flex;align-items:center;gap:12px}
-.ch2 .top img{width:62px;height:62px;flex:none;filter:drop-shadow(0 4px 10px rgba(0,0,0,.35));animation:bkbob 2.6s ease-in-out infinite}
+.ch2 .top img{width:auto;height:64px;object-fit:contain;flex:none;filter:drop-shadow(0 4px 10px rgba(0,0,0,.35));animation:bkbob 2.6s ease-in-out infinite}
 .ch2 .k{font:700 12px/1 var(--font);color:#C9B8FF;letter-spacing:.03em}
 .ch2 h3{margin:5px 0 3px;font:900 22px/1.1 var(--font);letter-spacing:-.02em;color:#fff}
 .ch2 .sub{font:500 12.5px/1.3 var(--font);color:#D6CCFF}
@@ -692,8 +707,8 @@ svg.ic{width:16px;height:16px;flex:none;vertical-align:-3px;margin-right:4px}
 #sheet #chal-go{margin:4px 0 14px}
 .ch2r{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
 .ch2r>div{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:16px;background:var(--g-card);border:1px solid var(--g-line);font:600 12.5px/1.25 var(--font);min-width:0}
-.ch2r img{width:30px;height:30px;flex:none}.ch2r b{display:flex;align-items:center;gap:3px;margin-top:3px;font:900 15px/1 var(--font);color:#7B4DFF}.ch2r b .pc{width:17px;height:17px;flex:none;vertical-align:0;margin:0}
-.ch2h{display:flex;align-items:center;gap:8px;margin:4px 0 8px;font:800 16px/1 var(--font)}.ch2h img{width:26px;height:26px;flex:none;transform:translateY(-2px)}.ch2h .note{margin-left:auto;font-weight:500}
+.ch2r img{width:auto;height:34px;object-fit:contain;flex:none}.ch2r b{display:flex;align-items:center;gap:3px;margin-top:3px;font:900 15px/1 var(--font);color:#7B4DFF}.ch2r b .pc{width:17px;height:17px;flex:none;vertical-align:0;margin:0}
+.ch2h{display:flex;align-items:center;gap:8px;margin:4px 0 8px;font:800 16px/1 var(--font)}.ch2h img{width:auto;height:24px;object-fit:contain;flex:none;transform:translateY(-2px)}.ch2h .note{margin-left:auto;font-weight:500}
 #sheet .rank .rk:nth-child(1) b,#sheet .rank .rk:nth-child(2) b,#sheet .rank .rk:nth-child(3) b{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:13px;color:#fff;margin:0 auto}
 #sheet .rank .rk:nth-child(1) b{background:linear-gradient(135deg,#FFE27A,#F0A000);color:#5A3A00;box-shadow:0 2px 6px rgba(240,160,0,.5)}
 #sheet .rank .rk:nth-child(2) b{background:linear-gradient(135deg,#F2F4F8,#AEB6C4);color:#3A4250}
@@ -710,7 +725,7 @@ svg.ic{width:16px;height:16px;flex:none;vertical-align:-3px;margin-right:4px}
  <div class="start"><div class="panel"><button class="opt go" id="boot-go" data-i18n="tap_to_start"></button><div id="boot-acct" style="display:contents"></div><div class="bfoot" id="boot-foot2"></div></div></div>
  <div class="bfoot" id="boot-foot"></div></div>
 <canvas id="stage" data-i18n-aria="notification_board"></canvas><canvas id="stage-ui" aria-hidden="true"></canvas>
-<div id="signing" role="status"><div class="b"><i></i><span data-i18n="signing_in"></span></div></div><div id="scrim"></div><div id="toasts"></div><div id="appd"></div><div id="ret"></div><div id="chres"></div><div id="chud"><span class="lb" data-i18n="daily_challenge"></span><b id="chud-t">1:00</b><span id="chud-s">+0 P</span><button id="chud-x" data-i18n-aria="quit" data-i18n="stop"></button></div><div id="coach"></div><div id="cf"><div class="box"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="cf-ico"><path d="M6 6h15l-1.5 9h-12zM6 6 5 3H2M9 20a1 1 0 1 0 0-.01M18 20a1 1 0 1 0 0-.01"/></svg><h3 id="cf-t"></h3><div class="what" id="cf-w"></div><div class="price" id="cf-p"></div><div class="row"><button class="no" id="cf-no" data-i18n="cancel"></button><button id="cf-ok" data-i18n="pay"></button></div></div></div><div id="adov"><div><b data-i18n="ad"></b><span data-i18n="ad_placeholder"></span><br><span id="adt">3</span><span data-i18n="s_to_reward"></span></div></div><div id="bestpop" role="dialog" aria-modal="true"><div class="bp"><img class="crown" src="img/ui/crown.webp" alt=""><ui-fr class="uf uf-ribbon ut-red bprib" id="bp-t"></ui-fr><div class="lbl" id="bp-l"></div><div class="amt"><b id="bp-v"></b><span>P</span><ui-fr class="uf uf-burst ut-gold x2"><b>×2</b></ui-fr></div><div class="sum" id="bp-s"></div><button class="uf uf-btn-l ut-gold go" id="bp-ok"></button><button class="no" id="bp-no"></button></div></div><div id="shade"></div><div id="sheet"><div class="sheet-h"><h2 id="sheet-t"></h2><span class="w" id="sheet-w"></span><button class="x" id="sheet-x" data-i18n-aria="close">✕</button></div><div class="sheet-b" id="sheet-b"></div></div>
+<div id="signing" role="status"><div class="b"><i></i><span data-i18n="signing_in"></span></div></div><div id="scrim"></div><div id="toasts"></div><div id="appd"></div><div id="ret"></div><div id="chres"></div><div id="chud"><span class="lb" data-i18n="daily_challenge"></span><b id="chud-t">1:00</b><span id="chud-s">+0 P</span><button id="chud-x" data-i18n-aria="quit" data-i18n="stop"></button></div><div id="coach"></div><div id="cf"><div class="box"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="cf-ico"><path d="M6 6h15l-1.5 9h-12zM6 6 5 3H2M9 20a1 1 0 1 0 0-.01M18 20a1 1 0 1 0 0-.01"/></svg><h3 id="cf-t"></h3><div class="what" id="cf-w"></div><div class="price" id="cf-p"></div><div class="row"><button class="no" id="cf-no" data-i18n="cancel"></button><button id="cf-ok" data-i18n="pay"></button></div></div></div><div id="adov"><div><b data-i18n="ad"></b><span data-i18n="ad_placeholder"></span><br><span id="adt">3</span><span data-i18n="s_to_reward"></span></div></div><div id="bestpop" role="dialog" aria-modal="true"><div class="bp"><img class="crown" src="img/ui/crown.webp" alt=""><ui-fr class="uf uf-ribbon ut-red bprib" id="bp-t"></ui-fr><div class="lbl" id="bp-l"></div><div class="amt"><b id="bp-v"></b><span>P</span><ui-fr class="uf uf-burst ut-red uf-fx x2"><b>×2</b></ui-fr></div><div class="sum" id="bp-s"></div><button class="uf uf-btn-l ut-gold go" id="bp-ok"></button><button class="no" id="bp-no"></button></div></div><div id="shade"></div><div id="sheet"><div class="sheet-h"><h2 id="sheet-t"></h2><span class="w" id="sheet-w"></span><button class="x" id="sheet-x" data-i18n-aria="close">✕</button></div><div class="sheet-b" id="sheet-b"></div></div>
 <script>
 // ---------- i18n: every on-screen string is a key in tools/game-page/i18n/<lang>.json ----------
 // Code calls $t(<key>, ...args) with {0}{1}… placeholders; no display text lives in the code (build.py fails on Hangul literals
@@ -2974,7 +2989,7 @@ function sticker(kind, lines, w, style = '') {
   const t = Array.isArray(lines) ? lines : [lines];
   if (kind === 'ribbon') return `<ui-fr class="pb uf uf-ribbon ut-red pb-first">${t[0]}</ui-fr>`;
   if (kind === 'rosette') return `<ui-fr class="pb uf uf-count ut-gold pb-rec" style="right:8px;top:8px">★ ${t[0]}</ui-fr>`;
-  if (kind === 'burst') return `<ui-fr class="pb uf uf-burst ut-red pb-gain" style="${w >= 80 ? 'right:8px;top:6px' : 'left:0;top:4px'}"><span>${t[0]}${t[1] ? `<small>${t[1]}</small>` : ''}</span></ui-fr>`;
+  if (kind === 'burst') return `<ui-fr class="pb uf uf-burst ut-red uf-fx pb-gain" style="${w >= 80 ? 'right:8px;top:6px' : 'left:0;top:4px'}"><span>${t[0]}${t[1] ? `<small>${t[1]}</small>` : ''}</span></ui-fr>`;
   if (kind === 'bolt') return `<ui-fr class="pb uf uf-pill-socket ut-purple pb-timer">${IC.clock}<span>${t[0]}</span></ui-fr>`;
   if (kind === 'stamp') return `<span class="pb pb-stamp" aria-label="${t[0]}">${IC.check}</span>`;
   return `<span class="pb pb-first">${t[0]}</span>`;

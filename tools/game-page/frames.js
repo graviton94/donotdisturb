@@ -24,6 +24,7 @@ function frameCSS(FRAMES, TINTS) {
         ? `${k}{width:calc(${f.w}px*var(--s));height:calc(${f.h}px*var(--s));border:0;background-size:100% 100%;position:relative;color:transparent}${k}>*{position:absolute;left:calc(${f.label.x}px*var(--s));top:calc(${f.label.y}px*var(--s));transform:translate(-50%,-50%) rotate(${f.label.rotate}deg)}\n`
         : `${k}{width:calc(${f.w}px*var(--s));height:calc(${f.h}px*var(--s));border:0;background-size:100% 100%;padding:0 0 calc(${Math.max(0, f.h / 2 - f.face) * 2}px*var(--s))}\n`;
       for (const [t, ramp] of Object.entries(TINTS)) css += `${k}.ut-${t}{background-image:${url(tint(f.svg, ramp))}}\n`;
+      css += `${k}{--uf-shape:${url(f.svg)}}\n`;  // the frame's silhouette, for masked effects (.uf-fx light sweep)
     }
   }
   return css;
