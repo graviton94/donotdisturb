@@ -1,0 +1,38 @@
+diff --git a/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Content.kt b/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Content.kt
+index 91b8ab0..7ed8b51 100644
+--- a/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Content.kt
++++ b/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Content.kt
+@@ -35,16 +35,16 @@ enum class EventCard(val label: String, val unlockLevel: Int, val price: Long, v
+     Update("업데이트", 4, 800, 40),
+
+     /** The next five arriving rows are A·B·A·B·A, a double sandwich. */
+-    AllHands("@모두 공지", 14, 30_000, 30),
++    AllHands("@모두 공지", 10, 5_000, 30),
+
+     /** Swiping it within [RuleSet.otpLifeSwipes] pays 10× the previous swipe; then it expires. */
+-    Otp("인증번호", 16, 60_000, 25),
++    Otp("인증번호", 12, 12_000, 25),
+
+     /** The next app bought costs half. Price 0 = priced from the level curve (RuleSet.cardPrice). */
+-    Sale("앱스토어 세일", 22, 0, 35),
++    Sale("앱스토어 세일", 13, 0, 35),
+
+     /** Every app row on the board gets one more notification: many rows jump to 3/4 or burst on the next touch. */
+-    GroupText("단체 문자", 27, 0, 30),
++    GroupText("단체 문자", 16, 0, 30),
+
+     /** Every app in the deck gains one upgrade level. */
+     Firmware("펌웨어 업데이트", 37, 0, 60),
+@@ -56,10 +56,10 @@ enum class EventCard(val label: String, val unlockLevel: Int, val price: Long, v
+     Birthday("생일 축하", 5, 0, 0),
+
+     /** A 30-second drill: every tap on the panel raises all income by 1%, up to ×2, while it runs. */
+-    Drill("알림훈련", 15, 0, 60),
++    Drill("알림훈련", 11, 0, 60),
+
+     /** Not a row: switched on up to 3 times a day for 20 s without interruptions and with auto twice as fast. */
+-    Dnd("방해 금지", 13, 0, 0),
++    Dnd("방해 금지", 9, 0, 0),
+ }
+
+ /**

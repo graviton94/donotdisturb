@@ -1,0 +1,33 @@
+key	change	ko
+#alert_Crash	추가	앱 충돌
+#alert_LowBattery	추가	배터리 부족
+#alert_Storage	추가	저장공간 부족
+#app_book	추가	앱 도감
+#book_collected	추가	수집률 {0}%
+#book_opens_lv	추가	Lv {0}에 열려요
+#book_opens_reset	추가	초기화 {0}회 뒤에 열려요
+#book_progress	추가	{0}/{1} 수집
+#boost_ready	추가	알림창 강화 가능
+#card_slot_free	추가	카드 칸이 비었어요
+#chain	수정	콤보
+#goal_buy	추가	구매!
+#loading	추가	불러오는 중…
+#mission_done	추가	미션 완료: {0}
+#missions_all_done	추가	오늘 미션 모두 완료! 매일 들르기에서 데이터 {0} 받기
+#music	추가	배경음악
+#music_sub	추가	연쇄가 이어지면 음악도 달아올라요
+#music_volume	추가	배경음악 크기
+#new_card_ready	추가	새 이벤트 카드
+#now_open	추가	새로 열림: {0}
+#offline_cap_note	수정	⚠ 상한을 넘긴 {0}은 정산되지 않아요
+#pro_ready	추가	PRO 버전 가능
+#purchases_are_test_only_for	수정	⚠ 지금 결제는 테스트용 가짜
+#rank_empty	추가	아직 기록이 없어요 · 첫 번째가 되어 보세요
+#rank_me	추가	나
+#rank_offline	추가	순위를 불러오지 못했어요 · 인터넷 연결을 확인해 주세요
+#rank_posted	추가	이번 주 순위에 올랐어요!
+#rank_resets	추가	매주 월요일 새로 시작
+#rank_sign_in	추가	로그인하면 순위에 올라요
+#rank_week	추가	이번 주 순위
+#this_can_t_be_undone	수정	⚠ 되돌릴 수 없어요
+#title_q	추가	「{0}」

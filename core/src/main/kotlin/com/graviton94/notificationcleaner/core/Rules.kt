@@ -145,6 +145,10 @@ data class RuleSet(
     val tierBase: Long = 6,
     val levelMilestones: List<Int> = listOf(10, 25, 50, 100, 200, 300, 400, 500),
     val appPriceBase: Long = 100,
+    /** Candidate onboarding prices. Neutral values preserve the launch economy. */
+    val firstRunTier2PricePermille: Int = 1_000,
+    val firstRunRankPricePermille: Int = 1_000,
+    val firstRunEarlyPro: Boolean = false,
     val appPriceTierRatio: Long = 60,
     val appPriceOrderPermille: List<Int> = listOf(1_000, 1_600, 2_500, 4_000, 6_300, 10_000),
     val appPriceLevelPermille: Int = 100,

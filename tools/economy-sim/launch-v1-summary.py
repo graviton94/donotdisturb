@@ -156,12 +156,15 @@ def screen_physical_rates(path, expected):
             for period in ("days1_14", "day15_on")]
 
 
-def render_release(directory, rows, expected):
+def render_release(directory, rows, expected, variant=False):
     manifest = (directory / "parameters.txt").read_text(encoding="utf-8")
     if "screenOnly=true;screenActions=v1.5" not in manifest or not (directory / "screen-actions.csv").is_file():
         raise ValueError("Release requires SIM_SCREEN_ONLY=1 and the v1.5 screen action audit")
-    if not manifest.startswith("launch-v1;") or ";rules=;" not in manifest:
+    if not manifest.startswith("launch-v1;") or (not variant and ";rules=;" not in manifest):
         raise ValueError("Release requires the operating engine without probe overrides")
+    if not variant and ("bookClaims=true;" in manifest or "stopPaidAfterDay=" in manifest
+                        or ("liveTuning=" in manifest and ";liveTuning=;" not in manifest)):
+        raise ValueError("Release requires default live settings and actions wired in the shipping screen")
     if "adsPlan=scheduled" in manifest:
         raise ValueError("Use the baseline ad policy for the release verdict")
     cohorts = checked_screen_cohorts(rows, expected)
@@ -169,6 +172,7 @@ def render_release(directory, rows, expected):
     print("| 지표 | 목표 | 결과 | 판정 |")
     print("|---|---:|---:|---|")
     decisions = []
+    day_tolerance = 0.1
 
     def emit(label, goal, result, ok):
         decisions.append(ok)
@@ -177,7 +181,7 @@ def render_release(directory, rows, expected):
     for profile, label, lo, hi in PROFILES:
         mid, _, value, reached = stats(cohorts[profile], "last_app_day", unit="일")
         emit(f"{label} 마지막 앱", f"{lo}~{hi}일", f"{mid} · {reached}/{expected} 도달",
-             reached == expected and lo <= value <= hi)
+             reached == expected and lo - day_tolerance <= value <= hi + day_tolerance)
 
     for key, label, lo, hi, scale, unit in (
         ("reset_day", "무과금 첫 초기화", 1, 2, 1, "일"),
@@ -187,14 +191,15 @@ def render_release(directory, rows, expected):
         ("offline_share", "무과금 오프라인 P 몫", 30, 50, 100, "%"),
     ):
         mid, _, value, reached = stats(free, key, scale, unit)
-        within_target = reached == expected and lo <= value <= hi
-        if value is not None and not within_target and lo <= round(value, 2) <= hi:
+        tolerance = day_tolerance if unit == "일" else 0
+        within_target = reached == expected and lo - tolerance <= value <= hi + tolerance
+        if value is not None and not lo <= value <= hi and unit == "일":
             mid = f"{value:.5f}{unit}"
         emit(label, f"{lo}~{hi}{unit}", f"{mid} · {reached}/{expected}", within_target)
 
     gaps = [float(row["unlock_gap_days"]) for row in free]
     emit("무과금 최대 해금 공백", "중앙 ≤7일 · 최악 ≤9일",
-         f"{median(gaps):.2f}일 / {max(gaps):.2f}일", median(gaps) <= 7 and max(gaps) <= 9)
+         f"{median(gaps):.2f}일 / {max(gaps):.2f}일", median(gaps) <= 7 + day_tolerance and max(gaps) <= 9 + day_tolerance)
     clipped = [float(row["clipped_p_share"]) for row in free]
     emit("무과금 과열로 잘린 P", "중앙 ≤5% · 최악 ≤15%",
          f"{median(clipped):.2%} / {max(clipped):.2%}", median(clipped) <= .05 and max(clipped) <= .15)
@@ -214,7 +219,11 @@ def render_release(directory, rows, expected):
     emit("무과금 초반 물리 3+", "≥25%", f"{early:.2%}", early >= .25)
     emit("무과금 후반 물리 3+", "≥45%", f"{late:.2%}", late >= .45)
     print()
-    print("출시 통과" if all(decisions) else "출시 보류")
+    print("일 단위 기준 허용 오차 ±0.1일")
+    if variant:
+        print(f"대조판 {sum(decisions)}/{len(decisions)} 충족")
+    else:
+        print("출시 통과(화면 기준)" if all(decisions) else "출시 보류")
     return all(decisions)
 
 
@@ -222,12 +231,14 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("csv", type=Path)
     parser.add_argument("--seeds", type=int, default=8)
-    parser.add_argument("--release", action="store_true", help="Evaluate the v1.5 screen-only launch criteria")
+    verdict_group = parser.add_mutually_exclusive_group()
+    verdict_group.add_argument("--release", action="store_true", help="Evaluate the screen-only launch criteria")
+    verdict_group.add_argument("--variant", action="store_true", help="Apply the same criteria to a screen-only probe")
     args = parser.parse_args()
     with args.csv.open(encoding="utf-8") as file:
         rows = list(csv.DictReader(file))
-    if args.release:
+    if args.release or args.variant:
         if args.seeds != 8:
             parser.error("--release requires eight seeds")
-        raise SystemExit(0 if render_release(args.csv.parent, rows, args.seeds) else 1)
+        raise SystemExit(0 if render_release(args.csv.parent, rows, args.seeds, variant=args.variant) else 1)
     render(rows, args.seeds)

@@ -277,3 +277,25 @@ Firestore 동기화에서 쓰는 저장 데이터는 `SaveCodec` JSON 버전 1�
   - 키 이름·범위는 `docs/balance/remote-tuning.md`(밸런스 세션 작성)를 따른다. 범위 검사는 코어가 한다.
 - **분석 이벤트 추가**(`track()`): `level_up{level}`, `chain{k,bursts,end}`, `buy_app`·`upgrade`·`buy_pro`·`buy_card`·`buy_boost`·`buyBackup`·`buyCloud`·`use_item`·`premium`·`attend`·`missions_claim`·`ad_reward_claim`, `reset{amount,level}`·`sync{amount,level}`, `offline_return{away_min,paid}`, `challenge_end{score,new_best}`. 더 필요한 이벤트는 KPI 정의서에 적어 주면 붙인다.
 - **주간 순위 정산**: Functions `settleWeekly`가 월요일 00:10(KST)에 지난주 판을 정산해 `weekly/{board}/results/{uid} = {rank, tier, of}`를 쓴다. tier는 `first`·`top10`·`top100`·`joined`. 보상 수치와 `grantWeekly(claimId, tier)`는 밸런스 세션 몫이다. claimId는 `{board}`(예: `2026-W48-L0`)를 쓸 예정이다.
+
+## v1.6 도감·주간 지급·기간 한정 콘텐츠
+
+`panel().book`의 `owned`는 지금 활성화된 카탈로그에서 한 번이라도 보유한 앱의 수다. 기본 앱과 백업으로 기억된 앱도 포함한다. 버전 1 옛 저장에 수집 이력이 없으면 현재 회차 보유 앱부터 센다. 화면의 출시 전 도감 목록은 회차별 `apps[].owned`를 쓰므로, 수집률·보상 자격은 새 `book.owned`로 표시한다. 개별 항목은 `book.collectedIds`를 현재 카탈로그의 앱 ID와 대조한다. 회차 보유 여부는 `apps[].owned`를 계속 읽는다.
+
+```json
+{"book":{"owned":3,"total":60,"collectedIds":["alarm","memo","weather"],"milestones":[{"at":10,"reward":{"data":0,"pieces":1,"vouchers":0},"claimed":false}]}}
+```
+
+`claimBook(at)`를 일반 게임에서 호출한다. `owned >= at && !claimed`일 때 받기 버튼을 켠다. 반환은 기존 동작의 `{"ok":true,"state":{…}}` 형식이며 이후 `panel()`과 `meta()`를 새로 읽는다. 같은 목표를 다시 청구하거나 도전 중에 호출하면 `ok:false`다. 앱 수·마일스톤·이미 청구 여부는 초기화·동기화·저장 로드 뒤에도 유지된다.
+
+`grantWeekly(claimId, tier)`는 **검증된 서버 지급을 받는 네이티브 호스트**가 호출한다. 웹 JavaScript 액션 목록에는 두지 않는다. 구간 ID는 `first`(1위), `top10`(2~10위), `top100`(11~100위), `participant`(101위 이상, 그 주 유효 점수 제출자)다. 각각 조각 8·5·3·1개를 지급한다. 지급 ID는 서버에서 계정과 마감 UTC ISO 주 기준으로 한 번 만든다. 리그별 순위를 계산하더라도 같은 계정에는 그 주에 자격이 있는 최고 구간 1건을 보낸다. 재전송·구간을 바꾼 동일 ID는 추가 지급하지 않는다. 표시 순위와 같이 높은 점수 인원 수에 1을 더하므로 동점은 같은 구간을 받는다. 현재 클라이언트 제출 점수는 서버에서 결과를 검증하는 함수가 붙을 때 지급에 사용한다. 서버 지급 확인은 지급과 원장 기록을 포함한 저장이 끝난 뒤 한다. Firebase 계정 충돌 또는 새 기기에서는 서버의 권위 있는 주간 지급 기록을 유지한다.
+
+`WebSession.applyTuning(json)`은 신뢰된 네이티브 브리지에서만 호출한다. 값, 날짜 형식과 되돌리기는 [원격 조정 계약](remote-tuning.md)을 따른다. 도전 중에도 호출할 수 있으며, 일반 게임에 돌아오면 반영된다. 적용·주간 지급은 기존 세션 잠금 안에서 호출한다. 세션 교체나 기기 재실행 뒤에는 캐시된 최신 JSON을 호스트가 다시 전달한다.
+
+```json
+{"liveEvent":{"id":"chain_week","title":"연쇄 주간","startsAt":1795824000000,"endsAt":1796428800000,"leftMs":604800000,"bonusBp":1200}}
+```
+
+`snapshot().liveEvent`와 `panel().state.liveEvent`는 활성 기간의 일반 게임 응답에서만 생긴다. 기간은 UTC epoch 밀리초이고 `bonusBp`는 자격 스와이프의 가산 bp다. 활성 중 성공한 스와이프 결과는 `liveEventExtraP`(정수 문자열)와 `liveEventExtraPShort`(표시 문자열)를 같이 준다. 실제 지급이 0일 때 둘 다 0이다. 기존 비트와 지갑 필드는 그대로 읽는다. 이벤트 종료 시 `snapshot()`을 갱신하면 배너를 내릴 수 있다.
+
+[코어 API 원본](../../core/src/main/kotlin/com/graviton94/notificationcleaner/core/WebSession.kt)

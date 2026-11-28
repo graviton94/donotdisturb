@@ -259,5 +259,7 @@ object Catalog {
         byId = apps.associateBy { it.id }
     }
 
+    fun hasApp(id: String): Boolean = id in byId
+
     fun app(id: String): AppDef = byId[id] ?: error("unknown app $id")
 }

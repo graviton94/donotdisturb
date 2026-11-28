@@ -4,6 +4,8 @@ import com.graviton94.notificationcleaner.core.BackupItem
 import com.graviton94.notificationcleaner.core.Beat
 import com.graviton94.notificationcleaner.core.Catalog
 import com.graviton94.notificationcleaner.core.CloudItem
+import com.graviton94.notificationcleaner.core.CollectionRewards
+import com.graviton94.notificationcleaner.core.LiveTuning
 import com.graviton94.notificationcleaner.core.Engine
 import com.graviton94.notificationcleaner.core.EventCard
 import com.graviton94.notificationcleaner.core.GameState
@@ -62,6 +64,9 @@ internal fun simRules(): com.graviton94.notificationcleaner.core.RuleSet {
             "recentIncomeWindow" -> r.copy(recentIncomeWindow = v.toInt())
             "offlineAutoPermille" -> r.copy(offlineAutoPermille = v.toInt())
             "autoSwipePermille" -> r.copy(autoSwipePermille = v.toInt())
+            "firstRunEarlyPro" -> r.copy(firstRunEarlyPro = v.toBooleanStrict())
+            "firstRunRankPricePermille" -> r.copy(firstRunRankPricePermille = v.toInt())
+            "firstRunTier2PricePermille" -> r.copy(firstRunTier2PricePermille = v.toInt())
             "appPriceLevelPermille" -> r.copy(appPriceLevelPermille = v.toInt())
             "tierBase" -> r.copy(tierBase = v.toLong())
             "callEverySwipes" -> r.copy(callEverySwipes = v.toInt())
@@ -76,7 +81,10 @@ internal fun simRules(): com.graviton94.notificationcleaner.core.RuleSet {
     }
     return r
 }
-private val engine = Engine(simRules())
+internal val simTuningJson = System.getenv("SIM_LIVE_TUNING").orEmpty()
+/** The screen team will wire the new claim button. Model that version as an explicit comparison. */
+internal val claimBookRewards = System.getenv("SIM_BOOK_CLAIMS") == "on"
+private val engine = Engine(simRules(), LiveTuning.parse(simTuningJson))
 private val shop = com.graviton94.notificationcleaner.core.Shop(engine)
 private val meta = Meta(engine)
 /** An alternate visible ad policy for comparison against the historical opportunistic policy. */
@@ -102,7 +110,7 @@ private val LAST_APP get() = Catalog.apps.maxBy { it.unlockLevel }.id
 private const val START = 1_000_000L
 private const val DAY = 86_400_000L
 
-data class DayPlan(val sessions: Int = 4, val sessionMin: Int = 15)
+data class DayPlan(val sessions: Int = 4, val sessionMin: Int = 15, val manualFloorMs: Long = 0)
 
 enum class InputPolicy { Best, Random, Auto }
 
@@ -154,11 +162,13 @@ interface DailyAudit {
     fun endSession() = Unit
     fun adAward(slot: AdSlot, credited: java.math.BigInteger) = Unit
     fun activeTime(elapsedMs: Long) = Unit
+    fun observe(engine: Engine, state: GameState, now: Long) = Unit
     fun input(actor: Actor) = Unit
     fun screenAction(action: String, item: String = "") = Unit
     fun swipe(engine: Engine, before: GameState, outcome: SwipeOutcome, now: Long)
     fun prestige(kind: String, before: GameState, after: GameState, now: Long, gain: Double, stalls: Int, sessions: Int)
     fun endDay(day: Int, state: GameState)
+    fun dayEconomy(day: Int, state: GameState, timeline: Timeline) = Unit
 }
 
 class Timeline {
@@ -218,7 +228,7 @@ fun unlockLevels(): Map<Int, List<String>> {
 }
 
 /** [update]: on this day (0-based) the pack is switched on, as a content update reaching a veteran save. */
-fun playDays(seed: Long, days: Int, plan: DayPlan, resets: Boolean, spam: Boolean = false, update: Pair<Int, com.graviton94.notificationcleaner.core.ContentPack>? = null, payer: Payer = Payer.Free, slots: Set<AdSlot> = AdSlot.entries.toSet(), stopAtLv124: Boolean = false, audit: DailyAudit? = null, input: InputPolicy = InputPolicy.Best): Timeline {
+fun playDays(seed: Long, days: Int, plan: DayPlan, resets: Boolean, spam: Boolean = false, update: Pair<Int, com.graviton94.notificationcleaner.core.ContentPack>? = null, payer: Payer = Payer.Free, slots: Set<AdSlot> = AdSlot.entries.toSet(), stopAtLv124: Boolean = false, stopPaidAfterDay: Int? = null, audit: DailyAudit? = null, input: InputPolicy = InputPolicy.Best): Timeline {
     if (Catalog.packs.isNotEmpty()) Catalog.packs = emptySet()  // shared global: only touch it when needed (parallel runs)
     require(!screenOnly || payer.monthlyData == 0L) { "Screen profiles must use a Play product for data purchases" }
     val tl = Timeline()
@@ -246,6 +256,7 @@ fun playDays(seed: Long, days: Int, plan: DayPlan, resets: Boolean, spam: Boolea
     val milestonesToRecord = listOf(1, 3, 5, 8, 12)
     fun reachedTarget(day: Int) = stopAtLv124 && day >= (audit?.throughDay ?: 0) && tl.level124Day != null
     fun observe() {
+        audit?.observe(engine, s, t)
         weekRunPeak = maxOf(weekRunPeak, s.level)
         while (highestLevel < s.level) tl.levelDays[++highestLevel] = dayOf(t)
         if (s.appLevels === seenLevels) return
@@ -302,7 +313,7 @@ fun playDays(seed: Long, days: Int, plan: DayPlan, resets: Boolean, spam: Boolea
             val controls = SessionControls(t, end, input == InputPolicy.Auto)
             while (t < end) {
                 val move = if (engine.rules.fallingChains) {
-                    controls.next(t, engine.chargeMs(s, t), engine.autoIntervalMs(s, t))
+                    controls.next(t, maxOf(plan.manualFloorMs, engine.chargeMs(s, t)), engine.autoIntervalMs(s, t))
                 } else {
                     val legacyStep = if (input == InputPolicy.Auto) engine.autoIntervalMs(s, t) else engine.chargeMs(s, t)
                     SessionInput(t + legacyStep, if (input == InputPolicy.Auto) Actor.Auto else Actor.Player)
@@ -392,6 +403,13 @@ fun playDays(seed: Long, days: Int, plan: DayPlan, resets: Boolean, spam: Boolea
                 if (claimed !== s) audit?.screenAction("claimMissions")
                 s = claimed
             }
+            if (screenOnly && claimBookRewards && s.account.claimedBook.size < CollectionRewards.milestones.keys.count { it <= Catalog.apps.size }) {
+                for (at in CollectionRewards.milestones.keys) {
+                    val claimed = CollectionRewards.claimBook(s, at, shop) ?: continue
+                    s = claimed
+                    audit?.screenAction("claimBook", at.toString())
+                }
+            }
             stallSessions = if (s.level > levelAtStart) 0 else stallSessions + 1
             if (traceDays && seed == traceSeed && resets && day in 4..6) println("  d$day s$session lv ${s.level} P ${s.runEarned.toString().length}자리 지갑 ${s.wallet.toString().length} 덱 ${s.active.size} 백업 ${s.backup.files}/${s.backup.lifetime} 초기화 ${s.backup.resets} 배터리 ${s.energy} 속도 ${s.earnRate} 부스트 ${s.account.boostUntil - t} 레벨P ${s.runEarned}")
             // Reset when it raises the lifetime-file bonus by 60% or more, or when the run has stalled for 3 sessions.
@@ -443,7 +461,9 @@ fun playDays(seed: Long, days: Int, plan: DayPlan, resets: Boolean, spam: Boolea
         tl.digitsByWeek[week] = s.bestSwipe.toString().length
         tl.lifetimeByWeek[week] = s.backup.lifetime
         audit?.endDay(day + 1, s)
+        audit?.dayEconomy(day + 1, s, tl)
         if (audit != null && reachedTarget(day + 1)) break
+        if (stopPaidAfterDay != null && payer != Payer.Free && day + 1 >= stopPaidAfterDay && tl.lastAppDay != null) break
     }
     tl.finalLevel = s.level
     tl.credits = s.account.creditsFree

@@ -1,0 +1,123 @@
+diff --git a/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Content.kt b/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Content.kt
+index 91b8ab0..7240166 100644
+--- a/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Content.kt
++++ b/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Content.kt
+@@ -35,16 +35,16 @@ enum class EventCard(val label: String, val unlockLevel: Int, val price: Long, v
+     Update("업데이트", 4, 800, 40),
+
+     /** The next five arriving rows are A·B·A·B·A, a double sandwich. */
+-    AllHands("@모두 공지", 14, 30_000, 30),
++    AllHands("@모두 공지", 10, 5_000, 30),
+
+     /** Swiping it within [RuleSet.otpLifeSwipes] pays 10× the previous swipe; then it expires. */
+-    Otp("인증번호", 16, 60_000, 25),
++    Otp("인증번호", 12, 12_000, 25),
+
+     /** The next app bought costs half. Price 0 = priced from the level curve (RuleSet.cardPrice). */
+-    Sale("앱스토어 세일", 22, 0, 35),
++    Sale("앱스토어 세일", 13, 0, 35),
+
+     /** Every app row on the board gets one more notification: many rows jump to 3/4 or burst on the next touch. */
+-    GroupText("단체 문자", 27, 0, 30),
++    GroupText("단체 문자", 16, 0, 30),
+
+     /** Every app in the deck gains one upgrade level. */
+     Firmware("펌웨어 업데이트", 37, 0, 60),
+@@ -56,10 +56,10 @@ enum class EventCard(val label: String, val unlockLevel: Int, val price: Long, v
+     Birthday("생일 축하", 5, 0, 0),
+
+     /** A 30-second drill: every tap on the panel raises all income by 1%, up to ×2, while it runs. */
+-    Drill("알림훈련", 15, 0, 60),
++    Drill("알림훈련", 11, 0, 60),
+
+     /** Not a row: switched on up to 3 times a day for 20 s without interruptions and with auto twice as fast. */
+-    Dnd("방해 금지", 13, 0, 0),
++    Dnd("방해 금지", 9, 0, 0),
+ }
+
+ /**
+@@ -147,12 +147,12 @@ object Catalog {
+         app("contacts", "연락처", 2, 4, ST, Category.Social, 9), // 기본 연락처
+         app("settings", "설정", 2, 5, ST, Category.Daily, 11), // 기본 설정
+         // 3티어
+-        app("music", "메롱", 3, 0, AS, Category.Media, 12), // Melon 패러디
+-        app("papago", "마마고", 3, 1, AS, Category.Work, 13), // Papago 패러디
+-        app("zalo", "잘로로", 3, 2, SE, Category.Social, 14), // Zalo 패러디
+-        app("momo", "모모모", 3, 3, SE, Category.Money, 16), // MoMo 패러디
+-        app("airbnb", "에어방앤방", 3, 4, WE, Category.Daily, 17), // Airbnb 패러디
+-        app("duo", "듀오링구", 3, 5, WE, Category.Work, 19), // Duolingo 패러디
++        app("music", "메롱", 3, 0, AS, Category.Media, 11), // Melon 패러디
++        app("papago", "마마고", 3, 1, AS, Category.Work, 12), // Papago 패러디
++        app("zalo", "잘로로", 3, 2, SE, Category.Social, 13), // Zalo 패러디
++        app("momo", "모모모", 3, 3, SE, Category.Money, 14), // MoMo 패러디
++        app("airbnb", "에어방앤방", 3, 4, WE, Category.Daily, 15), // Airbnb 패러디
++        app("duo", "듀오링구", 3, 5, WE, Category.Work, 16), // Duolingo 패러디
+         // 4티어
+         app("ctaxi", "코코아T", 4, 0, AS, Category.Daily, 20), // Kakao T 패러디
+         app("pay", "토스트", 4, 1, AS, Category.Money, 22), // Toss 패러디
+diff --git a/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Engine.kt b/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Engine.kt
+index 4219131..69b691a 100644
+--- a/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Engine.kt
++++ b/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Engine.kt
+@@ -1318,6 +1318,8 @@ class Engine(val rules: RuleSet = RuleSet(), val tuning: LiveTuning = LiveTuning
+         var p = rules.appPrice(app)
+         if (app.tier == 2 && firstRun(s) && rules.firstRunTier2PricePermille != 1_000)
+             p = (p * BigInteger.valueOf(rules.firstRunTier2PricePermille.toLong()) / BigInteger.valueOf(1_000)).max(BigInteger.ONE)
++        if (app.tier == 3 && firstRun(s) && rules.openingTier3PricePermille != 1_000)
++            p = (p * BigInteger.valueOf(rules.openingTier3PricePermille.toLong()) / BigInteger.valueOf(1_000)).max(BigInteger.ONE)
+         if (on(s, "shopee") && p < rules.appPrice(Catalog.app("shopee"))) p = p * BigInteger.valueOf(9) / BigInteger.TEN  // 쇼피피
+         return if (s.saleNext) p / BigInteger.TWO else p
+     }
+@@ -1329,7 +1331,7 @@ class Engine(val rules: RuleSet = RuleSet(), val tuning: LiveTuning = LiveTuning
+         val app = Catalog.app(appId)
+         val rank = s.appLevels[appId] ?: 1
+         var p = rules.upgradePrice(app, rank)
+-        if (rules.firstRunRankPricePermille != 1_000 && firstRun(s) && s.level >= 8 && app.tier <= 2 && rank < 25)
++        if (rules.firstRunRankPricePermille != 1_000 && firstRun(s) && s.level >= 8 && app.tier <= 2 && rank < rules.firstRunDiscountedRankCap)
+             p = (p * BigInteger.valueOf(rules.firstRunRankPricePermille.toLong()) / BigInteger.valueOf(1_000)).max(BigInteger.ONE)
+         if ((on(s, "glints") && app.category == Category.Work) || (on(s, "paypal") && app.category == Category.Money)) p = p * BigInteger.valueOf(9) / BigInteger.TEN
+         return p
+diff --git a/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Rules.kt b/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Rules.kt
+index fcc4404..9a76d66 100644
+--- a/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Rules.kt
++++ b/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Rules.kt
+@@ -148,7 +148,10 @@ data class RuleSet(
+     /** Candidate onboarding prices. Neutral values preserve the launch economy. */
+     val firstRunTier2PricePermille: Int = 1_000,
+     val firstRunRankPricePermille: Int = 1_000,
++    val firstRunDiscountedRankCap: Int = 25,
+     val firstRunEarlyPro: Boolean = false,
++    val openingLevelRelief: Int = 0,
++    val openingTier3PricePermille: Int = 1_000,
+     val appPriceTierRatio: Long = 60,
+     val appPriceOrderPermille: List<Int> = listOf(1_000, 1_600, 2_500, 4_000, 6_300, 10_000),
+     val appPriceLevelPermille: Int = 100,
+@@ -238,7 +241,11 @@ data class RuleSet(
+         var q = java.math.BigDecimal(levelPBase)
+         var ratio = levelRatioPermille
+         for (l in 2..400) {
+-            t += q.toBigInteger()
++            val early = if (openingLevelRelief != 0 && l in 8..29) {
++                val weight = minOf((l - 7) / 10.0, (30 - l) / 13.0)
++                q * java.math.BigDecimal.valueOf(kotlin.math.exp(-openingLevelRelief / 1_000.0 * weight))
++            } else q
++            t += early.toBigInteger()
+             if (l >= levelLateFrom) ratio += levelRatioStepPermille
+             val lateMultiplier = if (l >= lateGrowthFrom) lateGrowthPermille else 1_000
+             q = q * java.math.BigDecimal(ratio.toLong() * lateMultiplier) / java.math.BigDecimal(1_000_000)
+diff --git a/tools/economy-sim/src/main/kotlin/Daily.kt b/tools/economy-sim/src/main/kotlin/Daily.kt
+index c50fb8a..4a84aaf 100644
+--- a/tools/economy-sim/src/main/kotlin/Daily.kt
++++ b/tools/economy-sim/src/main/kotlin/Daily.kt
+@@ -64,8 +64,11 @@ internal fun simRules(): com.graviton94.notificationcleaner.core.RuleSet {
+             "recentIncomeWindow" -> r.copy(recentIncomeWindow = v.toInt())
+             "offlineAutoPermille" -> r.copy(offlineAutoPermille = v.toInt())
+             "autoSwipePermille" -> r.copy(autoSwipePermille = v.toInt())
++            "openingTier3PricePermille" -> r.copy(openingTier3PricePermille = v.toInt())
++            "openingLevelRelief" -> r.copy(openingLevelRelief = v.toInt())
+             "firstRunEarlyPro" -> r.copy(firstRunEarlyPro = v.toBooleanStrict())
+             "firstRunRankPricePermille" -> r.copy(firstRunRankPricePermille = v.toInt())
++            "firstRunDiscountedRankCap" -> r.copy(firstRunDiscountedRankCap = v.toInt())
+             "firstRunTier2PricePermille" -> r.copy(firstRunTier2PricePermille = v.toInt())
+             "appPriceLevelPermille" -> r.copy(appPriceLevelPermille = v.toInt())
+             "tierBase" -> r.copy(tierBase = v.toLong())

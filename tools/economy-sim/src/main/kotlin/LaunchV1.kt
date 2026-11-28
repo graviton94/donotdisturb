@@ -1,4 +1,5 @@
 import com.graviton94.notificationcleaner.core.Actor
+import com.graviton94.notificationcleaner.core.account
 import com.graviton94.notificationcleaner.core.AdSlot
 import com.graviton94.notificationcleaner.core.Alert
 import com.graviton94.notificationcleaner.core.Beat
@@ -62,6 +63,9 @@ private class LaunchFeel(override val throughDay: Int) : DailyAudit {
     override fun screenAction(action: String, item: String) {
         screenActions.merge(action to item, 1, Long::plus)
     }
+    val weeks = mutableListOf<String>()
+    private var eventExtra = zero
+    private var eventSwipes = 0L
     private var previousEvent: String? = null
     private var day = 0
     private var actor = Actor.Player
@@ -92,6 +96,10 @@ private class LaunchFeel(override val throughDay: Int) : DailyAudit {
     }
 
     override fun swipe(engine: Engine, before: GameState, outcome: SwipeOutcome, now: Long) {
+        if (outcome.liveEventExtra.signum() > 0) {
+            eventExtra += outcome.liveEventExtra
+            eventSwipes++
+        }
         var physicalBursts = 0
         var preWaveChain = 0
         var waveCount = 0
@@ -145,6 +153,13 @@ private class LaunchFeel(override val throughDay: Int) : DailyAudit {
 
     override fun prestige(kind: String, before: GameState, after: GameState, now: Long, gain: Double, stalls: Int, sessions: Int) = Unit
     override fun endDay(day: Int, state: GameState) = Unit
+
+    override fun dayEconomy(day: Int, state: GameState, timeline: Timeline) {
+        if (day % 7 != 0) return
+        val peak = timeline.bestLevelByWeek.getValue(day / 7)
+        weeks += "$day,$peak,${timeline.activeP},${timeline.offlineP},$eventExtra,$eventSwipes," +
+            "${state.backup.resets},${state.backup.cloud.syncs},${state.account.claimedBook.size}"
+    }
 }
 
 private fun storeCompletedCase(file: File, line: String) {
@@ -170,7 +185,10 @@ fun launchV1(out: File, days: Int, seeds: Int, profiles: List<Profile>, modes: S
     val slots = profiles.joinToString(";") { "${it.payer}=${it.slots.map { slot -> slot.name }.sorted()}" }
     val actionPlan = if (screenOnly) ";screenOnly=true;screenActions=v1.5" else ""
     val adPlan = if (scheduledAds) ";adsPlan=scheduled" else ""
-    val signature = "launch-v1;schema=2;days=$days;seeds=$seeds;profiles=${profiles.map { it.payer }};modes=${modes.sorted()};rules=${System.getenv("SIM_RULES").orEmpty()};slots=$slots$actionPlan$adPlan"
+    val stopPaidAfterDay = System.getenv("SIM_STOP_PAID_AFTER_DAY")?.toInt()
+    require(stopPaidAfterDay == null || stopPaidAfterDay in 1..days)
+    val earlyStop = stopPaidAfterDay?.let { ";stopPaidAfterDay=$it" }.orEmpty()
+    val signature = "launch-v1;schema=3;bookClaims=$claimBookRewards;liveTuning=$simTuningJson;days=$days;seeds=$seeds;profiles=${profiles.map { it.payer }};modes=${modes.sorted()};rules=${System.getenv("SIM_RULES").orEmpty()};slots=$slots$actionPlan$adPlan$earlyStop"
     out.mkdirs()
     val manifest = File(out, "parameters.txt")
     if (manifest.isFile) require(manifest.readText().trim() == signature) { "Results directory already has different parameters" }
@@ -194,11 +212,12 @@ fun launchV1(out: File, days: Int, seeds: Int, profiles: List<Profile>, modes: S
         val chain = File(path, "$filename.chains")
         val span = File(path, "$filename.unlocks")
         val actions = File(path, "$filename.screen-actions")
-        if (main.isFile && ad.isFile && chain.isFile && span.isFile && (!screenOnly || actions.isFile)) return@forEach
+        val weeksFile = File(path, "$filename.weeks")
+        if (weeksFile.isFile && main.isFile && ad.isFile && chain.isFile && span.isFile && (!screenOnly || actions.isFile)) return@forEach
         val horizon = if (case.resets) days else minOf(30, days)
         val feel = LaunchFeel(horizon)
         val tl = playDays(case.seed.toLong(), horizon, DayPlan(), case.resets, payer = case.payer,
-            slots = case.profile.slots, audit = feel, input = case.input)
+            slots = case.profile.slots, stopPaidAfterDay = stopPaidAfterDay, audit = feel, input = case.input)
         val end = tl.lastAppDay ?: horizon.toDouble()
         val unlocks = listOf(0.0 to "start") + tl.unlocks.filter { it.second <= end }.map { it.second to it.third } + (end to "end")
         val (gapFrom, gapTo) = unlocks.zipWithNext().maxBy { (from, to) -> to.first - from.first }
@@ -230,13 +249,15 @@ fun launchV1(out: File, days: Int, seeds: Int, profiles: List<Profile>, modes: S
                 "${case.key},${action.first},${quote(action.second)},$count"
             }.takeIf { feel.screenActions.isNotEmpty() }.orEmpty())
         }
+        storeCompletedCase(weeksFile, feel.weeks.joinToString("\n", postfix = "\n") { "${case.key},$it" }.takeIf { feel.weeks.isNotEmpty() }.orEmpty())
         storeCompletedCase(main, record + "\n")
         println(record)
     }
     val chains = "profile,seed,input,period,physical_bursts,match_bonus,waves,scoring_chain,swipes,actor,end_reason,processing_steps"
     val gaps = "profile,seed,input,from_day,from_unlock,to_day,to_unlock,gap_days"
     val outputs = mutableListOf(Triple("seeds.csv", metrics, "metrics"), Triple("ad-slots.csv", ads, "ads"),
-        Triple("chain-paths.csv", chains, "chains"), Triple("unlock-gaps.csv", gaps, "unlocks"))
+        Triple("chain-paths.csv", chains, "chains"), Triple("unlock-gaps.csv", gaps, "unlocks"),
+        Triple("weeks.csv", "profile,seed,input,day,peak,active_p,offline_p,event_extra_p,event_swipes,cycle_resets,syncs,book_claims", "weeks"))
     if (screenOnly) outputs += Triple("screen-actions.csv", "profile,seed,input,action,item,count", "screen-actions")
     for ((file, header, extension) in outputs) {
         File(out,file).bufferedWriter().use { writer ->

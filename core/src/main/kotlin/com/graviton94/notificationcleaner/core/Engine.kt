@@ -198,6 +198,7 @@ data class SwipeOutcome(
     val overload: Boolean,
     /** P lost to the jackpot cap (RuleSet.swipeLevelCap). */
     val capped: BigInteger = ZERO,
+    val liveEventExtra: BigInteger = ZERO,
 )
 
 enum class Actor { Player, Auto }
@@ -244,7 +245,7 @@ data class OfflineSettlement(
     val bonus: OfflineBonusStatus,
 )
 
-class Engine(val rules: RuleSet = RuleSet()) {
+class Engine(val rules: RuleSet = RuleSet(), val tuning: LiveTuning = LiveTuning()) {
 
     private val hundred = BigInteger.valueOf(100)
 
@@ -479,7 +480,7 @@ class Engine(val rules: RuleSet = RuleSet()) {
             bestRunP = s.backup.bestRunP.max(s.runEarned),
             legacyAppUnlockLevel = legacyAppUnlockLevel(s),
             cloud = s.backup.cloud.let { c -> if (files > 0 && Catalog.packs.isNotEmpty()) c.copy(packResets = c.packResets + 1) else c }
-                .let { c -> c.copy(account = c.account.copy(backupBoost = false)) },
+                .let { c -> c.copy(account = s.rememberCollection().account.copy(backupBoost = false)) },
         )).copy(nextOverloadAt = s.nextOverloadAt, nextMajorEventAt = s.nextMajorEventAt, previousMajorEvent = s.previousMajorEvent)
     }
 
@@ -523,7 +524,7 @@ class Engine(val rules: RuleSet = RuleSet()) {
     fun sync(s: GameState, now: Long): GameState? {
         if (s.level < rules.syncLevel) return null
         val gb = cloudGbNow(s)
-        val c = s.backup.cloud
+        val c = s.rememberCollection().backup.cloud
         val cloud = c.copy(
             // 속도 구독 bonus GB is spendable but not counted in lifetime, so later syncs still pay in full.
             gb = c.gb + scalePermille(gb, prestigePermille(s, now)), syncs = c.syncs + if (gb > 0) 1 else 0, lifetime = c.lifetime + gb,
@@ -1029,6 +1030,12 @@ class Engine(val rules: RuleSet = RuleSet()) {
         val baselineIncome = earned
         if (!auto && s.level >= rules.lateDirectIncomeFrom)
             earned = earned * BigInteger.valueOf(rules.lateDirectIncomePermille.toLong()) / BigInteger.valueOf(1_000)
+        val beforeEvent = earned
+        val event = if (auto) null else tuning.eventAt(now)?.event
+        if (event != null && event.qualifies(s.active, bursts)) {
+            val bp = tuning.bonusBasisPoints(event)
+            earned += earned * BigInteger.valueOf(bp.toLong()) / BigInteger.valueOf(10_000)
+        }
         // Jackpot cap: luck may jump a few levels, never the whole run.
         val capSteps = rules.swipeLevelCap + if (s.level >= rules.lateGrowthFrom) rules.lateSwipeCapSteps else 0
         val tailHeadroom = if (overload && maxOf(s.level, s.backup.bestLevel) >= 124) rules.post124WaveCapSteps else 0
@@ -1085,7 +1092,7 @@ class Engine(val rules: RuleSet = RuleSet()) {
         )
         next = fillDeck(next)
         next = refill(next, now, beats)
-        return SwipeOutcome(next, beats, earned, chain, cleared, overload, capped)
+        return SwipeOutcome(next, beats, earned, chain, cleared, overload, capped, if (event != null) earned - beforeEvent.min(room) else ZERO)
     }
 
     /** A rising minimum slot count pulls the best owned apps into the deck. */
@@ -1190,7 +1197,10 @@ class Engine(val rules: RuleSet = RuleSet()) {
 
     fun offlineCapMs(s: GameState): Long =
         (rules.step(rules.offlineCapSteps, s.level) + s.backup.lv(BackupItem.Offline) + s.backup.cloud.lv(CloudItem.CloudOffline)) * 3_600_000L
-    fun offlinePercent(s: GameState): Int = rules.offlineEfficiencyPercent + 2 * s.backup.lv(BackupItem.Offline)
+    fun offlinePercent(s: GameState): Int {
+        val veteranDelta = if (maxOf(s.level, s.backup.bestLevel) >= 124) tuning.veteranOfflinePercentDelta else 0
+        return (rules.offlineEfficiencyPercent + veteranDelta).coerceAtLeast(0) + 2 * s.backup.lv(BackupItem.Offline)
+    }
 
     /** Eligibility at return time. A watched ad and a pass share one reward; Ultra multiplies that payout. */
     fun offlineBonus(s: GameState, now: Long): OfflineBonusStatus {
@@ -1304,15 +1314,23 @@ class Engine(val rules: RuleSet = RuleSet()) {
 
     /** App price now: half after 앱스토어 세일. */
     fun appPrice(s: GameState, appId: String): BigInteger {
-        var p = rules.appPrice(Catalog.app(appId))
+        val app = Catalog.app(appId)
+        var p = rules.appPrice(app)
+        if (app.tier == 2 && firstRun(s) && rules.firstRunTier2PricePermille != 1_000)
+            p = (p * BigInteger.valueOf(rules.firstRunTier2PricePermille.toLong()) / BigInteger.valueOf(1_000)).max(BigInteger.ONE)
         if (on(s, "shopee") && p < rules.appPrice(Catalog.app("shopee"))) p = p * BigInteger.valueOf(9) / BigInteger.TEN  // 쇼피피
         return if (s.saleNext) p / BigInteger.TWO else p
     }
 
+    private fun firstRun(s: GameState) = s.backup.bestLevel < rules.resetLevel && s.backup.resets == 0 && s.backup.cloud.syncs == 0
+
     /** Upgrade price after 글린츠츠 (업무 −10%) and 페이팔팔 (금융 −10%). */
     fun upgradePrice(s: GameState, appId: String): BigInteger {
         val app = Catalog.app(appId)
-        var p = rules.upgradePrice(app, s.appLevels[appId] ?: 1)
+        val rank = s.appLevels[appId] ?: 1
+        var p = rules.upgradePrice(app, rank)
+        if (rules.firstRunRankPricePermille != 1_000 && firstRun(s) && s.level >= 8 && app.tier <= 2 && rank < 25)
+            p = (p * BigInteger.valueOf(rules.firstRunRankPricePermille.toLong()) / BigInteger.valueOf(1_000)).max(BigInteger.ONE)
         if ((on(s, "glints") && app.category == Category.Work) || (on(s, "paypal") && app.category == Category.Money)) p = p * BigInteger.valueOf(9) / BigInteger.TEN
         return p
     }
@@ -1339,13 +1357,25 @@ class Engine(val rules: RuleSet = RuleSet()) {
         val active = if (s.active.size < maxSlots(s)) s.active + appId else s.active
         val start = if (on(s, "store")) 2 else 1  // 큐글플레이: new apps arrive upgraded once
         return stabilizeBoard(s.copy(wallet = s.wallet - appPrice(s, appId), appLevels = s.appLevels + (appId to start),
-            active = active, saleNext = false, boostNext = on(s, "travel") || s.boostNext))
+            active = active, saleNext = false, boostNext = on(s, "travel") || s.boostNext).rememberCollection())
+    }
+
+    private val earlyProLevels = mapOf("alarm" to 10, "weather" to 11, "memo" to 12, "flash" to 13, "calc" to 14, "recorder" to 15)
+
+    fun proLevel(s: GameState, appId: String): Int =
+        (if (rules.firstRunEarlyPro && firstRun(s)) earlyProLevels[appId] else null) ?: Catalog.proLevel.getValue(appId)
+
+    fun proPrice(s: GameState, appId: String): BigInteger {
+        val level = proLevel(s, appId)
+        return if (level == Catalog.proLevel.getValue(appId)) rules.proPrice(appId)
+        else (rules.levelP(level + 1) * BigInteger.valueOf(3) / BigInteger.TEN).max(BigInteger.ONE)
     }
 
     /** Pro version: ×3 value for an owned app, from its pro level; priced from the level curve. */
     fun buyPro(s: GameState, appId: String): GameState {
-        val price = rules.proPrice(appId)
-        if (appId !in s.appLevels || appId in s.pro || s.level < Catalog.proLevel.getValue(appId) || s.wallet < price) return s
+        if (appId !in s.appLevels || appId in s.pro || s.level < proLevel(s, appId)) return s
+        val price = proPrice(s, appId)
+        if (s.wallet < price) return s
         return s.copy(wallet = s.wallet - price, pro = s.pro + appId)
     }
 
