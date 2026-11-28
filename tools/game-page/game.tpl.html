@@ -654,6 +654,70 @@ svg.ic{width:16px;height:16px;flex:none;vertical-align:-3px;margin-right:4px}
 .key.on::after{display:none!important}
 .cols .keys{background:none!important;border:0!important;box-shadow:none!important;padding:0!important}
 .rule b{font:800 22px/1.3 var(--font)!important}
+
+
+/* a real gold call-to-action for celebration moments (the design system's "gold" skin maps to primary blue) */
+.cta-gold{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;height:58px;border:0;border-radius:18px;cursor:pointer;overflow:hidden;
+  font:900 17px/1 var(--font);color:#4A2600;letter-spacing:-.01em;text-shadow:0 1px 0 rgba(255,240,190,.7);
+  background:linear-gradient(180deg,#FFF0A0 0%,#FFCB3A 45%,#F5A300 100%);box-shadow:inset 0 2px 0 rgba(255,255,255,.65),inset 0 -4px 0 rgba(170,90,0,.45),0 6px 0 #B86E00,0 10px 22px rgba(240,150,0,.35);
+  transform:translateY(-3px);transition:transform .08s,box-shadow .08s}
+.cta-gold:active{transform:translateY(2px);box-shadow:inset 0 2px 0 rgba(255,255,255,.6),inset 0 -3px 0 rgba(170,90,0,.4),0 1px 0 #B86E00,0 4px 10px rgba(240,150,0,.3)}
+.cta-gold:disabled{background:var(--dis);color:var(--dis-ink);text-shadow:none;box-shadow:none;transform:none;cursor:default}
+/* best-chain x2 offer: a celebration card over a paused board */
+#bestpop{position:fixed;inset:0;z-index:62;display:grid;place-items:center;padding:24px;background:rgba(6,8,24,.55);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);opacity:0;pointer-events:none;transition:opacity .18s var(--ease-std)}
+#bestpop.on{opacity:1;pointer-events:auto}
+#bestpop .bp{position:relative;isolation:isolate;width:100%;max-width:320px;padding:58px 20px 16px;border-radius:30px;text-align:center;color:#FFF6E0;font-family:var(--font);
+  background:radial-gradient(130% 80% at 50% 0%,#5B3BD6 0%,#2A1A6E 48%,#150D3A 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 24px 60px rgba(20,8,60,.55),0 0 0 1.5px rgba(255,214,107,.35);
+  transform:translateY(24px) scale(.86);transition:transform .38s cubic-bezier(.2,1.5,.4,1)}
+#bestpop.on .bp{transform:none}
+#bestpop .bp::before{content:"";position:absolute;left:50%;top:70px;width:560px;height:560px;margin:-280px 0 0 -280px;z-index:-1;border-radius:30px;
+  background:repeating-conic-gradient(from 0deg,rgba(255,214,107,.20) 0 8deg,rgba(255,214,107,0) 8deg 22deg);-webkit-mask:radial-gradient(closest-side,#000 15%,transparent 70%);mask:radial-gradient(closest-side,#000 15%,transparent 70%);animation:bkspin 16s linear infinite}
+#bestpop .bp::after{content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;pointer-events:none;background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.10) 50%,transparent 62%);background-size:250% 100%;animation:sheen 3s ease-in-out infinite}
+#bestpop .crown{position:absolute;left:50%;top:-46px;width:96px;margin-left:-48px;filter:drop-shadow(0 6px 16px rgba(255,190,40,.6));animation:bkbob 2.2s ease-in-out infinite}
+#bestpop .bprib{position:absolute;left:50%;top:18px;width:236px;height:54px;margin-left:-118px;background:url(img/ui/ribbon.webp) center/contain no-repeat;display:grid;place-items:center;padding-bottom:8px}
+#bestpop .bprib span{font:900 19px/1 var(--font);color:#fff;letter-spacing:-.01em;text-shadow:0 2px 0 #8E1010,0 0 8px rgba(0,0,0,.25)}
+#bestpop .lbl{margin-top:22px;font:700 13px/1 var(--font);color:#C9B8FF;letter-spacing:.02em}
+#bestpop .amt{position:relative;display:inline-flex;align-items:baseline;gap:6px;margin:10px 0 2px}
+#bestpop .amt b{font:900 44px/1 var(--font);font-variant-numeric:tabular-nums;background:linear-gradient(180deg,#FFF3B0,#FFC23A 55%,#F08A00);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 3px 0 #6A3A00)}
+#bestpop .amt span{font:900 22px/1 var(--font);color:#FFD66B}
+#bestpop .x2{position:absolute;right:-50px;top:-26px;width:58px;height:58px;display:grid;place-items:center;background:url(img/ui/burst.webp) center/contain no-repeat;transform:rotate(12deg);animation:bpx2 1.1s ease-in-out infinite}
+#bestpop .x2 b{font:900 17px/1 var(--font);color:#7A1500;-webkit-text-fill-color:#7A1500;background:none;filter:none}
+@keyframes bpx2{0%,100%{transform:rotate(12deg) scale(1)}50%{transform:rotate(4deg) scale(1.12)}}
+#bestpop .sum{margin:8px auto 16px;padding:8px 12px;border-radius:14px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);font:600 13.5px/1.35 var(--font);color:#E8E0FF}
+#bestpop .sum b{color:#FFD66B;font-weight:900}
+#bestpop .go{margin-top:2px}#bestpop .go img{width:28px;height:28px;margin:-4px 2px 0 -4px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.25))}
+#bestpop .no{margin-top:8px;height:40px;padding:0 18px;border:0;background:none;color:#B9AEE6;font:600 14px var(--font)}
+@media (prefers-reduced-motion:reduce){#bestpop .bp::before,#bestpop .bp::after,#bestpop .crown,#bestpop .x2{animation:none}}
+
+/* daily challenge sheet */
+.ch2{position:relative;isolation:isolate;overflow:hidden;border-radius:26px;padding:16px 16px 14px;margin-bottom:12px;color:#F4EEFF;
+  background:radial-gradient(120% 90% at 85% 0%,#7B4DFF 0%,#3B1F9E 45%,#1A1046 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 10px 28px rgba(40,16,120,.35)}
+.ch2::before{content:"";position:absolute;right:-90px;top:-110px;width:320px;height:320px;z-index:-1;background:repeating-conic-gradient(from 0deg,rgba(190,160,255,.18) 0 7deg,transparent 7deg 20deg);-webkit-mask:radial-gradient(closest-side,#000 20%,transparent 100%);mask:radial-gradient(closest-side,#000 20%,transparent 100%);animation:bkspin 22s linear infinite}
+.ch2 .top{display:flex;align-items:center;gap:12px}
+.ch2 .top img{width:62px;height:62px;flex:none;filter:drop-shadow(0 4px 10px rgba(0,0,0,.35));animation:bkbob 2.6s ease-in-out infinite}
+.ch2 .k{font:700 12px/1 var(--font);color:#C9B8FF;letter-spacing:.03em}
+.ch2 h3{margin:5px 0 3px;font:900 22px/1.1 var(--font);letter-spacing:-.02em;color:#fff}
+.ch2 .sub{font:500 12.5px/1.3 var(--font);color:#D6CCFF}
+.ch2 .dk{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin:14px 0 12px;padding:10px 8px;border-radius:18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12)}
+.ch2 .dk span{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:0}.ch2 .dk img{width:38px;height:38px;border-radius:10px;box-shadow:0 3px 8px rgba(0,0,0,.3)}
+.ch2 .dk em{font:600 10px/1 var(--font);font-style:normal;color:#E4DCFF;max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ch2 .st{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ch2 .st>div{border-radius:16px;padding:10px 12px;background:rgba(10,4,40,.35);border:1px solid rgba(255,255,255,.10);min-width:0}
+.ch2 .st h4{margin:0;font:700 11.5px/1 var(--font);color:#C9B8FF}
+.ch2 .best{display:block;margin-top:6px;font:900 24px/1 var(--font);background:linear-gradient(180deg,#FFF3B0,#FFC23A 60%,#F08A00);-webkit-background-clip:text;background-clip:text;color:transparent}
+.ch2 .keys{display:flex;gap:6px;margin-top:6px}.ch2 .key{width:26px;height:26px}
+.ch2 .st .note{display:block;margin-top:5px;font-size:10.5px;color:#B3A6E6}
+#sheet #chal-go{margin:4px 0 14px}
+.ch2r{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.ch2r>div{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:16px;background:var(--g-card);border:1px solid var(--g-line);font:600 12.5px/1.25 var(--font);min-width:0}
+.ch2r img{width:30px;height:30px;flex:none}.ch2r b{display:block;font:900 15px/1.1 var(--font);color:#7B4DFF}.ch2r .pc{width:16px;height:16px;vertical-align:-3px}
+.ch2h{display:flex;align-items:center;gap:8px;margin:4px 0 8px;font:800 16px/1 var(--font)}.ch2h img{width:26px;height:26px}.ch2h .note{margin-left:auto;font-weight:500}
+#sheet .rank .rk:nth-child(1) b,#sheet .rank .rk:nth-child(2) b,#sheet .rank .rk:nth-child(3) b{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:13px;color:#fff;margin:0 auto}
+#sheet .rank .rk:nth-child(1) b{background:linear-gradient(135deg,#FFE27A,#F0A000);color:#5A3A00;box-shadow:0 2px 6px rgba(240,160,0,.5)}
+#sheet .rank .rk:nth-child(2) b{background:linear-gradient(135deg,#F2F4F8,#AEB6C4);color:#3A4250}
+#sheet .rank .rk:nth-child(3) b{background:linear-gradient(135deg,#F7C9A0,#C97B3D);color:#4A2400}
+#sheet .rank .rk:nth-child(1){border-color:rgba(240,160,0,.55);background:linear-gradient(90deg,rgba(255,214,107,.18),var(--g-card) 60%)}
+@media (prefers-reduced-motion:reduce){.ch2::before,.ch2 .top img{animation:none}}
 </style>
 </head>
 <body>
@@ -664,7 +728,7 @@ svg.ic{width:16px;height:16px;flex:none;vertical-align:-3px;margin-right:4px}
  <div class="start"><div class="panel"><button class="opt go" id="boot-go" data-i18n="tap_to_start"></button><div id="boot-acct" style="display:contents"></div><div class="bfoot" id="boot-foot2"></div></div></div>
  <div class="bfoot" id="boot-foot"></div></div>
 <canvas id="stage" data-i18n-aria="notification_board"></canvas><canvas id="stage-ui" aria-hidden="true"></canvas>
-<div id="signing" role="status"><div class="b"><i></i><span data-i18n="signing_in"></span></div></div><div id="scrim"></div><div id="toasts"></div><div id="appd"></div><div id="ret"></div><div id="chres"></div><div id="chud"><span class="lb" data-i18n="daily_challenge"></span><b id="chud-t">1:00</b><span id="chud-s">+0 P</span><button id="chud-x" data-i18n-aria="quit" data-i18n="stop"></button></div><div id="coach"></div><div id="cf"><div class="box"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="cf-ico"><path d="M6 6h15l-1.5 9h-12zM6 6 5 3H2M9 20a1 1 0 1 0 0-.01M18 20a1 1 0 1 0 0-.01"/></svg><h3 id="cf-t"></h3><div class="what" id="cf-w"></div><div class="price" id="cf-p"></div><div class="row"><button class="no" id="cf-no" data-i18n="cancel"></button><button id="cf-ok" data-i18n="pay"></button></div></div></div><div id="adov"><div><b data-i18n="ad"></b><span data-i18n="ad_placeholder"></span><br><span id="adt">3</span><span data-i18n="s_to_reward"></span></div></div><div id="shade"></div><div id="sheet"><div class="sheet-h"><h2 id="sheet-t"></h2><span class="w" id="sheet-w"></span><button class="x" id="sheet-x" data-i18n-aria="close">✕</button></div><div class="sheet-b" id="sheet-b"></div></div>
+<div id="signing" role="status"><div class="b"><i></i><span data-i18n="signing_in"></span></div></div><div id="scrim"></div><div id="toasts"></div><div id="appd"></div><div id="ret"></div><div id="chres"></div><div id="chud"><span class="lb" data-i18n="daily_challenge"></span><b id="chud-t">1:00</b><span id="chud-s">+0 P</span><button id="chud-x" data-i18n-aria="quit" data-i18n="stop"></button></div><div id="coach"></div><div id="cf"><div class="box"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="cf-ico"><path d="M6 6h15l-1.5 9h-12zM6 6 5 3H2M9 20a1 1 0 1 0 0-.01M18 20a1 1 0 1 0 0-.01"/></svg><h3 id="cf-t"></h3><div class="what" id="cf-w"></div><div class="price" id="cf-p"></div><div class="row"><button class="no" id="cf-no" data-i18n="cancel"></button><button id="cf-ok" data-i18n="pay"></button></div></div></div><div id="adov"><div><b data-i18n="ad"></b><span data-i18n="ad_placeholder"></span><br><span id="adt">3</span><span data-i18n="s_to_reward"></span></div></div><div id="bestpop" role="dialog" aria-modal="true"><div class="bp"><img class="crown" src="img/ui/crown.webp" alt=""><div class="bprib"><span id="bp-t"></span></div><div class="lbl" id="bp-l"></div><div class="amt"><b id="bp-v"></b><span>P</span><i class="x2"><b>×2</b></i></div><div class="sum" id="bp-s"></div><button class="cta-gold go" id="bp-ok"></button><button class="no" id="bp-no"></button></div></div><div id="shade"></div><div id="sheet"><div class="sheet-h"><h2 id="sheet-t"></h2><span class="w" id="sheet-w"></span><button class="x" id="sheet-x" data-i18n-aria="close">✕</button></div><div class="sheet-b" id="sheet-b"></div></div>
 <script>
 // ---------- i18n: every on-screen string is a key in tools/game-page/i18n/<lang>.json ----------
 // Code calls $t(<key>, ...args) with {0}{1}… placeholders; no display text lives in the code (build.py fails on Hangul literals
@@ -2401,7 +2465,7 @@ async function tickGame(dt) {
   }
   if (!S || boardBusy || busy || drag.r || ev || !autoOn) return;
   // auto-clean is the idle helper: it waits while the player is touching, a panel/dialog is open or a guide is up
-  if (idleT < 4 || pull.on || shadeEl.classList.contains('open') || sheetEl.classList.contains('open') || $('cf').classList.contains('on') || $('ret').classList.contains('on') || $('coach').classList.contains('on')) return;
+  if (idleT < 4 || pull.on || shadeEl.classList.contains('open') || sheetEl.classList.contains('open') || $('cf').classList.contains('on') || $('bestpop').classList.contains('on') || $('ret').classList.contains('on') || $('coach').classList.contains('on')) return;
   autoClock -= dt;
   if (autoClock <= 0) {
     autoClock = Math.max(.8, (S.autoIntervalMs || 5000) / 1000);
@@ -2499,6 +2563,7 @@ window.onBack = () => {
   const on = id => { const e = $(id); return !!e && e.classList.contains('on'); };
   if (on('signing')) return true;
   if (on('cf')) { $('cf-no').click(); return true; }
+  if (on('bestpop')) { $('bp-no').click(); return true; }
   if (on('appd')) { $('appd-x').click(); return true; }
   if (on('chres')) { $('chres-ok').click(); return true; }
   if (on('ret')) { $('ret-ok').click(); return true; }
@@ -3146,14 +3211,18 @@ async function sheetAct(x) {
 }
 async function offerDouble(total) {
   if (chal) return;  // the challenge board is a side run: no ad offers on it
-  const m = await api('bm'); const ad = m.ads.find(a => a.id === 'BestDouble'); if (!ad || ad.left <= 0 || m.state.level < 20 || scrimEl.classList.contains('open') || $('cf').classList.contains('on')) return;
-  // a popup over a paused board: the dialog blocks swipes and auto-clean waits while it is open
+  const m = await api('bm'); const ad = m.ads.find(a => a.id === 'BestDouble');
+  if (!ad || ad.left <= 0 || m.state.level < 20 || scrimEl.classList.contains('open') || $('cf').classList.contains('on') || $('bestpop').classList.contains('on')) return;
+  // a celebration popup over a paused board: it blocks swipes and auto-clean waits while it is open
   const wasAuto = autoOn; autoOn = false;
-  const pr = choose($t('new_best'), `${$t('best_offer_what', fmtL(total))}<div class="price t-gold" style="margin-top:6px">+${fmtL(total)} P</div>`,
-    m.passActive ? $t('pass_perk') + $t('claim_x2') : $t('watch_ad_x2'), $t('no_thanks'));
-  $('cf-ico').innerHTML = '<rect x="3" y="5" width="18" height="13" rx="2"/><path d="M10 9l5 2.5-5 2.5zM8 21h8"/>';  // a screen with a play mark
-  const yes = await pr; autoOn = wasAuto;
-  if (!yes) return;
+  $('bp-t').textContent = $t('new_best'); $('bp-l').textContent = $t('this_chain_earned'); $('bp-v').textContent = '+' + fmtL(total);
+  $('bp-s').innerHTML = $t('best_offer_sum', `<b>${fmtL(total + Math.log10(2))} P</b>`);
+  $('bp-ok').innerHTML = m.passActive ? $t('pass_perk') + $t('claim_x2') : `<img src="img/ui/ad.webp" alt="">${$t('watch_ad_x2')}`;
+  $('bp-no').textContent = $t('no_thanks');
+  const pop = $('bestpop'); pop.classList.add('on'); sfx.unit(); buzz([10, 40, 18]);
+  const yes = await new Promise(res => { $('bp-ok').onclick = () => res(true); $('bp-no').onclick = () => res(false); });
+  pop.classList.remove('on'); autoOn = wasAuto;
+  if (!yes) { sfx.snap(); return; }
   if (!m.passActive && !(await fakeAd('BestDouble'))) return;
   const before = L(S.wallet); const o = await api('watchAd', { slot: 'BestDouble' }); if (o.ok) { addWallet(Lsub(L(o.state.wallet), before)); say2($t('best_2_2'), 300, 30); sfx.unit(); } applyState(o.state);
 }
@@ -3352,13 +3421,12 @@ function renderChal(b) {
   $('sheet-t').textContent = $t('daily_challenge'); $('sheet-w').textContent = '';
   const m = P.meta;
   const keys = Array.from({ length: m.keyCap }, (_, i) => `<span class="key ${i < m.keys ? 'on' : ''}">${KEY}</span>`).join('');
-  b.innerHTML = `<div class="chero"><span class="l">${$t('daily_challenge')}</span>
-      <div class="cdeck">${m.deck.map(a => `<span class="cdk">${ico(a.id, 0)}<em class="fit1">${a.name}</em></span>`).join('')}</div>
-      <div class="rule"><b class="fit1">${$t('60s_time_attack')}</b></div></div>
-    <div class="cols"><div><h4>${$t('my_best_2')}</h4><b class="cbest t-gold">${m.bestShort} P</b></div><div><h4>${$t('keys_left_today')}</h4><div class="keys">${keys}</div><span class="note fit1">${m.keyCap === 3 ? $t('keys_lv52') : $t('from_lv52_3_a_day')}</span></div></div>
-    <button class="btn big skin gold ${m.keys ? 'fx-shine' : ''}" id="chal-go" ${m.keys ? '' : 'disabled'}>${m.keys ? $t('start_1_keys') : $t('keys_tomorrow')}</button>
-    <div class="rwd"><span>${$t('on_completion', PIECE)}<b>×1</b></span><span>${$t('on_a_new_best', PIECE)}<b>×2</b></span></div>
-    <div id="rank-last" class="rank"></div><div class="h3">${$t('rank_week')} <span class="note">${$t('rank_resets')}</span></div><div id="rank-list" class="rank"><div class="note">${$t('loading')}</div></div>`;
+  b.innerHTML = `<div class="ch2"><div class="top"><img src="img/ui/clock.webp" alt=""><div><div class="k">${$t('daily_challenge')}</div><h3 class="fit1">${$t('60s_time_attack')}</h3><div class="sub">${$t('chal_same_board')}</div></div></div>
+      <div class="dk">${m.deck.map(a => `<span>${ico(a.id, 0)}<em>${a.name}</em></span>`).join('')}</div>
+      <div class="st"><div><h4>${$t('my_best_2')}</h4><b class="best">${m.bestShort} P</b></div><div><h4>${$t('keys_left_today')}</h4><div class="keys">${keys}</div><span class="note fit1">${m.keyCap === 3 ? $t('keys_lv52') : $t('from_lv52_3_a_day')}</span></div></div></div>
+    <button class="cta-gold ${m.keys ? 'fx-shine' : ''}" id="chal-go" ${m.keys ? '' : 'disabled'}>${m.keys ? $t('start_1_keys') : $t('keys_tomorrow')}</button>
+    <div class="ch2r"><div><img src="img/ui/gift.webp" alt=""><span>${$t('chal_done')}<b>${PIECE} ×1</b></span></div><div><img src="img/ui/rosette.webp" alt=""><span>${$t('chal_new_best')}<b>${PIECE} ×2</b></span></div></div>
+    <div id="rank-last" class="rank"></div><div class="ch2h"><img src="img/ui/crown.webp" alt="">${$t('rank_week')}<span class="note">${$t('rank_resets')}</span></div><div id="rank-list" class="rank"><div class="note">${$t('loading')}</div></div>`;
   const go = $('chal-go'); if (go) go.onclick = startChallenge;
   loadRank();
 }
