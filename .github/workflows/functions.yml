@@ -1,6 +1,6 @@
 name: Functions
 
-# Deploys Cloud Functions (functions/, Python: Kakao login, account deletion) and the Firestore rules.
+# Deploys Cloud Functions (functions/, Python: Kakao login, account deletion, weekly ranking settlement) and the Firestore rules.
 # The project id comes from the FIREBASE_SERVICE_ACCOUNT secret. No secret value is printed.
 on:
   push:
@@ -103,9 +103,14 @@ jobs:
 
       - name: Deploy functions
         if: steps.sa.outputs.ok == 'true'
+        shell: bash
         run: |
-          npx -y firebase-tools deploy --project "$PROJECT" --non-interactive --force \
-            --only functions:login,functions:deleteAccount
+          if ! npx -y firebase-tools deploy --project "$PROJECT" --non-interactive --force \
+            --only functions:login,functions:deleteAccount,functions:settleWeekly 2>&1 | tee fn.log; then
+            grep -iE "permission|denied|403|scheduler" fn.log | sort -u | head -8
+            echo "::error::Deploy failed. settleWeekly is a scheduled function: the deploy service account also needs the Cloud Scheduler Admin role."
+            exit 1
+          fi
 
       - name: Firestore rules (users/{uid} is the owner's only)
         if: steps.sa.outputs.ok == 'true'
