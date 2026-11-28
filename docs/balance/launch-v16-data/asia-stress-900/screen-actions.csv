@@ -1,0 +1,3118 @@
+profile,seed,input,action,item,count
+Free,1,Best,buyAssist,"과부하 깊이",747
+Free,1,Best,buyAssist,"넓은 알림창",284
+Free,1,Best,buyAssist,"샌드위치",749
+Free,1,Best,buyAssist,"와일드 알림",651
+Free,1,Best,buyEvent,"@모두 공지",102
+Free,1,Best,buyEvent,"단체 문자",91
+Free,1,Best,buyEvent,"방해 금지",102
+Free,1,Best,buyEvent,"생일 축하",102
+Free,1,Best,buyEvent,"알림훈련",102
+Free,1,Best,buyEvent,"앱스토어 세일",95
+Free,1,Best,buyEvent,"업데이트",102
+Free,1,Best,buyEvent,"인증번호",102
+Free,1,Best,buyEvent,"펌웨어 업데이트",83
+Free,1,Best,buyEvent,"행운 알림",70
+Free,1,Best,buyPro,"갤러리",67
+Free,1,Best,buyPro,"계산기",16
+Free,1,Best,buyPro,"그래브",8
+Free,1,Best,buyPro,"글린츠츠",26
+Free,1,Best,buyPro,"날씨",7
+Free,1,Best,buyPro,"너튜브",6
+Free,1,Best,buyPro,"넷플러그",10
+Free,1,Best,buyPro,"듀오링구",1
+Free,1,Best,buyPro,"라잉",2
+Free,1,Best,buyPro,"라자다다",6
+Free,1,Best,buyPro,"래딧",48
+Free,1,Best,buyPro,"링크드아웃",40
+Free,1,Best,buyPro,"마마고",82
+Free,1,Best,buyPro,"메롱",73
+Free,1,Best,buyPro,"메모",10
+Free,1,Best,buyPro,"메시지",82
+Free,1,Best,buyPro,"모모모",33
+Free,1,Best,buyPro,"배다른민족",35
+Free,1,Best,buyPro,"비고고",8
+Free,1,Best,buyPro,"설정",43
+Free,1,Best,buyPro,"손전등",3
+Free,1,Best,buyPro,"쇼피피",9
+Free,1,Best,buyPro,"스팟티파이",7
+Free,1,Best,buyPro,"시계",57
+Free,1,Best,buyPro,"아고다다",4
+Free,1,Best,buyPro,"아마좀",11
+Free,1,Best,buyPro,"에어방앤방",9
+Free,1,Best,buyPro,"연락처",80
+Free,1,Best,buyPro,"와이",5
+Free,1,Best,buyPro,"위잿",9
+Free,1,Best,buyPro,"음성 녹음",52
+Free,1,Best,buyPro,"인싸그램",3
+Free,1,Best,buyPro,"잘로로",77
+Free,1,Best,buyPro,"잡스트리트",17
+Free,1,Best,buyPro,"전화",83
+Free,1,Best,buyPro,"주움",34
+Free,1,Best,buyPro,"쥬욱스",14
+Free,1,Best,buyPro,"카메라",75
+Free,1,Best,buyPro,"컵컷",50
+Free,1,Best,buyPro,"코코아T",37
+Free,1,Best,buyPro,"코코아톡",1
+Free,1,Best,buyPro,"쿠빵",1
+Free,1,Best,buyPro,"텔레그림",3
+Free,1,Best,buyPro,"토스트",32
+Free,1,Best,buyPro,"트래블로까",11
+Free,1,Best,buyPro,"틱특",19
+Free,1,Best,buyPro,"핀트레스트",18
+Free,1,Best,claimBook,"10",1
+Free,1,Best,claimBook,"20",1
+Free,1,Best,claimBook,"30",1
+Free,1,Best,claimBook,"40",1
+Free,1,Best,claimBook,"50",1
+Free,1,Best,claimBook,"60",1
+Free,1,Best,claimMissions,"",80
+Free,1,Best,setCards,"AllHands|Birthday",13
+Free,1,Best,setCards,"AllHands|Birthday|Update",4
+Free,1,Best,setCards,"AllHands|Drill",35
+Free,1,Best,setCards,"AllHands|Drill|Lotto|Otp",10
+Free,1,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",22
+Free,1,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",38
+Free,1,Best,setCards,"AllHands|Drill|Otp",35
+Free,1,Best,setCards,"AllHands|Drill|Otp|Birthday",33
+Free,1,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",36
+Free,1,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",2
+Free,1,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",4
+Free,1,Best,setCards,"AllHands|Otp",16
+Free,1,Best,setCards,"AllHands|Otp|Birthday",2
+Free,1,Best,setCards,"Birthday",10
+Free,1,Best,setCards,"Birthday|Update",6
+Free,2,Best,buyAssist,"과부하 깊이",779
+Free,2,Best,buyAssist,"넓은 알림창",295
+Free,2,Best,buyAssist,"샌드위치",787
+Free,2,Best,buyAssist,"와일드 알림",693
+Free,2,Best,buyEvent,"@모두 공지",107
+Free,2,Best,buyEvent,"단체 문자",94
+Free,2,Best,buyEvent,"방해 금지",107
+Free,2,Best,buyEvent,"생일 축하",107
+Free,2,Best,buyEvent,"알림훈련",107
+Free,2,Best,buyEvent,"앱스토어 세일",102
+Free,2,Best,buyEvent,"업데이트",107
+Free,2,Best,buyEvent,"인증번호",107
+Free,2,Best,buyEvent,"펌웨어 업데이트",85
+Free,2,Best,buyEvent,"행운 알림",70
+Free,2,Best,buyPro,"갤러리",72
+Free,2,Best,buyPro,"계산기",19
+Free,2,Best,buyPro,"그래브",6
+Free,2,Best,buyPro,"글린츠츠",21
+Free,2,Best,buyPro,"날씨",8
+Free,2,Best,buyPro,"너튜브",6
+Free,2,Best,buyPro,"넷플러그",11
+Free,2,Best,buyPro,"듀오링구",2
+Free,2,Best,buyPro,"라잉",2
+Free,2,Best,buyPro,"라자다다",4
+Free,2,Best,buyPro,"래딧",54
+Free,2,Best,buyPro,"로빈훗훗",1
+Free,2,Best,buyPro,"링크드아웃",47
+Free,2,Best,buyPro,"마마고",80
+Free,2,Best,buyPro,"메롱",75
+Free,2,Best,buyPro,"메모",11
+Free,2,Best,buyPro,"메시지",85
+Free,2,Best,buyPro,"모모모",28
+Free,2,Best,buyPro,"배다른민족",36
+Free,2,Best,buyPro,"비고고",10
+Free,2,Best,buyPro,"설정",42
+Free,2,Best,buyPro,"손전등",4
+Free,2,Best,buyPro,"쇼피피",4
+Free,2,Best,buyPro,"스팟티파이",10
+Free,2,Best,buyPro,"시계",62
+Free,2,Best,buyPro,"아고다다",3
+Free,2,Best,buyPro,"아마좀",6
+Free,2,Best,buyPro,"에어방앤방",14
+Free,2,Best,buyPro,"연락처",85
+Free,2,Best,buyPro,"와이",6
+Free,2,Best,buyPro,"위잿",7
+Free,2,Best,buyPro,"음성 녹음",53
+Free,2,Best,buyPro,"인싸그램",1
+Free,2,Best,buyPro,"잘로로",75
+Free,2,Best,buyPro,"잡스트리트",16
+Free,2,Best,buyPro,"전화",85
+Free,2,Best,buyPro,"주움",46
+Free,2,Best,buyPro,"쥐메일",1
+Free,2,Best,buyPro,"쥬욱스",17
+Free,2,Best,buyPro,"카메라",81
+Free,2,Best,buyPro,"컵컷",59
+Free,2,Best,buyPro,"코코아T",40
+Free,2,Best,buyPro,"코코아톡",4
+Free,2,Best,buyPro,"텔레그림",1
+Free,2,Best,buyPro,"토스트",40
+Free,2,Best,buyPro,"트래블로까",13
+Free,2,Best,buyPro,"틱특",17
+Free,2,Best,buyPro,"핀트레스트",19
+Free,2,Best,claimBook,"10",1
+Free,2,Best,claimBook,"20",1
+Free,2,Best,claimBook,"30",1
+Free,2,Best,claimBook,"40",1
+Free,2,Best,claimBook,"50",1
+Free,2,Best,claimBook,"60",1
+Free,2,Best,claimMissions,"",83
+Free,2,Best,setCards,"AllHands|Birthday",17
+Free,2,Best,setCards,"AllHands|Birthday|Update",2
+Free,2,Best,setCards,"AllHands|Drill",34
+Free,2,Best,setCards,"AllHands|Drill|Lotto|Otp",6
+Free,2,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",22
+Free,2,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",42
+Free,2,Best,setCards,"AllHands|Drill|Otp",34
+Free,2,Best,setCards,"AllHands|Drill|Otp|Birthday",37
+Free,2,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",42
+Free,2,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",3
+Free,2,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",5
+Free,2,Best,setCards,"AllHands|Otp",15
+Free,2,Best,setCards,"AllHands|Otp|Birthday",2
+Free,2,Best,setCards,"Birthday",10
+Free,2,Best,setCards,"Birthday|Update",5
+Free,3,Best,buyAssist,"과부하 깊이",818
+Free,3,Best,buyAssist,"넓은 알림창",309
+Free,3,Best,buyAssist,"샌드위치",824
+Free,3,Best,buyAssist,"와일드 알림",724
+Free,3,Best,buyEvent,"@모두 공지",112
+Free,3,Best,buyEvent,"단체 문자",101
+Free,3,Best,buyEvent,"방해 금지",112
+Free,3,Best,buyEvent,"생일 축하",112
+Free,3,Best,buyEvent,"알림훈련",112
+Free,3,Best,buyEvent,"앱스토어 세일",106
+Free,3,Best,buyEvent,"업데이트",112
+Free,3,Best,buyEvent,"인증번호",112
+Free,3,Best,buyEvent,"펌웨어 업데이트",90
+Free,3,Best,buyEvent,"행운 알림",76
+Free,3,Best,buyPro,"갤러리",78
+Free,3,Best,buyPro,"계산기",23
+Free,3,Best,buyPro,"그래브",9
+Free,3,Best,buyPro,"글린츠츠",25
+Free,3,Best,buyPro,"날씨",6
+Free,3,Best,buyPro,"너튜브",11
+Free,3,Best,buyPro,"넷플러그",13
+Free,3,Best,buyPro,"듀오링구",1
+Free,3,Best,buyPro,"라잉",1
+Free,3,Best,buyPro,"라자다다",4
+Free,3,Best,buyPro,"래딧",59
+Free,3,Best,buyPro,"링크드아웃",53
+Free,3,Best,buyPro,"마마고",86
+Free,3,Best,buyPro,"메롱",81
+Free,3,Best,buyPro,"메모",12
+Free,3,Best,buyPro,"메시지",90
+Free,3,Best,buyPro,"모모모",29
+Free,3,Best,buyPro,"미챗챗",1
+Free,3,Best,buyPro,"배다른민족",37
+Free,3,Best,buyPro,"비고고",8
+Free,3,Best,buyPro,"설정",46
+Free,3,Best,buyPro,"손전등",6
+Free,3,Best,buyPro,"쇼피피",8
+Free,3,Best,buyPro,"스팟티파이",10
+Free,3,Best,buyPro,"시계",65
+Free,3,Best,buyPro,"아고다다",3
+Free,3,Best,buyPro,"아마좀",18
+Free,3,Best,buyPro,"에어방앤방",15
+Free,3,Best,buyPro,"연락처",85
+Free,3,Best,buyPro,"와이",9
+Free,3,Best,buyPro,"우바",2
+Free,3,Best,buyPro,"위잿",5
+Free,3,Best,buyPro,"음성 녹음",55
+Free,3,Best,buyPro,"인싸그램",4
+Free,3,Best,buyPro,"잘로로",80
+Free,3,Best,buyPro,"잡스트리트",19
+Free,3,Best,buyPro,"전화",91
+Free,3,Best,buyPro,"주움",51
+Free,3,Best,buyPro,"쥐메일",1
+Free,3,Best,buyPro,"쥬욱스",14
+Free,3,Best,buyPro,"카메라",87
+Free,3,Best,buyPro,"컵컷",69
+Free,3,Best,buyPro,"코코아T",39
+Free,3,Best,buyPro,"코코아톡",5
+Free,3,Best,buyPro,"큐글맵스",1
+Free,3,Best,buyPro,"텔레그림",11
+Free,3,Best,buyPro,"토스트",32
+Free,3,Best,buyPro,"튄더",3
+Free,3,Best,buyPro,"트래블로까",20
+Free,3,Best,buyPro,"틱특",21
+Free,3,Best,buyPro,"핀트레스트",17
+Free,3,Best,claimBook,"10",1
+Free,3,Best,claimBook,"20",1
+Free,3,Best,claimBook,"30",1
+Free,3,Best,claimBook,"40",1
+Free,3,Best,claimBook,"50",1
+Free,3,Best,claimBook,"60",1
+Free,3,Best,claimMissions,"",82
+Free,3,Best,setCards,"AllHands|Birthday",16
+Free,3,Best,setCards,"AllHands|Birthday|Update",5
+Free,3,Best,setCards,"AllHands|Drill",36
+Free,3,Best,setCards,"AllHands|Drill|Lotto|Otp",9
+Free,3,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",20
+Free,3,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",47
+Free,3,Best,setCards,"AllHands|Drill|Otp",38
+Free,3,Best,setCards,"AllHands|Drill|Otp|Birthday",34
+Free,3,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",41
+Free,3,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",2
+Free,3,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",7
+Free,3,Best,setCards,"AllHands|Otp",17
+Free,3,Best,setCards,"AllHands|Otp|Birthday",1
+Free,3,Best,setCards,"Birthday",10
+Free,3,Best,setCards,"Birthday|Update",6
+Free,4,Best,buyAssist,"과부하 깊이",749
+Free,4,Best,buyAssist,"넓은 알림창",283
+Free,4,Best,buyAssist,"샌드위치",756
+Free,4,Best,buyAssist,"와일드 알림",658
+Free,4,Best,buyEvent,"@모두 공지",103
+Free,4,Best,buyEvent,"단체 문자",91
+Free,4,Best,buyEvent,"방해 금지",103
+Free,4,Best,buyEvent,"생일 축하",103
+Free,4,Best,buyEvent,"알림훈련",103
+Free,4,Best,buyEvent,"앱스토어 세일",97
+Free,4,Best,buyEvent,"업데이트",103
+Free,4,Best,buyEvent,"인증번호",103
+Free,4,Best,buyEvent,"펌웨어 업데이트",83
+Free,4,Best,buyEvent,"행운 알림",70
+Free,4,Best,buyPro,"갤러리",73
+Free,4,Best,buyPro,"계산기",16
+Free,4,Best,buyPro,"그래브",9
+Free,4,Best,buyPro,"글린츠츠",36
+Free,4,Best,buyPro,"날씨",7
+Free,4,Best,buyPro,"너튜브",6
+Free,4,Best,buyPro,"넷플러그",8
+Free,4,Best,buyPro,"듀오링구",3
+Free,4,Best,buyPro,"라잉",9
+Free,4,Best,buyPro,"라자다다",5
+Free,4,Best,buyPro,"래딧",54
+Free,4,Best,buyPro,"로빈훗훗",1
+Free,4,Best,buyPro,"링크드아웃",39
+Free,4,Best,buyPro,"마마고",77
+Free,4,Best,buyPro,"메롱",77
+Free,4,Best,buyPro,"메모",11
+Free,4,Best,buyPro,"메시지",79
+Free,4,Best,buyPro,"모모모",32
+Free,4,Best,buyPro,"배다른민족",25
+Free,4,Best,buyPro,"비고고",14
+Free,4,Best,buyPro,"설정",42
+Free,4,Best,buyPro,"손전등",3
+Free,4,Best,buyPro,"쇼피피",8
+Free,4,Best,buyPro,"스팟티파이",7
+Free,4,Best,buyPro,"시계",57
+Free,4,Best,buyPro,"아고다다",1
+Free,4,Best,buyPro,"아마좀",8
+Free,4,Best,buyPro,"에어방앤방",12
+Free,4,Best,buyPro,"연락처",80
+Free,4,Best,buyPro,"와이",2
+Free,4,Best,buyPro,"위잿",7
+Free,4,Best,buyPro,"음성 녹음",51
+Free,4,Best,buyPro,"인싸그램",1
+Free,4,Best,buyPro,"잘로로",73
+Free,4,Best,buyPro,"잡스트리트",17
+Free,4,Best,buyPro,"전화",80
+Free,4,Best,buyPro,"주움",35
+Free,4,Best,buyPro,"쥬욱스",21
+Free,4,Best,buyPro,"카메라",79
+Free,4,Best,buyPro,"컵컷",59
+Free,4,Best,buyPro,"코코아T",28
+Free,4,Best,buyPro,"코코아톡",11
+Free,4,Best,buyPro,"텔레그림",2
+Free,4,Best,buyPro,"토스트",31
+Free,4,Best,buyPro,"트래블로까",13
+Free,4,Best,buyPro,"틱특",17
+Free,4,Best,buyPro,"핀트레스트",20
+Free,4,Best,claimBook,"10",1
+Free,4,Best,claimBook,"20",1
+Free,4,Best,claimBook,"30",1
+Free,4,Best,claimBook,"40",1
+Free,4,Best,claimBook,"50",1
+Free,4,Best,claimBook,"60",1
+Free,4,Best,claimMissions,"",80
+Free,4,Best,setCards,"AllHands|Birthday",18
+Free,4,Best,setCards,"AllHands|Birthday|Update",4
+Free,4,Best,setCards,"AllHands|Drill",38
+Free,4,Best,setCards,"AllHands|Drill|Lotto|Otp",11
+Free,4,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",23
+Free,4,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",36
+Free,4,Best,setCards,"AllHands|Drill|Otp",34
+Free,4,Best,setCards,"AllHands|Drill|Otp|Birthday",38
+Free,4,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",40
+Free,4,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",5
+Free,4,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",4
+Free,4,Best,setCards,"AllHands|Otp",14
+Free,4,Best,setCards,"Birthday",11
+Free,4,Best,setCards,"Birthday|Update",4
+Free,5,Best,buyAssist,"과부하 깊이",806
+Free,5,Best,buyAssist,"넓은 알림창",305
+Free,5,Best,buyAssist,"샌드위치",815
+Free,5,Best,buyAssist,"와일드 알림",712
+Free,5,Best,buyEvent,"@모두 공지",111
+Free,5,Best,buyEvent,"단체 문자",98
+Free,5,Best,buyEvent,"방해 금지",111
+Free,5,Best,buyEvent,"생일 축하",111
+Free,5,Best,buyEvent,"알림훈련",111
+Free,5,Best,buyEvent,"앱스토어 세일",105
+Free,5,Best,buyEvent,"업데이트",111
+Free,5,Best,buyEvent,"인증번호",111
+Free,5,Best,buyEvent,"펌웨어 업데이트",88
+Free,5,Best,buyEvent,"행운 알림",74
+Free,5,Best,buyPro,"갤러리",79
+Free,5,Best,buyPro,"계산기",22
+Free,5,Best,buyPro,"그래브",8
+Free,5,Best,buyPro,"글린츠츠",27
+Free,5,Best,buyPro,"날씨",8
+Free,5,Best,buyPro,"너튜브",10
+Free,5,Best,buyPro,"넷플러그",13
+Free,5,Best,buyPro,"라자다다",3
+Free,5,Best,buyPro,"래딧",56
+Free,5,Best,buyPro,"링크드아웃",41
+Free,5,Best,buyPro,"마마고",81
+Free,5,Best,buyPro,"메롱",80
+Free,5,Best,buyPro,"메모",10
+Free,5,Best,buyPro,"메시지",89
+Free,5,Best,buyPro,"모모모",29
+Free,5,Best,buyPro,"배다른민족",25
+Free,5,Best,buyPro,"비고고",10
+Free,5,Best,buyPro,"설정",55
+Free,5,Best,buyPro,"손전등",5
+Free,5,Best,buyPro,"쇼피피",12
+Free,5,Best,buyPro,"스팟티파이",8
+Free,5,Best,buyPro,"시계",67
+Free,5,Best,buyPro,"아고다다",2
+Free,5,Best,buyPro,"아마좀",22
+Free,5,Best,buyPro,"에어방앤방",20
+Free,5,Best,buyPro,"연락처",87
+Free,5,Best,buyPro,"와이",6
+Free,5,Best,buyPro,"우바",2
+Free,5,Best,buyPro,"위잿",7
+Free,5,Best,buyPro,"음성 녹음",54
+Free,5,Best,buyPro,"인싸그램",2
+Free,5,Best,buyPro,"잘로로",83
+Free,5,Best,buyPro,"잡스트리트",13
+Free,5,Best,buyPro,"전화",90
+Free,5,Best,buyPro,"주움",42
+Free,5,Best,buyPro,"쥬욱스",14
+Free,5,Best,buyPro,"카메라",84
+Free,5,Best,buyPro,"컵컷",65
+Free,5,Best,buyPro,"코코아T",26
+Free,5,Best,buyPro,"코코아톡",6
+Free,5,Best,buyPro,"큐글플레이",3
+Free,5,Best,buyPro,"텔레그림",13
+Free,5,Best,buyPro,"토스트",38
+Free,5,Best,buyPro,"트래블로까",8
+Free,5,Best,buyPro,"틱특",24
+Free,5,Best,buyPro,"핀트레스트",13
+Free,5,Best,claimBook,"10",1
+Free,5,Best,claimBook,"20",1
+Free,5,Best,claimBook,"30",1
+Free,5,Best,claimBook,"40",1
+Free,5,Best,claimBook,"50",1
+Free,5,Best,claimBook,"60",1
+Free,5,Best,claimMissions,"",84
+Free,5,Best,setCards,"AllHands|Birthday",16
+Free,5,Best,setCards,"AllHands|Birthday|Update",5
+Free,5,Best,setCards,"AllHands|Drill",36
+Free,5,Best,setCards,"AllHands|Drill|Lotto|Otp",9
+Free,5,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",23
+Free,5,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",42
+Free,5,Best,setCards,"AllHands|Drill|Otp",35
+Free,5,Best,setCards,"AllHands|Drill|Otp|Birthday",33
+Free,5,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",40
+Free,5,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",2
+Free,5,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",6
+Free,5,Best,setCards,"AllHands|Otp",16
+Free,5,Best,setCards,"AllHands|Otp|Birthday",3
+Free,5,Best,setCards,"Birthday",10
+Free,5,Best,setCards,"Birthday|Update",5
+Free,6,Best,buyAssist,"과부하 깊이",828
+Free,6,Best,buyAssist,"넓은 알림창",312
+Free,6,Best,buyAssist,"샌드위치",825
+Free,6,Best,buyAssist,"와일드 알림",725
+Free,6,Best,buyEvent,"@모두 공지",112
+Free,6,Best,buyEvent,"단체 문자",101
+Free,6,Best,buyEvent,"방해 금지",112
+Free,6,Best,buyEvent,"생일 축하",112
+Free,6,Best,buyEvent,"알림훈련",112
+Free,6,Best,buyEvent,"앱스토어 세일",106
+Free,6,Best,buyEvent,"업데이트",112
+Free,6,Best,buyEvent,"인증번호",112
+Free,6,Best,buyEvent,"펌웨어 업데이트",94
+Free,6,Best,buyEvent,"행운 알림",77
+Free,6,Best,buyPro,"갤러리",75
+Free,6,Best,buyPro,"계산기",24
+Free,6,Best,buyPro,"그래브",4
+Free,6,Best,buyPro,"글린츠츠",25
+Free,6,Best,buyPro,"날씨",9
+Free,6,Best,buyPro,"너튜브",11
+Free,6,Best,buyPro,"넷플러그",15
+Free,6,Best,buyPro,"라잉",4
+Free,6,Best,buyPro,"라자다다",3
+Free,6,Best,buyPro,"래딧",64
+Free,6,Best,buyPro,"링크드아웃",55
+Free,6,Best,buyPro,"마마고",87
+Free,6,Best,buyPro,"메롱",80
+Free,6,Best,buyPro,"메모",11
+Free,6,Best,buyPro,"메시지",90
+Free,6,Best,buyPro,"모모모",37
+Free,6,Best,buyPro,"미챗챗",1
+Free,6,Best,buyPro,"배다른민족",45
+Free,6,Best,buyPro,"비고고",10
+Free,6,Best,buyPro,"설정",49
+Free,6,Best,buyPro,"손전등",5
+Free,6,Best,buyPro,"쇼피피",7
+Free,6,Best,buyPro,"스팟티파이",13
+Free,6,Best,buyPro,"시계",69
+Free,6,Best,buyPro,"아고다다",3
+Free,6,Best,buyPro,"아마좀",20
+Free,6,Best,buyPro,"에어방앤방",6
+Free,6,Best,buyPro,"연락처",89
+Free,6,Best,buyPro,"와이",9
+Free,6,Best,buyPro,"위잿",17
+Free,6,Best,buyPro,"음성 녹음",60
+Free,6,Best,buyPro,"인싸그램",6
+Free,6,Best,buyPro,"잘로로",84
+Free,6,Best,buyPro,"잡스트리트",19
+Free,6,Best,buyPro,"전화",90
+Free,6,Best,buyPro,"주움",49
+Free,6,Best,buyPro,"쥐메일",1
+Free,6,Best,buyPro,"쥬욱스",19
+Free,6,Best,buyPro,"카메라",85
+Free,6,Best,buyPro,"컵컷",56
+Free,6,Best,buyPro,"코코아T",48
+Free,6,Best,buyPro,"코코아톡",4
+Free,6,Best,buyPro,"쿠빵",2
+Free,6,Best,buyPro,"텔레그림",12
+Free,6,Best,buyPro,"토스트",27
+Free,6,Best,buyPro,"튄더",2
+Free,6,Best,buyPro,"트래블로까",25
+Free,6,Best,buyPro,"틱특",10
+Free,6,Best,buyPro,"핀트레스트",30
+Free,6,Best,claimBook,"10",1
+Free,6,Best,claimBook,"20",1
+Free,6,Best,claimBook,"30",1
+Free,6,Best,claimBook,"40",1
+Free,6,Best,claimBook,"50",1
+Free,6,Best,claimBook,"60",1
+Free,6,Best,claimMissions,"",82
+Free,6,Best,setCards,"AllHands|Birthday",15
+Free,6,Best,setCards,"AllHands|Birthday|Update",5
+Free,6,Best,setCards,"AllHands|Drill",37
+Free,6,Best,setCards,"AllHands|Drill|Lotto|Otp",10
+Free,6,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",21
+Free,6,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",46
+Free,6,Best,setCards,"AllHands|Drill|Otp",36
+Free,6,Best,setCards,"AllHands|Drill|Otp|Birthday",34
+Free,6,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",39
+Free,6,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",1
+Free,6,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",5
+Free,6,Best,setCards,"AllHands|Otp",15
+Free,6,Best,setCards,"AllHands|Otp|Birthday",2
+Free,6,Best,setCards,"Birthday",9
+Free,6,Best,setCards,"Birthday|Update",5
+Free,7,Best,buyAssist,"과부하 깊이",809
+Free,7,Best,buyAssist,"넓은 알림창",306
+Free,7,Best,buyAssist,"샌드위치",813
+Free,7,Best,buyAssist,"와일드 알림",715
+Free,7,Best,buyEvent,"@모두 공지",111
+Free,7,Best,buyEvent,"단체 문자",99
+Free,7,Best,buyEvent,"방해 금지",111
+Free,7,Best,buyEvent,"생일 축하",111
+Free,7,Best,buyEvent,"알림훈련",111
+Free,7,Best,buyEvent,"앱스토어 세일",106
+Free,7,Best,buyEvent,"업데이트",111
+Free,7,Best,buyEvent,"인증번호",111
+Free,7,Best,buyEvent,"펌웨어 업데이트",89
+Free,7,Best,buyEvent,"행운 알림",75
+Free,7,Best,buyPro,"갤러리",72
+Free,7,Best,buyPro,"계산기",27
+Free,7,Best,buyPro,"그래브",11
+Free,7,Best,buyPro,"글린츠츠",21
+Free,7,Best,buyPro,"날씨",10
+Free,7,Best,buyPro,"너튜브",11
+Free,7,Best,buyPro,"넷플러그",17
+Free,7,Best,buyPro,"듀오링구",1
+Free,7,Best,buyPro,"라잉",9
+Free,7,Best,buyPro,"라자다다",2
+Free,7,Best,buyPro,"래딧",51
+Free,7,Best,buyPro,"링크드아웃",45
+Free,7,Best,buyPro,"마마고",84
+Free,7,Best,buyPro,"메롱",79
+Free,7,Best,buyPro,"메모",14
+Free,7,Best,buyPro,"메시지",87
+Free,7,Best,buyPro,"모모모",35
+Free,7,Best,buyPro,"미챗챗",1
+Free,7,Best,buyPro,"배다른민족",28
+Free,7,Best,buyPro,"비고고",9
+Free,7,Best,buyPro,"설정",49
+Free,7,Best,buyPro,"손전등",6
+Free,7,Best,buyPro,"쇼피피",10
+Free,7,Best,buyPro,"스팟티파이",14
+Free,7,Best,buyPro,"시계",72
+Free,7,Best,buyPro,"아고다다",7
+Free,7,Best,buyPro,"아마좀",16
+Free,7,Best,buyPro,"에어방앤방",12
+Free,7,Best,buyPro,"연락처",86
+Free,7,Best,buyPro,"와이",2
+Free,7,Best,buyPro,"우바",1
+Free,7,Best,buyPro,"위잿",10
+Free,7,Best,buyPro,"음성 녹음",56
+Free,7,Best,buyPro,"인싸그램",5
+Free,7,Best,buyPro,"잘로로",80
+Free,7,Best,buyPro,"잡스트리트",18
+Free,7,Best,buyPro,"전화",88
+Free,7,Best,buyPro,"주움",45
+Free,7,Best,buyPro,"쥐메일",1
+Free,7,Best,buyPro,"쥬욱스",14
+Free,7,Best,buyPro,"카메라",80
+Free,7,Best,buyPro,"컵컷",61
+Free,7,Best,buyPro,"코코아T",31
+Free,7,Best,buyPro,"코코아톡",11
+Free,7,Best,buyPro,"텔레그림",12
+Free,7,Best,buyPro,"토스트",31
+Free,7,Best,buyPro,"트래블로까",14
+Free,7,Best,buyPro,"틱특",23
+Free,7,Best,buyPro,"핀트레스트",15
+Free,7,Best,claimBook,"10",1
+Free,7,Best,claimBook,"20",1
+Free,7,Best,claimBook,"30",1
+Free,7,Best,claimBook,"40",1
+Free,7,Best,claimBook,"50",1
+Free,7,Best,claimBook,"60",1
+Free,7,Best,claimMissions,"",82
+Free,7,Best,setCards,"AllHands|Birthday",18
+Free,7,Best,setCards,"AllHands|Birthday|Update",6
+Free,7,Best,setCards,"AllHands|Drill",35
+Free,7,Best,setCards,"AllHands|Drill|Lotto|Otp",8
+Free,7,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",20
+Free,7,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",47
+Free,7,Best,setCards,"AllHands|Drill|Otp",37
+Free,7,Best,setCards,"AllHands|Drill|Otp|Birthday",29
+Free,7,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",39
+Free,7,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",5
+Free,7,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",1
+Free,7,Best,setCards,"AllHands|Otp",18
+Free,7,Best,setCards,"AllHands|Otp|Birthday",2
+Free,7,Best,setCards,"Birthday",7
+Free,7,Best,setCards,"Birthday|Update",8
+Free,8,Best,buyAssist,"과부하 깊이",801
+Free,8,Best,buyAssist,"넓은 알림창",305
+Free,8,Best,buyAssist,"샌드위치",807
+Free,8,Best,buyAssist,"와일드 알림",705
+Free,8,Best,buyEvent,"@모두 공지",110
+Free,8,Best,buyEvent,"단체 문자",98
+Free,8,Best,buyEvent,"방해 금지",110
+Free,8,Best,buyEvent,"생일 축하",110
+Free,8,Best,buyEvent,"알림훈련",110
+Free,8,Best,buyEvent,"앱스토어 세일",103
+Free,8,Best,buyEvent,"업데이트",110
+Free,8,Best,buyEvent,"인증번호",110
+Free,8,Best,buyEvent,"펌웨어 업데이트",89
+Free,8,Best,buyEvent,"행운 알림",73
+Free,8,Best,buyPro,"갤러리",73
+Free,8,Best,buyPro,"계산기",22
+Free,8,Best,buyPro,"그래브",4
+Free,8,Best,buyPro,"글린츠츠",21
+Free,8,Best,buyPro,"날씨",7
+Free,8,Best,buyPro,"너튜브",9
+Free,8,Best,buyPro,"넷플러그",14
+Free,8,Best,buyPro,"듀오링구",2
+Free,8,Best,buyPro,"라잉",9
+Free,8,Best,buyPro,"라자다다",2
+Free,8,Best,buyPro,"래딧",51
+Free,8,Best,buyPro,"로빈훗훗",1
+Free,8,Best,buyPro,"링크드아웃",40
+Free,8,Best,buyPro,"마마고",82
+Free,8,Best,buyPro,"메롱",78
+Free,8,Best,buyPro,"메모",14
+Free,8,Best,buyPro,"메시지",86
+Free,8,Best,buyPro,"모모모",39
+Free,8,Best,buyPro,"미챗챗",1
+Free,8,Best,buyPro,"배다른민족",33
+Free,8,Best,buyPro,"비고고",12
+Free,8,Best,buyPro,"설정",54
+Free,8,Best,buyPro,"손전등",5
+Free,8,Best,buyPro,"쇼피피",9
+Free,8,Best,buyPro,"스팟티파이",14
+Free,8,Best,buyPro,"시계",70
+Free,8,Best,buyPro,"아고다다",4
+Free,8,Best,buyPro,"아마좀",22
+Free,8,Best,buyPro,"에어방앤방",16
+Free,8,Best,buyPro,"연락처",86
+Free,8,Best,buyPro,"와이",6
+Free,8,Best,buyPro,"우바",1
+Free,8,Best,buyPro,"위잿",10
+Free,8,Best,buyPro,"음성 녹음",58
+Free,8,Best,buyPro,"인싸그램",4
+Free,8,Best,buyPro,"잘로로",81
+Free,8,Best,buyPro,"잡스트리트",15
+Free,8,Best,buyPro,"전화",87
+Free,8,Best,buyPro,"주움",42
+Free,8,Best,buyPro,"쥬욱스",14
+Free,8,Best,buyPro,"카메라",83
+Free,8,Best,buyPro,"컵컷",64
+Free,8,Best,buyPro,"코코아T",35
+Free,8,Best,buyPro,"코코아톡",13
+Free,8,Best,buyPro,"쿠빵",1
+Free,8,Best,buyPro,"텔레그림",12
+Free,8,Best,buyPro,"토스트",31
+Free,8,Best,buyPro,"트래블로까",15
+Free,8,Best,buyPro,"틱특",21
+Free,8,Best,buyPro,"핀트레스트",18
+Free,8,Best,claimBook,"10",1
+Free,8,Best,claimBook,"20",1
+Free,8,Best,claimBook,"30",1
+Free,8,Best,claimBook,"40",1
+Free,8,Best,claimBook,"50",1
+Free,8,Best,claimBook,"60",1
+Free,8,Best,claimMissions,"",82
+Free,8,Best,setCards,"AllHands|Birthday",15
+Free,8,Best,setCards,"AllHands|Birthday|Update",6
+Free,8,Best,setCards,"AllHands|Drill",36
+Free,8,Best,setCards,"AllHands|Drill|Lotto|Otp",8
+Free,8,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",21
+Free,8,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",44
+Free,8,Best,setCards,"AllHands|Drill|Otp",37
+Free,8,Best,setCards,"AllHands|Drill|Otp|Birthday",31
+Free,8,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",42
+Free,8,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",4
+Free,8,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",3
+Free,8,Best,setCards,"AllHands|Otp",17
+Free,8,Best,setCards,"AllHands|Otp|Birthday",1
+Free,8,Best,setCards,"Birthday",12
+Free,8,Best,setCards,"Birthday|Update",5
+Ads,1,Best,buyAssist,"과부하 깊이",542
+Ads,1,Best,buyAssist,"넓은 알림창",211
+Ads,1,Best,buyAssist,"샌드위치",557
+Ads,1,Best,buyAssist,"와일드 알림",473
+Ads,1,Best,buyEvent,"@모두 공지",77
+Ads,1,Best,buyEvent,"단체 문자",67
+Ads,1,Best,buyEvent,"방해 금지",77
+Ads,1,Best,buyEvent,"생일 축하",77
+Ads,1,Best,buyEvent,"알림훈련",77
+Ads,1,Best,buyEvent,"앱스토어 세일",73
+Ads,1,Best,buyEvent,"업데이트",77
+Ads,1,Best,buyEvent,"인증번호",77
+Ads,1,Best,buyEvent,"펌웨어 업데이트",61
+Ads,1,Best,buyEvent,"행운 알림",45
+Ads,1,Best,buyPro,"갤러리",48
+Ads,1,Best,buyPro,"계산기",3
+Ads,1,Best,buyPro,"그래브",4
+Ads,1,Best,buyPro,"글린츠츠",22
+Ads,1,Best,buyPro,"날씨",2
+Ads,1,Best,buyPro,"넷플러그",3
+Ads,1,Best,buyPro,"듀오링구",1
+Ads,1,Best,buyPro,"래딧",32
+Ads,1,Best,buyPro,"로빈훗훗",1
+Ads,1,Best,buyPro,"링크드아웃",28
+Ads,1,Best,buyPro,"마마고",56
+Ads,1,Best,buyPro,"메롱",55
+Ads,1,Best,buyPro,"메모",8
+Ads,1,Best,buyPro,"메시지",59
+Ads,1,Best,buyPro,"모모모",25
+Ads,1,Best,buyPro,"배다른민족",7
+Ads,1,Best,buyPro,"비고고",9
+Ads,1,Best,buyPro,"설정",34
+Ads,1,Best,buyPro,"쇼피피",1
+Ads,1,Best,buyPro,"스팟티파이",2
+Ads,1,Best,buyPro,"시계",40
+Ads,1,Best,buyPro,"아고다다",2
+Ads,1,Best,buyPro,"아마좀",6
+Ads,1,Best,buyPro,"에어방앤방",10
+Ads,1,Best,buyPro,"연락처",58
+Ads,1,Best,buyPro,"와이",5
+Ads,1,Best,buyPro,"위잿",1
+Ads,1,Best,buyPro,"음성 녹음",33
+Ads,1,Best,buyPro,"잘로로",54
+Ads,1,Best,buyPro,"잡스트리트",4
+Ads,1,Best,buyPro,"전화",59
+Ads,1,Best,buyPro,"주움",21
+Ads,1,Best,buyPro,"쥬욱스",3
+Ads,1,Best,buyPro,"카메라",55
+Ads,1,Best,buyPro,"컵컷",46
+Ads,1,Best,buyPro,"코코아T",9
+Ads,1,Best,buyPro,"코코아톡",1
+Ads,1,Best,buyPro,"텔레그림",2
+Ads,1,Best,buyPro,"토스트",16
+Ads,1,Best,buyPro,"튄더",2
+Ads,1,Best,buyPro,"트래블로까",9
+Ads,1,Best,buyPro,"틱특",12
+Ads,1,Best,buyPro,"핀트레스트",7
+Ads,1,Best,claimBook,"10",1
+Ads,1,Best,claimBook,"20",1
+Ads,1,Best,claimBook,"30",1
+Ads,1,Best,claimBook,"40",1
+Ads,1,Best,claimBook,"50",1
+Ads,1,Best,claimBook,"60",1
+Ads,1,Best,claimMissions,"",48
+Ads,1,Best,setCards,"AllHands|Birthday",15
+Ads,1,Best,setCards,"AllHands|Birthday|Update",2
+Ads,1,Best,setCards,"AllHands|Drill",37
+Ads,1,Best,setCards,"AllHands|Drill|Lotto|Otp",10
+Ads,1,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",19
+Ads,1,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",16
+Ads,1,Best,setCards,"AllHands|Drill|Otp",30
+Ads,1,Best,setCards,"AllHands|Drill|Otp|Birthday",25
+Ads,1,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",27
+Ads,1,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",2
+Ads,1,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",1
+Ads,1,Best,setCards,"AllHands|Otp",17
+Ads,1,Best,setCards,"AllHands|Otp|Birthday",1
+Ads,1,Best,setCards,"Birthday",11
+Ads,1,Best,setCards,"Birthday|Update",6
+Ads,2,Best,buyAssist,"과부하 깊이",537
+Ads,2,Best,buyAssist,"넓은 알림창",210
+Ads,2,Best,buyAssist,"샌드위치",557
+Ads,2,Best,buyAssist,"와일드 알림",470
+Ads,2,Best,buyEvent,"@모두 공지",77
+Ads,2,Best,buyEvent,"단체 문자",66
+Ads,2,Best,buyEvent,"방해 금지",77
+Ads,2,Best,buyEvent,"생일 축하",77
+Ads,2,Best,buyEvent,"알림훈련",77
+Ads,2,Best,buyEvent,"앱스토어 세일",72
+Ads,2,Best,buyEvent,"업데이트",77
+Ads,2,Best,buyEvent,"인증번호",77
+Ads,2,Best,buyEvent,"펌웨어 업데이트",60
+Ads,2,Best,buyEvent,"행운 알림",45
+Ads,2,Best,buyPro,"갤러리",45
+Ads,2,Best,buyPro,"계산기",2
+Ads,2,Best,buyPro,"그래브",1
+Ads,2,Best,buyPro,"글린츠츠",16
+Ads,2,Best,buyPro,"날씨",2
+Ads,2,Best,buyPro,"넷플러그",3
+Ads,2,Best,buyPro,"라잉",2
+Ads,2,Best,buyPro,"라자다다",1
+Ads,2,Best,buyPro,"래딧",33
+Ads,2,Best,buyPro,"링크드아웃",26
+Ads,2,Best,buyPro,"마마고",57
+Ads,2,Best,buyPro,"메롱",50
+Ads,2,Best,buyPro,"메모",4
+Ads,2,Best,buyPro,"메시지",58
+Ads,2,Best,buyPro,"모모모",24
+Ads,2,Best,buyPro,"배다른민족",19
+Ads,2,Best,buyPro,"비고고",4
+Ads,2,Best,buyPro,"설정",30
+Ads,2,Best,buyPro,"손전등",1
+Ads,2,Best,buyPro,"쇼피피",1
+Ads,2,Best,buyPro,"스팟티파이",4
+Ads,2,Best,buyPro,"시계",42
+Ads,2,Best,buyPro,"아마좀",3
+Ads,2,Best,buyPro,"에어방앤방",13
+Ads,2,Best,buyPro,"연락처",59
+Ads,2,Best,buyPro,"와이",2
+Ads,2,Best,buyPro,"위잿",4
+Ads,2,Best,buyPro,"음성 녹음",26
+Ads,2,Best,buyPro,"잘로로",55
+Ads,2,Best,buyPro,"잡스트리트",4
+Ads,2,Best,buyPro,"전화",60
+Ads,2,Best,buyPro,"주움",26
+Ads,2,Best,buyPro,"쥬욱스",9
+Ads,2,Best,buyPro,"카메라",50
+Ads,2,Best,buyPro,"컵컷",39
+Ads,2,Best,buyPro,"코코아T",22
+Ads,2,Best,buyPro,"코코아톡",3
+Ads,2,Best,buyPro,"텔레그림",1
+Ads,2,Best,buyPro,"토스트",22
+Ads,2,Best,buyPro,"트래블로까",6
+Ads,2,Best,buyPro,"틱특",9
+Ads,2,Best,buyPro,"핀트레스트",8
+Ads,2,Best,claimBook,"10",1
+Ads,2,Best,claimBook,"20",1
+Ads,2,Best,claimBook,"30",1
+Ads,2,Best,claimBook,"40",1
+Ads,2,Best,claimBook,"50",1
+Ads,2,Best,claimBook,"60",1
+Ads,2,Best,claimMissions,"",52
+Ads,2,Best,setCards,"AllHands|Birthday",16
+Ads,2,Best,setCards,"AllHands|Birthday|Update",2
+Ads,2,Best,setCards,"AllHands|Drill",39
+Ads,2,Best,setCards,"AllHands|Drill|Lotto|Otp",14
+Ads,2,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",13
+Ads,2,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",18
+Ads,2,Best,setCards,"AllHands|Drill|Otp",34
+Ads,2,Best,setCards,"AllHands|Drill|Otp|Birthday",19
+Ads,2,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",26
+Ads,2,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",4
+Ads,2,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",3
+Ads,2,Best,setCards,"AllHands|Otp",14
+Ads,2,Best,setCards,"AllHands|Otp|Birthday",1
+Ads,2,Best,setCards,"Birthday",12
+Ads,2,Best,setCards,"Birthday|Update",5
+Ads,3,Best,buyAssist,"과부하 깊이",549
+Ads,3,Best,buyAssist,"넓은 알림창",215
+Ads,3,Best,buyAssist,"샌드위치",564
+Ads,3,Best,buyAssist,"와일드 알림",480
+Ads,3,Best,buyEvent,"@모두 공지",78
+Ads,3,Best,buyEvent,"단체 문자",66
+Ads,3,Best,buyEvent,"방해 금지",78
+Ads,3,Best,buyEvent,"생일 축하",78
+Ads,3,Best,buyEvent,"알림훈련",78
+Ads,3,Best,buyEvent,"앱스토어 세일",73
+Ads,3,Best,buyEvent,"업데이트",78
+Ads,3,Best,buyEvent,"인증번호",78
+Ads,3,Best,buyEvent,"펌웨어 업데이트",62
+Ads,3,Best,buyEvent,"행운 알림",47
+Ads,3,Best,buyPro,"갤러리",48
+Ads,3,Best,buyPro,"계산기",8
+Ads,3,Best,buyPro,"그래브",4
+Ads,3,Best,buyPro,"글린츠츠",32
+Ads,3,Best,buyPro,"날씨",2
+Ads,3,Best,buyPro,"넷플러그",2
+Ads,3,Best,buyPro,"라잉",3
+Ads,3,Best,buyPro,"라자다다",1
+Ads,3,Best,buyPro,"래딧",37
+Ads,3,Best,buyPro,"링크드아웃",29
+Ads,3,Best,buyPro,"마마고",53
+Ads,3,Best,buyPro,"메롱",57
+Ads,3,Best,buyPro,"메모",8
+Ads,3,Best,buyPro,"메시지",60
+Ads,3,Best,buyPro,"모모모",29
+Ads,3,Best,buyPro,"배다른민족",16
+Ads,3,Best,buyPro,"비고고",12
+Ads,3,Best,buyPro,"설정",34
+Ads,3,Best,buyPro,"손전등",1
+Ads,3,Best,buyPro,"쇼피피",2
+Ads,3,Best,buyPro,"스팟티파이",1
+Ads,3,Best,buyPro,"시계",37
+Ads,3,Best,buyPro,"아고다다",2
+Ads,3,Best,buyPro,"아마좀",7
+Ads,3,Best,buyPro,"에어방앤방",11
+Ads,3,Best,buyPro,"연락처",60
+Ads,3,Best,buyPro,"와이",1
+Ads,3,Best,buyPro,"위잿",9
+Ads,3,Best,buyPro,"음성 녹음",31
+Ads,3,Best,buyPro,"잘로로",59
+Ads,3,Best,buyPro,"잡스트리트",9
+Ads,3,Best,buyPro,"전화",61
+Ads,3,Best,buyPro,"주움",26
+Ads,3,Best,buyPro,"쥬욱스",11
+Ads,3,Best,buyPro,"카메라",54
+Ads,3,Best,buyPro,"컵컷",26
+Ads,3,Best,buyPro,"코코아T",15
+Ads,3,Best,buyPro,"코코아톡",3
+Ads,3,Best,buyPro,"텔레그림",2
+Ads,3,Best,buyPro,"토스트",24
+Ads,3,Best,buyPro,"트래블로까",19
+Ads,3,Best,buyPro,"틱특",5
+Ads,3,Best,buyPro,"핀트레스트",5
+Ads,3,Best,claimBook,"10",1
+Ads,3,Best,claimBook,"20",1
+Ads,3,Best,claimBook,"30",1
+Ads,3,Best,claimBook,"40",1
+Ads,3,Best,claimBook,"50",1
+Ads,3,Best,claimBook,"60",1
+Ads,3,Best,claimMissions,"",55
+Ads,3,Best,setCards,"AllHands|Birthday",16
+Ads,3,Best,setCards,"AllHands|Birthday|Update",2
+Ads,3,Best,setCards,"AllHands|Drill",38
+Ads,3,Best,setCards,"AllHands|Drill|Lotto|Otp",11
+Ads,3,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",20
+Ads,3,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",16
+Ads,3,Best,setCards,"AllHands|Drill|Otp",31
+Ads,3,Best,setCards,"AllHands|Drill|Otp|Birthday",25
+Ads,3,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",25
+Ads,3,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",1
+Ads,3,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",3
+Ads,3,Best,setCards,"AllHands|Otp",18
+Ads,3,Best,setCards,"AllHands|Otp|Birthday",2
+Ads,3,Best,setCards,"Birthday",9
+Ads,3,Best,setCards,"Birthday|Update",1
+Ads,4,Best,buyAssist,"과부하 깊이",639
+Ads,4,Best,buyAssist,"넓은 알림창",251
+Ads,4,Best,buyAssist,"샌드위치",666
+Ads,4,Best,buyAssist,"와일드 알림",560
+Ads,4,Best,buyEvent,"@모두 공지",91
+Ads,4,Best,buyEvent,"단체 문자",80
+Ads,4,Best,buyEvent,"방해 금지",91
+Ads,4,Best,buyEvent,"생일 축하",91
+Ads,4,Best,buyEvent,"알림훈련",91
+Ads,4,Best,buyEvent,"앱스토어 세일",87
+Ads,4,Best,buyEvent,"업데이트",91
+Ads,4,Best,buyEvent,"인증번호",91
+Ads,4,Best,buyEvent,"펌웨어 업데이트",71
+Ads,4,Best,buyEvent,"행운 알림",54
+Ads,4,Best,buyPro,"갤러리",60
+Ads,4,Best,buyPro,"계산기",6
+Ads,4,Best,buyPro,"그래브",7
+Ads,4,Best,buyPro,"글린츠츠",33
+Ads,4,Best,buyPro,"날씨",1
+Ads,4,Best,buyPro,"넷플러그",3
+Ads,4,Best,buyPro,"듀오링구",1
+Ads,4,Best,buyPro,"라잉",2
+Ads,4,Best,buyPro,"라자다다",1
+Ads,4,Best,buyPro,"래딧",50
+Ads,4,Best,buyPro,"링크드아웃",38
+Ads,4,Best,buyPro,"마마고",68
+Ads,4,Best,buyPro,"메롱",64
+Ads,4,Best,buyPro,"메모",9
+Ads,4,Best,buyPro,"메시지",70
+Ads,4,Best,buyPro,"모모모",25
+Ads,4,Best,buyPro,"배다른민족",9
+Ads,4,Best,buyPro,"비고고",11
+Ads,4,Best,buyPro,"설정",40
+Ads,4,Best,buyPro,"손전등",1
+Ads,4,Best,buyPro,"쇼피피",5
+Ads,4,Best,buyPro,"스팟티파이",3
+Ads,4,Best,buyPro,"시계",50
+Ads,4,Best,buyPro,"아고다다",3
+Ads,4,Best,buyPro,"아마좀",6
+Ads,4,Best,buyPro,"에어방앤방",16
+Ads,4,Best,buyPro,"연락처",68
+Ads,4,Best,buyPro,"와이",2
+Ads,4,Best,buyPro,"위잿",3
+Ads,4,Best,buyPro,"음성 녹음",35
+Ads,4,Best,buyPro,"잘로로",64
+Ads,4,Best,buyPro,"잡스트리트",9
+Ads,4,Best,buyPro,"전화",70
+Ads,4,Best,buyPro,"주움",32
+Ads,4,Best,buyPro,"쥬욱스",6
+Ads,4,Best,buyPro,"카메라",70
+Ads,4,Best,buyPro,"컵컷",53
+Ads,4,Best,buyPro,"코코아T",11
+Ads,4,Best,buyPro,"코코아톡",2
+Ads,4,Best,buyPro,"텔레그림",3
+Ads,4,Best,buyPro,"토스트",19
+Ads,4,Best,buyPro,"트래블로까",27
+Ads,4,Best,buyPro,"틱특",7
+Ads,4,Best,buyPro,"핀트레스트",8
+Ads,4,Best,claimBook,"10",1
+Ads,4,Best,claimBook,"20",1
+Ads,4,Best,claimBook,"30",1
+Ads,4,Best,claimBook,"40",1
+Ads,4,Best,claimBook,"50",1
+Ads,4,Best,claimBook,"60",1
+Ads,4,Best,claimMissions,"",59
+Ads,4,Best,setCards,"AllHands|Birthday",15
+Ads,4,Best,setCards,"AllHands|Birthday|Update",2
+Ads,4,Best,setCards,"AllHands|Drill",38
+Ads,4,Best,setCards,"AllHands|Drill|Lotto|Otp",11
+Ads,4,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",16
+Ads,4,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",27
+Ads,4,Best,setCards,"AllHands|Drill|Otp",35
+Ads,4,Best,setCards,"AllHands|Drill|Otp|Birthday",28
+Ads,4,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",31
+Ads,4,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",2
+Ads,4,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",3
+Ads,4,Best,setCards,"AllHands|Otp",16
+Ads,4,Best,setCards,"AllHands|Otp|Birthday",3
+Ads,4,Best,setCards,"Birthday",13
+Ads,4,Best,setCards,"Birthday|Update",5
+Ads,5,Best,buyAssist,"과부하 깊이",585
+Ads,5,Best,buyAssist,"넓은 알림창",229
+Ads,5,Best,buyAssist,"샌드위치",603
+Ads,5,Best,buyAssist,"와일드 알림",515
+Ads,5,Best,buyEvent,"@모두 공지",82
+Ads,5,Best,buyEvent,"단체 문자",72
+Ads,5,Best,buyEvent,"방해 금지",82
+Ads,5,Best,buyEvent,"생일 축하",82
+Ads,5,Best,buyEvent,"알림훈련",82
+Ads,5,Best,buyEvent,"앱스토어 세일",78
+Ads,5,Best,buyEvent,"업데이트",82
+Ads,5,Best,buyEvent,"인증번호",82
+Ads,5,Best,buyEvent,"펌웨어 업데이트",65
+Ads,5,Best,buyEvent,"행운 알림",52
+Ads,5,Best,buyPro,"갤러리",52
+Ads,5,Best,buyPro,"계산기",9
+Ads,5,Best,buyPro,"그래브",2
+Ads,5,Best,buyPro,"글린츠츠",22
+Ads,5,Best,buyPro,"날씨",4
+Ads,5,Best,buyPro,"너튜브",1
+Ads,5,Best,buyPro,"넷플러그",3
+Ads,5,Best,buyPro,"듀오링구",3
+Ads,5,Best,buyPro,"라자다다",2
+Ads,5,Best,buyPro,"래딧",36
+Ads,5,Best,buyPro,"링크드아웃",29
+Ads,5,Best,buyPro,"마마고",58
+Ads,5,Best,buyPro,"메롱",58
+Ads,5,Best,buyPro,"메모",10
+Ads,5,Best,buyPro,"메시지",64
+Ads,5,Best,buyPro,"모모모",28
+Ads,5,Best,buyPro,"배다른민족",4
+Ads,5,Best,buyPro,"비고고",9
+Ads,5,Best,buyPro,"설정",36
+Ads,5,Best,buyPro,"손전등",1
+Ads,5,Best,buyPro,"쇼피피",4
+Ads,5,Best,buyPro,"스팟티파이",3
+Ads,5,Best,buyPro,"시계",48
+Ads,5,Best,buyPro,"아고다다",1
+Ads,5,Best,buyPro,"아마좀",6
+Ads,5,Best,buyPro,"에어방앤방",17
+Ads,5,Best,buyPro,"연락처",64
+Ads,5,Best,buyPro,"와이",8
+Ads,5,Best,buyPro,"위잿",4
+Ads,5,Best,buyPro,"음성 녹음",39
+Ads,5,Best,buyPro,"잘로로",60
+Ads,5,Best,buyPro,"잡스트리트",8
+Ads,5,Best,buyPro,"전화",65
+Ads,5,Best,buyPro,"주움",26
+Ads,5,Best,buyPro,"쥬욱스",15
+Ads,5,Best,buyPro,"카메라",56
+Ads,5,Best,buyPro,"컵컷",49
+Ads,5,Best,buyPro,"코코아T",7
+Ads,5,Best,buyPro,"코코아톡",1
+Ads,5,Best,buyPro,"텔레그림",1
+Ads,5,Best,buyPro,"토스트",14
+Ads,5,Best,buyPro,"튄더",5
+Ads,5,Best,buyPro,"트래블로까",5
+Ads,5,Best,buyPro,"틱특",12
+Ads,5,Best,buyPro,"핀트레스트",2
+Ads,5,Best,claimBook,"10",1
+Ads,5,Best,claimBook,"20",1
+Ads,5,Best,claimBook,"30",1
+Ads,5,Best,claimBook,"40",1
+Ads,5,Best,claimBook,"50",1
+Ads,5,Best,claimBook,"60",1
+Ads,5,Best,claimMissions,"",50
+Ads,5,Best,setCards,"AllHands|Birthday",15
+Ads,5,Best,setCards,"AllHands|Birthday|Update",1
+Ads,5,Best,setCards,"AllHands|Drill",34
+Ads,5,Best,setCards,"AllHands|Drill|Lotto|Otp",11
+Ads,5,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",17
+Ads,5,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",24
+Ads,5,Best,setCards,"AllHands|Drill|Otp",29
+Ads,5,Best,setCards,"AllHands|Drill|Otp|Birthday",23
+Ads,5,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",29
+Ads,5,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",3
+Ads,5,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",2
+Ads,5,Best,setCards,"AllHands|Otp",12
+Ads,5,Best,setCards,"AllHands|Otp|Birthday",1
+Ads,5,Best,setCards,"Birthday",11
+Ads,5,Best,setCards,"Birthday|Update",5
+Ads,6,Best,buyAssist,"과부하 깊이",567
+Ads,6,Best,buyAssist,"넓은 알림창",221
+Ads,6,Best,buyAssist,"샌드위치",582
+Ads,6,Best,buyAssist,"와일드 알림",497
+Ads,6,Best,buyEvent,"@모두 공지",80
+Ads,6,Best,buyEvent,"단체 문자",71
+Ads,6,Best,buyEvent,"방해 금지",80
+Ads,6,Best,buyEvent,"생일 축하",80
+Ads,6,Best,buyEvent,"알림훈련",80
+Ads,6,Best,buyEvent,"앱스토어 세일",73
+Ads,6,Best,buyEvent,"업데이트",80
+Ads,6,Best,buyEvent,"인증번호",80
+Ads,6,Best,buyEvent,"펌웨어 업데이트",64
+Ads,6,Best,buyEvent,"행운 알림",49
+Ads,6,Best,buyPro,"갤러리",48
+Ads,6,Best,buyPro,"계산기",4
+Ads,6,Best,buyPro,"그래브",2
+Ads,6,Best,buyPro,"글린츠츠",23
+Ads,6,Best,buyPro,"날씨",6
+Ads,6,Best,buyPro,"넷플러그",2
+Ads,6,Best,buyPro,"듀오링구",2
+Ads,6,Best,buyPro,"라잉",1
+Ads,6,Best,buyPro,"래딧",38
+Ads,6,Best,buyPro,"링크드아웃",32
+Ads,6,Best,buyPro,"마마고",60
+Ads,6,Best,buyPro,"메롱",56
+Ads,6,Best,buyPro,"메모",9
+Ads,6,Best,buyPro,"메시지",59
+Ads,6,Best,buyPro,"모모모",19
+Ads,6,Best,buyPro,"배다른민족",14
+Ads,6,Best,buyPro,"비고고",7
+Ads,6,Best,buyPro,"설정",35
+Ads,6,Best,buyPro,"손전등",1
+Ads,6,Best,buyPro,"쇼피피",2
+Ads,6,Best,buyPro,"스팟티파이",2
+Ads,6,Best,buyPro,"시계",47
+Ads,6,Best,buyPro,"아고다다",2
+Ads,6,Best,buyPro,"아마좀",6
+Ads,6,Best,buyPro,"에어방앤방",4
+Ads,6,Best,buyPro,"연락처",59
+Ads,6,Best,buyPro,"와이",6
+Ads,6,Best,buyPro,"위잿",7
+Ads,6,Best,buyPro,"음성 녹음",39
+Ads,6,Best,buyPro,"잘로로",55
+Ads,6,Best,buyPro,"잡스트리트",5
+Ads,6,Best,buyPro,"전화",60
+Ads,6,Best,buyPro,"주움",34
+Ads,6,Best,buyPro,"쥬욱스",5
+Ads,6,Best,buyPro,"카메라",60
+Ads,6,Best,buyPro,"컵컷",46
+Ads,6,Best,buyPro,"코코아T",15
+Ads,6,Best,buyPro,"코코아톡",1
+Ads,6,Best,buyPro,"텔레그림",1
+Ads,6,Best,buyPro,"토스트",15
+Ads,6,Best,buyPro,"트래블로까",7
+Ads,6,Best,buyPro,"틱특",3
+Ads,6,Best,buyPro,"핀트레스트",12
+Ads,6,Best,claimBook,"10",1
+Ads,6,Best,claimBook,"20",1
+Ads,6,Best,claimBook,"30",1
+Ads,6,Best,claimBook,"40",1
+Ads,6,Best,claimBook,"50",1
+Ads,6,Best,claimBook,"60",1
+Ads,6,Best,claimMissions,"",55
+Ads,6,Best,setCards,"AllHands|Birthday",15
+Ads,6,Best,setCards,"AllHands|Birthday|Update",2
+Ads,6,Best,setCards,"AllHands|Drill",36
+Ads,6,Best,setCards,"AllHands|Drill|Lotto|Otp",9
+Ads,6,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",20
+Ads,6,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",20
+Ads,6,Best,setCards,"AllHands|Drill|Otp",30
+Ads,6,Best,setCards,"AllHands|Drill|Otp|Birthday",26
+Ads,6,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",29
+Ads,6,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",1
+Ads,6,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",1
+Ads,6,Best,setCards,"AllHands|Otp",15
+Ads,6,Best,setCards,"AllHands|Otp|Birthday",1
+Ads,6,Best,setCards,"Birthday",10
+Ads,6,Best,setCards,"Birthday|Update",5
+Ads,7,Best,buyAssist,"과부하 깊이",629
+Ads,7,Best,buyAssist,"넓은 알림창",249
+Ads,7,Best,buyAssist,"샌드위치",650
+Ads,7,Best,buyAssist,"와일드 알림",553
+Ads,7,Best,buyEvent,"@모두 공지",89
+Ads,7,Best,buyEvent,"단체 문자",77
+Ads,7,Best,buyEvent,"방해 금지",89
+Ads,7,Best,buyEvent,"생일 축하",89
+Ads,7,Best,buyEvent,"알림훈련",89
+Ads,7,Best,buyEvent,"앱스토어 세일",84
+Ads,7,Best,buyEvent,"업데이트",89
+Ads,7,Best,buyEvent,"인증번호",89
+Ads,7,Best,buyEvent,"펌웨어 업데이트",73
+Ads,7,Best,buyEvent,"행운 알림",55
+Ads,7,Best,buyPro,"갤러리",55
+Ads,7,Best,buyPro,"계산기",8
+Ads,7,Best,buyPro,"그래브",4
+Ads,7,Best,buyPro,"글린츠츠",33
+Ads,7,Best,buyPro,"날씨",7
+Ads,7,Best,buyPro,"너튜브",1
+Ads,7,Best,buyPro,"넷플러그",5
+Ads,7,Best,buyPro,"듀오링구",2
+Ads,7,Best,buyPro,"래딧",44
+Ads,7,Best,buyPro,"링크드아웃",38
+Ads,7,Best,buyPro,"마마고",67
+Ads,7,Best,buyPro,"메롱",68
+Ads,7,Best,buyPro,"메모",10
+Ads,7,Best,buyPro,"메시지",67
+Ads,7,Best,buyPro,"모모모",29
+Ads,7,Best,buyPro,"배다른민족",17
+Ads,7,Best,buyPro,"비고고",11
+Ads,7,Best,buyPro,"설정",39
+Ads,7,Best,buyPro,"손전등",2
+Ads,7,Best,buyPro,"쇼피피",4
+Ads,7,Best,buyPro,"스팟티파이",1
+Ads,7,Best,buyPro,"시계",50
+Ads,7,Best,buyPro,"아고다다",2
+Ads,7,Best,buyPro,"아마좀",3
+Ads,7,Best,buyPro,"에어방앤방",14
+Ads,7,Best,buyPro,"연락처",67
+Ads,7,Best,buyPro,"와이",8
+Ads,7,Best,buyPro,"우바",1
+Ads,7,Best,buyPro,"위잿",3
+Ads,7,Best,buyPro,"음성 녹음",35
+Ads,7,Best,buyPro,"잘로로",64
+Ads,7,Best,buyPro,"잡스트리트",12
+Ads,7,Best,buyPro,"전화",67
+Ads,7,Best,buyPro,"주움",29
+Ads,7,Best,buyPro,"쥬욱스",11
+Ads,7,Best,buyPro,"카메라",63
+Ads,7,Best,buyPro,"컵컷",45
+Ads,7,Best,buyPro,"코코아T",18
+Ads,7,Best,buyPro,"쿠빵",1
+Ads,7,Best,buyPro,"텔레그림",1
+Ads,7,Best,buyPro,"토스트",12
+Ads,7,Best,buyPro,"트래블로까",9
+Ads,7,Best,buyPro,"틱특",13
+Ads,7,Best,claimBook,"10",1
+Ads,7,Best,claimBook,"20",1
+Ads,7,Best,claimBook,"30",1
+Ads,7,Best,claimBook,"40",1
+Ads,7,Best,claimBook,"50",1
+Ads,7,Best,claimBook,"60",1
+Ads,7,Best,claimMissions,"",66
+Ads,7,Best,setCards,"AllHands|Birthday",15
+Ads,7,Best,setCards,"AllHands|Birthday|Update",2
+Ads,7,Best,setCards,"AllHands|Drill",36
+Ads,7,Best,setCards,"AllHands|Drill|Lotto|Otp",8
+Ads,7,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",21
+Ads,7,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",26
+Ads,7,Best,setCards,"AllHands|Drill|Otp",35
+Ads,7,Best,setCards,"AllHands|Drill|Otp|Birthday",33
+Ads,7,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",29
+Ads,7,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",6
+Ads,7,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",4
+Ads,7,Best,setCards,"AllHands|Otp",16
+Ads,7,Best,setCards,"AllHands|Otp|Birthday",2
+Ads,7,Best,setCards,"Birthday",11
+Ads,7,Best,setCards,"Birthday|Update",2
+Ads,8,Best,buyAssist,"과부하 깊이",589
+Ads,8,Best,buyAssist,"넓은 알림창",231
+Ads,8,Best,buyAssist,"샌드위치",613
+Ads,8,Best,buyAssist,"와일드 알림",518
+Ads,8,Best,buyEvent,"@모두 공지",85
+Ads,8,Best,buyEvent,"단체 문자",73
+Ads,8,Best,buyEvent,"방해 금지",85
+Ads,8,Best,buyEvent,"생일 축하",85
+Ads,8,Best,buyEvent,"알림훈련",85
+Ads,8,Best,buyEvent,"앱스토어 세일",80
+Ads,8,Best,buyEvent,"업데이트",85
+Ads,8,Best,buyEvent,"인증번호",85
+Ads,8,Best,buyEvent,"펌웨어 업데이트",65
+Ads,8,Best,buyEvent,"행운 알림",49
+Ads,8,Best,buyPro,"갤러리",54
+Ads,8,Best,buyPro,"계산기",5
+Ads,8,Best,buyPro,"그래브",5
+Ads,8,Best,buyPro,"글린츠츠",29
+Ads,8,Best,buyPro,"날씨",8
+Ads,8,Best,buyPro,"넷플러그",1
+Ads,8,Best,buyPro,"듀오링구",3
+Ads,8,Best,buyPro,"라잉",1
+Ads,8,Best,buyPro,"라자다다",3
+Ads,8,Best,buyPro,"래딧",34
+Ads,8,Best,buyPro,"로빈훗훗",1
+Ads,8,Best,buyPro,"링크드아웃",28
+Ads,8,Best,buyPro,"마마고",60
+Ads,8,Best,buyPro,"메롱",56
+Ads,8,Best,buyPro,"메모",10
+Ads,8,Best,buyPro,"메시지",62
+Ads,8,Best,buyPro,"모모모",16
+Ads,8,Best,buyPro,"배다른민족",18
+Ads,8,Best,buyPro,"비고고",19
+Ads,8,Best,buyPro,"설정",36
+Ads,8,Best,buyPro,"손전등",3
+Ads,8,Best,buyPro,"쇼피피",4
+Ads,8,Best,buyPro,"스팟티파이",1
+Ads,8,Best,buyPro,"시계",49
+Ads,8,Best,buyPro,"아고다다",2
+Ads,8,Best,buyPro,"아마좀",7
+Ads,8,Best,buyPro,"에어방앤방",4
+Ads,8,Best,buyPro,"연락처",62
+Ads,8,Best,buyPro,"와이",5
+Ads,8,Best,buyPro,"우바",1
+Ads,8,Best,buyPro,"위잿",7
+Ads,8,Best,buyPro,"음성 녹음",34
+Ads,8,Best,buyPro,"잘로로",57
+Ads,8,Best,buyPro,"잡스트리트",5
+Ads,8,Best,buyPro,"전화",63
+Ads,8,Best,buyPro,"주움",28
+Ads,8,Best,buyPro,"쥬욱스",15
+Ads,8,Best,buyPro,"카메라",60
+Ads,8,Best,buyPro,"컵컷",34
+Ads,8,Best,buyPro,"코코아T",14
+Ads,8,Best,buyPro,"코코아톡",1
+Ads,8,Best,buyPro,"텔레그림",1
+Ads,8,Best,buyPro,"토스트",23
+Ads,8,Best,buyPro,"튄더",1
+Ads,8,Best,buyPro,"트래블로까",3
+Ads,8,Best,buyPro,"틱특",5
+Ads,8,Best,buyPro,"핀트레스트",10
+Ads,8,Best,claimBook,"10",1
+Ads,8,Best,claimBook,"20",1
+Ads,8,Best,claimBook,"30",1
+Ads,8,Best,claimBook,"40",1
+Ads,8,Best,claimBook,"50",1
+Ads,8,Best,claimBook,"60",1
+Ads,8,Best,claimMissions,"",54
+Ads,8,Best,setCards,"AllHands|Birthday",15
+Ads,8,Best,setCards,"AllHands|Birthday|Update",3
+Ads,8,Best,setCards,"AllHands|Drill",38
+Ads,8,Best,setCards,"AllHands|Drill|Lotto|Otp",10
+Ads,8,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",17
+Ads,8,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",22
+Ads,8,Best,setCards,"AllHands|Drill|Otp",35
+Ads,8,Best,setCards,"AllHands|Drill|Otp|Birthday",25
+Ads,8,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",29
+Ads,8,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",2
+Ads,8,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",4
+Ads,8,Best,setCards,"AllHands|Otp",16
+Ads,8,Best,setCards,"AllHands|Otp|Birthday",3
+Ads,8,Best,setCards,"Birthday",11
+Ads,8,Best,setCards,"Birthday|Update",6
+Pass,1,Best,buyAssist,"과부하 깊이",477
+Pass,1,Best,buyAssist,"넓은 알림창",187
+Pass,1,Best,buyAssist,"샌드위치",495
+Pass,1,Best,buyAssist,"와일드 알림",418
+Pass,1,Best,buyEvent,"@모두 공지",68
+Pass,1,Best,buyEvent,"단체 문자",60
+Pass,1,Best,buyEvent,"방해 금지",68
+Pass,1,Best,buyEvent,"생일 축하",68
+Pass,1,Best,buyEvent,"알림훈련",68
+Pass,1,Best,buyEvent,"앱스토어 세일",64
+Pass,1,Best,buyEvent,"업데이트",68
+Pass,1,Best,buyEvent,"인증번호",68
+Pass,1,Best,buyEvent,"펌웨어 업데이트",53
+Pass,1,Best,buyEvent,"행운 알림",40
+Pass,1,Best,buyPro,"갤러리",39
+Pass,1,Best,buyPro,"계산기",11
+Pass,1,Best,buyPro,"그래브",3
+Pass,1,Best,buyPro,"글린츠츠",22
+Pass,1,Best,buyPro,"날씨",4
+Pass,1,Best,buyPro,"넷플러그",3
+Pass,1,Best,buyPro,"듀오링구",2
+Pass,1,Best,buyPro,"라자다다",2
+Pass,1,Best,buyPro,"래딧",30
+Pass,1,Best,buyPro,"링크드아웃",25
+Pass,1,Best,buyPro,"마마고",49
+Pass,1,Best,buyPro,"메롱",47
+Pass,1,Best,buyPro,"메모",11
+Pass,1,Best,buyPro,"메시지",52
+Pass,1,Best,buyPro,"모모모",21
+Pass,1,Best,buyPro,"배다른민족",14
+Pass,1,Best,buyPro,"비고고",11
+Pass,1,Best,buyPro,"설정",31
+Pass,1,Best,buyPro,"손전등",3
+Pass,1,Best,buyPro,"쇼피피",2
+Pass,1,Best,buyPro,"스팟티파이",5
+Pass,1,Best,buyPro,"시계",32
+Pass,1,Best,buyPro,"아고다다",2
+Pass,1,Best,buyPro,"아마좀",8
+Pass,1,Best,buyPro,"에어방앤방",20
+Pass,1,Best,buyPro,"연락처",51
+Pass,1,Best,buyPro,"위잿",8
+Pass,1,Best,buyPro,"음성 녹음",32
+Pass,1,Best,buyPro,"잘로로",50
+Pass,1,Best,buyPro,"잡스트리트",8
+Pass,1,Best,buyPro,"전화",52
+Pass,1,Best,buyPro,"주움",29
+Pass,1,Best,buyPro,"쥬욱스",12
+Pass,1,Best,buyPro,"카메라",44
+Pass,1,Best,buyPro,"컵컷",28
+Pass,1,Best,buyPro,"코코아T",11
+Pass,1,Best,buyPro,"코코아톡",1
+Pass,1,Best,buyPro,"텔레그림",2
+Pass,1,Best,buyPro,"토스트",24
+Pass,1,Best,buyPro,"트래블로까",1
+Pass,1,Best,buyPro,"틱특",8
+Pass,1,Best,buyPro,"핀트레스트",6
+Pass,1,Best,claimBook,"10",1
+Pass,1,Best,claimBook,"20",1
+Pass,1,Best,claimBook,"30",1
+Pass,1,Best,claimBook,"40",1
+Pass,1,Best,claimBook,"50",1
+Pass,1,Best,claimBook,"60",1
+Pass,1,Best,claimMissions,"",42
+Pass,1,Best,setCards,"AllHands|Birthday",14
+Pass,1,Best,setCards,"AllHands|Birthday|Update",1
+Pass,1,Best,setCards,"AllHands|Drill",34
+Pass,1,Best,setCards,"AllHands|Drill|Lotto|Otp",10
+Pass,1,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",22
+Pass,1,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",8
+Pass,1,Best,setCards,"AllHands|Drill|Otp",28
+Pass,1,Best,setCards,"AllHands|Drill|Otp|Birthday",27
+Pass,1,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",12
+Pass,1,Best,setCards,"AllHands|Otp",11
+Pass,1,Best,setCards,"AllHands|Otp|Birthday",2
+Pass,1,Best,setCards,"Birthday",10
+Pass,1,Best,setCards,"Birthday|Update",3
+Pass,2,Best,buyAssist,"과부하 깊이",573
+Pass,2,Best,buyAssist,"넓은 알림창",220
+Pass,2,Best,buyAssist,"샌드위치",584
+Pass,2,Best,buyAssist,"와일드 알림",505
+Pass,2,Best,buyEvent,"@모두 공지",79
+Pass,2,Best,buyEvent,"단체 문자",71
+Pass,2,Best,buyEvent,"방해 금지",79
+Pass,2,Best,buyEvent,"생일 축하",79
+Pass,2,Best,buyEvent,"알림훈련",79
+Pass,2,Best,buyEvent,"앱스토어 세일",76
+Pass,2,Best,buyEvent,"업데이트",79
+Pass,2,Best,buyEvent,"인증번호",79
+Pass,2,Best,buyEvent,"펌웨어 업데이트",64
+Pass,2,Best,buyEvent,"행운 알림",50
+Pass,2,Best,buyPro,"갤러리",48
+Pass,2,Best,buyPro,"계산기",10
+Pass,2,Best,buyPro,"그래브",5
+Pass,2,Best,buyPro,"글린츠츠",37
+Pass,2,Best,buyPro,"날씨",5
+Pass,2,Best,buyPro,"너튜브",1
+Pass,2,Best,buyPro,"듀오링구",2
+Pass,2,Best,buyPro,"라잉",1
+Pass,2,Best,buyPro,"라자다다",2
+Pass,2,Best,buyPro,"래딧",38
+Pass,2,Best,buyPro,"로빈훗훗",1
+Pass,2,Best,buyPro,"링크드아웃",36
+Pass,2,Best,buyPro,"마마고",62
+Pass,2,Best,buyPro,"메롱",52
+Pass,2,Best,buyPro,"메모",11
+Pass,2,Best,buyPro,"메시지",62
+Pass,2,Best,buyPro,"모모모",24
+Pass,2,Best,buyPro,"배다른민족",29
+Pass,2,Best,buyPro,"비고고",5
+Pass,2,Best,buyPro,"설정",36
+Pass,2,Best,buyPro,"손전등",3
+Pass,2,Best,buyPro,"쇼피피",6
+Pass,2,Best,buyPro,"스팟티파이",1
+Pass,2,Best,buyPro,"시계",48
+Pass,2,Best,buyPro,"아마좀",9
+Pass,2,Best,buyPro,"에어방앤방",8
+Pass,2,Best,buyPro,"연락처",59
+Pass,2,Best,buyPro,"와이",4
+Pass,2,Best,buyPro,"위잿",11
+Pass,2,Best,buyPro,"음성 녹음",35
+Pass,2,Best,buyPro,"잘로로",60
+Pass,2,Best,buyPro,"잡스트리트",13
+Pass,2,Best,buyPro,"전화",62
+Pass,2,Best,buyPro,"주움",33
+Pass,2,Best,buyPro,"쥬욱스",3
+Pass,2,Best,buyPro,"카메라",56
+Pass,2,Best,buyPro,"컵컷",35
+Pass,2,Best,buyPro,"코코아T",30
+Pass,2,Best,buyPro,"코코아톡",1
+Pass,2,Best,buyPro,"쿠빵",1
+Pass,2,Best,buyPro,"텔레그림",2
+Pass,2,Best,buyPro,"토스트",25
+Pass,2,Best,buyPro,"튄더",1
+Pass,2,Best,buyPro,"트래블로까",14
+Pass,2,Best,buyPro,"틱특",2
+Pass,2,Best,buyPro,"핀트레스트",14
+Pass,2,Best,claimBook,"10",1
+Pass,2,Best,claimBook,"20",1
+Pass,2,Best,claimBook,"30",1
+Pass,2,Best,claimBook,"40",1
+Pass,2,Best,claimBook,"50",1
+Pass,2,Best,claimBook,"60",1
+Pass,2,Best,claimMissions,"",48
+Pass,2,Best,setCards,"AllHands|Birthday",12
+Pass,2,Best,setCards,"AllHands|Birthday|Update",1
+Pass,2,Best,setCards,"AllHands|Drill",36
+Pass,2,Best,setCards,"AllHands|Drill|Lotto|Otp",11
+Pass,2,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",21
+Pass,2,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",18
+Pass,2,Best,setCards,"AllHands|Drill|Otp",31
+Pass,2,Best,setCards,"AllHands|Drill|Otp|Birthday",25
+Pass,2,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",19
+Pass,2,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",3
+Pass,2,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",1
+Pass,2,Best,setCards,"AllHands|Otp",12
+Pass,2,Best,setCards,"AllHands|Otp|Birthday",1
+Pass,2,Best,setCards,"Birthday",9
+Pass,2,Best,setCards,"Birthday|Update",3
+Pass,3,Best,buyAssist,"과부하 깊이",551
+Pass,3,Best,buyAssist,"넓은 알림창",213
+Pass,3,Best,buyAssist,"샌드위치",567
+Pass,3,Best,buyAssist,"와일드 알림",486
+Pass,3,Best,buyEvent,"@모두 공지",77
+Pass,3,Best,buyEvent,"단체 문자",69
+Pass,3,Best,buyEvent,"방해 금지",77
+Pass,3,Best,buyEvent,"생일 축하",77
+Pass,3,Best,buyEvent,"알림훈련",77
+Pass,3,Best,buyEvent,"앱스토어 세일",73
+Pass,3,Best,buyEvent,"업데이트",77
+Pass,3,Best,buyEvent,"인증번호",77
+Pass,3,Best,buyEvent,"펌웨어 업데이트",61
+Pass,3,Best,buyEvent,"행운 알림",48
+Pass,3,Best,buyPro,"갤러리",44
+Pass,3,Best,buyPro,"계산기",7
+Pass,3,Best,buyPro,"그래브",4
+Pass,3,Best,buyPro,"글린츠츠",25
+Pass,3,Best,buyPro,"날씨",6
+Pass,3,Best,buyPro,"넷플러그",4
+Pass,3,Best,buyPro,"듀오링구",2
+Pass,3,Best,buyPro,"라자다다",1
+Pass,3,Best,buyPro,"래딧",42
+Pass,3,Best,buyPro,"링크드아웃",37
+Pass,3,Best,buyPro,"마마고",58
+Pass,3,Best,buyPro,"메롱",49
+Pass,3,Best,buyPro,"메모",12
+Pass,3,Best,buyPro,"메시지",59
+Pass,3,Best,buyPro,"모모모",23
+Pass,3,Best,buyPro,"배다른민족",42
+Pass,3,Best,buyPro,"비고고",6
+Pass,3,Best,buyPro,"설정",30
+Pass,3,Best,buyPro,"손전등",2
+Pass,3,Best,buyPro,"쇼피피",2
+Pass,3,Best,buyPro,"시계",44
+Pass,3,Best,buyPro,"아고다다",4
+Pass,3,Best,buyPro,"아마좀",9
+Pass,3,Best,buyPro,"에어방앤방",11
+Pass,3,Best,buyPro,"연락처",58
+Pass,3,Best,buyPro,"위잿",10
+Pass,3,Best,buyPro,"음성 녹음",35
+Pass,3,Best,buyPro,"잘로로",56
+Pass,3,Best,buyPro,"잡스트리트",10
+Pass,3,Best,buyPro,"전화",59
+Pass,3,Best,buyPro,"주움",35
+Pass,3,Best,buyPro,"쥬욱스",13
+Pass,3,Best,buyPro,"카메라",52
+Pass,3,Best,buyPro,"컵컷",15
+Pass,3,Best,buyPro,"코코아T",45
+Pass,3,Best,buyPro,"텔레그림",2
+Pass,3,Best,buyPro,"토스트",30
+Pass,3,Best,buyPro,"트래블로까",8
+Pass,3,Best,buyPro,"핀트레스트",21
+Pass,3,Best,claimBook,"10",1
+Pass,3,Best,claimBook,"20",1
+Pass,3,Best,claimBook,"30",1
+Pass,3,Best,claimBook,"40",1
+Pass,3,Best,claimBook,"50",1
+Pass,3,Best,claimBook,"60",1
+Pass,3,Best,claimMissions,"",45
+Pass,3,Best,setCards,"AllHands|Birthday",12
+Pass,3,Best,setCards,"AllHands|Birthday|Update",1
+Pass,3,Best,setCards,"AllHands|Drill",37
+Pass,3,Best,setCards,"AllHands|Drill|Lotto|Otp",12
+Pass,3,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",19
+Pass,3,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",17
+Pass,3,Best,setCards,"AllHands|Drill|Otp",32
+Pass,3,Best,setCards,"AllHands|Drill|Otp|Birthday",22
+Pass,3,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",22
+Pass,3,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",2
+Pass,3,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",2
+Pass,3,Best,setCards,"AllHands|Otp",12
+Pass,3,Best,setCards,"Birthday",11
+Pass,3,Best,setCards,"Birthday|Update",5
+Pass,4,Best,buyAssist,"과부하 깊이",548
+Pass,4,Best,buyAssist,"넓은 알림창",212
+Pass,4,Best,buyAssist,"샌드위치",563
+Pass,4,Best,buyAssist,"와일드 알림",481
+Pass,4,Best,buyEvent,"@모두 공지",77
+Pass,4,Best,buyEvent,"단체 문자",69
+Pass,4,Best,buyEvent,"방해 금지",77
+Pass,4,Best,buyEvent,"생일 축하",77
+Pass,4,Best,buyEvent,"알림훈련",77
+Pass,4,Best,buyEvent,"앱스토어 세일",73
+Pass,4,Best,buyEvent,"업데이트",77
+Pass,4,Best,buyEvent,"인증번호",77
+Pass,4,Best,buyEvent,"펌웨어 업데이트",61
+Pass,4,Best,buyEvent,"행운 알림",47
+Pass,4,Best,buyPro,"갤러리",46
+Pass,4,Best,buyPro,"계산기",8
+Pass,4,Best,buyPro,"그래브",3
+Pass,4,Best,buyPro,"글린츠츠",21
+Pass,4,Best,buyPro,"날씨",5
+Pass,4,Best,buyPro,"넷플러그",2
+Pass,4,Best,buyPro,"듀오링구",3
+Pass,4,Best,buyPro,"라자다다",2
+Pass,4,Best,buyPro,"래딧",39
+Pass,4,Best,buyPro,"링크드아웃",34
+Pass,4,Best,buyPro,"마마고",59
+Pass,4,Best,buyPro,"메롱",50
+Pass,4,Best,buyPro,"메모",10
+Pass,4,Best,buyPro,"메시지",59
+Pass,4,Best,buyPro,"모모모",11
+Pass,4,Best,buyPro,"배다른민족",22
+Pass,4,Best,buyPro,"비고고",23
+Pass,4,Best,buyPro,"설정",30
+Pass,4,Best,buyPro,"손전등",5
+Pass,4,Best,buyPro,"쇼피피",5
+Pass,4,Best,buyPro,"시계",46
+Pass,4,Best,buyPro,"아마좀",8
+Pass,4,Best,buyPro,"에어방앤방",11
+Pass,4,Best,buyPro,"연락처",58
+Pass,4,Best,buyPro,"와이",1
+Pass,4,Best,buyPro,"위잿",9
+Pass,4,Best,buyPro,"음성 녹음",37
+Pass,4,Best,buyPro,"잘로로",57
+Pass,4,Best,buyPro,"잡스트리트",11
+Pass,4,Best,buyPro,"전화",59
+Pass,4,Best,buyPro,"주움",34
+Pass,4,Best,buyPro,"쥬욱스",25
+Pass,4,Best,buyPro,"카메라",53
+Pass,4,Best,buyPro,"컵컷",21
+Pass,4,Best,buyPro,"코코아T",23
+Pass,4,Best,buyPro,"텔레그림",2
+Pass,4,Best,buyPro,"토스트",18
+Pass,4,Best,buyPro,"트래블로까",5
+Pass,4,Best,buyPro,"틱특",5
+Pass,4,Best,buyPro,"핀트레스트",4
+Pass,4,Best,claimBook,"10",1
+Pass,4,Best,claimBook,"20",1
+Pass,4,Best,claimBook,"30",1
+Pass,4,Best,claimBook,"40",1
+Pass,4,Best,claimBook,"50",1
+Pass,4,Best,claimBook,"60",1
+Pass,4,Best,claimMissions,"",45
+Pass,4,Best,setCards,"AllHands|Birthday",15
+Pass,4,Best,setCards,"AllHands|Birthday|Update",2
+Pass,4,Best,setCards,"AllHands|Drill",37
+Pass,4,Best,setCards,"AllHands|Drill|Lotto|Otp",11
+Pass,4,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",19
+Pass,4,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",17
+Pass,4,Best,setCards,"AllHands|Drill|Otp",30
+Pass,4,Best,setCards,"AllHands|Drill|Otp|Birthday",26
+Pass,4,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",17
+Pass,4,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",1
+Pass,4,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",1
+Pass,4,Best,setCards,"AllHands|Otp",13
+Pass,4,Best,setCards,"Birthday",8
+Pass,4,Best,setCards,"Birthday|Update",3
+Pass,5,Best,buyAssist,"과부하 깊이",593
+Pass,5,Best,buyAssist,"넓은 알림창",228
+Pass,5,Best,buyAssist,"샌드위치",611
+Pass,5,Best,buyAssist,"와일드 알림",526
+Pass,5,Best,buyEvent,"@모두 공지",83
+Pass,5,Best,buyEvent,"단체 문자",75
+Pass,5,Best,buyEvent,"방해 금지",83
+Pass,5,Best,buyEvent,"생일 축하",83
+Pass,5,Best,buyEvent,"알림훈련",83
+Pass,5,Best,buyEvent,"앱스토어 세일",79
+Pass,5,Best,buyEvent,"업데이트",83
+Pass,5,Best,buyEvent,"인증번호",83
+Pass,5,Best,buyEvent,"펌웨어 업데이트",66
+Pass,5,Best,buyEvent,"행운 알림",50
+Pass,5,Best,buyPro,"갤러리",51
+Pass,5,Best,buyPro,"계산기",6
+Pass,5,Best,buyPro,"그래브",6
+Pass,5,Best,buyPro,"글린츠츠",25
+Pass,5,Best,buyPro,"날씨",6
+Pass,5,Best,buyPro,"넷플러그",4
+Pass,5,Best,buyPro,"듀오링구",2
+Pass,5,Best,buyPro,"라자다다",1
+Pass,5,Best,buyPro,"래딧",43
+Pass,5,Best,buyPro,"링크드아웃",35
+Pass,5,Best,buyPro,"마마고",60
+Pass,5,Best,buyPro,"메롱",57
+Pass,5,Best,buyPro,"메모",14
+Pass,5,Best,buyPro,"메시지",64
+Pass,5,Best,buyPro,"모모모",24
+Pass,5,Best,buyPro,"배다른민족",22
+Pass,5,Best,buyPro,"비고고",15
+Pass,5,Best,buyPro,"설정",37
+Pass,5,Best,buyPro,"손전등",2
+Pass,5,Best,buyPro,"쇼피피",2
+Pass,5,Best,buyPro,"스팟티파이",2
+Pass,5,Best,buyPro,"시계",51
+Pass,5,Best,buyPro,"아고다다",2
+Pass,5,Best,buyPro,"아마좀",5
+Pass,5,Best,buyPro,"에어방앤방",4
+Pass,5,Best,buyPro,"연락처",63
+Pass,5,Best,buyPro,"와이",8
+Pass,5,Best,buyPro,"위잿",1
+Pass,5,Best,buyPro,"음성 녹음",43
+Pass,5,Best,buyPro,"잘로로",63
+Pass,5,Best,buyPro,"잡스트리트",7
+Pass,5,Best,buyPro,"전화",64
+Pass,5,Best,buyPro,"주움",35
+Pass,5,Best,buyPro,"쥬욱스",21
+Pass,5,Best,buyPro,"카메라",58
+Pass,5,Best,buyPro,"컵컷",29
+Pass,5,Best,buyPro,"코코아T",24
+Pass,5,Best,buyPro,"텔레그림",2
+Pass,5,Best,buyPro,"토스트",21
+Pass,5,Best,buyPro,"튄더",2
+Pass,5,Best,buyPro,"트래블로까",17
+Pass,5,Best,buyPro,"틱특",2
+Pass,5,Best,buyPro,"핀트레스트",12
+Pass,5,Best,claimBook,"10",1
+Pass,5,Best,claimBook,"20",1
+Pass,5,Best,claimBook,"30",1
+Pass,5,Best,claimBook,"40",1
+Pass,5,Best,claimBook,"50",1
+Pass,5,Best,claimBook,"60",1
+Pass,5,Best,claimMissions,"",46
+Pass,5,Best,setCards,"AllHands|Birthday",12
+Pass,5,Best,setCards,"AllHands|Birthday|Update",2
+Pass,5,Best,setCards,"AllHands|Drill",37
+Pass,5,Best,setCards,"AllHands|Drill|Lotto|Otp",9
+Pass,5,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",18
+Pass,5,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",23
+Pass,5,Best,setCards,"AllHands|Drill|Otp",32
+Pass,5,Best,setCards,"AllHands|Drill|Otp|Birthday",27
+Pass,5,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",33
+Pass,5,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",4
+Pass,5,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",2
+Pass,5,Best,setCards,"AllHands|Otp",11
+Pass,5,Best,setCards,"AllHands|Otp|Birthday",1
+Pass,5,Best,setCards,"Birthday",7
+Pass,5,Best,setCards,"Birthday|Update",5
+Pass,6,Best,buyAssist,"과부하 깊이",512
+Pass,6,Best,buyAssist,"넓은 알림창",198
+Pass,6,Best,buyAssist,"샌드위치",530
+Pass,6,Best,buyAssist,"와일드 알림",450
+Pass,6,Best,buyEvent,"@모두 공지",72
+Pass,6,Best,buyEvent,"단체 문자",65
+Pass,6,Best,buyEvent,"방해 금지",72
+Pass,6,Best,buyEvent,"생일 축하",72
+Pass,6,Best,buyEvent,"알림훈련",72
+Pass,6,Best,buyEvent,"앱스토어 세일",69
+Pass,6,Best,buyEvent,"업데이트",72
+Pass,6,Best,buyEvent,"인증번호",72
+Pass,6,Best,buyEvent,"펌웨어 업데이트",57
+Pass,6,Best,buyEvent,"행운 알림",46
+Pass,6,Best,buyPro,"갤러리",42
+Pass,6,Best,buyPro,"계산기",9
+Pass,6,Best,buyPro,"그래브",2
+Pass,6,Best,buyPro,"글린츠츠",30
+Pass,6,Best,buyPro,"날씨",8
+Pass,6,Best,buyPro,"너튜브",1
+Pass,6,Best,buyPro,"넷플러그",4
+Pass,6,Best,buyPro,"듀오링구",1
+Pass,6,Best,buyPro,"래딧",42
+Pass,6,Best,buyPro,"로빈훗훗",3
+Pass,6,Best,buyPro,"링크드아웃",34
+Pass,6,Best,buyPro,"마마고",54
+Pass,6,Best,buyPro,"메롱",47
+Pass,6,Best,buyPro,"메모",12
+Pass,6,Best,buyPro,"메시지",54
+Pass,6,Best,buyPro,"모모모",28
+Pass,6,Best,buyPro,"배다른민족",32
+Pass,6,Best,buyPro,"비고고",9
+Pass,6,Best,buyPro,"설정",31
+Pass,6,Best,buyPro,"손전등",3
+Pass,6,Best,buyPro,"쇼피피",2
+Pass,6,Best,buyPro,"스팟티파이",3
+Pass,6,Best,buyPro,"시계",41
+Pass,6,Best,buyPro,"아마좀",1
+Pass,6,Best,buyPro,"에어방앤방",7
+Pass,6,Best,buyPro,"연락처",54
+Pass,6,Best,buyPro,"우바",1
+Pass,6,Best,buyPro,"위잿",3
+Pass,6,Best,buyPro,"음성 녹음",32
+Pass,6,Best,buyPro,"잘로로",54
+Pass,6,Best,buyPro,"잡스트리트",10
+Pass,6,Best,buyPro,"전화",55
+Pass,6,Best,buyPro,"주움",35
+Pass,6,Best,buyPro,"쥬욱스",15
+Pass,6,Best,buyPro,"카메라",45
+Pass,6,Best,buyPro,"컵컷",19
+Pass,6,Best,buyPro,"코코아T",34
+Pass,6,Best,buyPro,"쿠빵",1
+Pass,6,Best,buyPro,"토스트",26
+Pass,6,Best,buyPro,"트래블로까",13
+Pass,6,Best,buyPro,"틱특",3
+Pass,6,Best,buyPro,"핀트레스트",23
+Pass,6,Best,claimBook,"10",1
+Pass,6,Best,claimBook,"20",1
+Pass,6,Best,claimBook,"30",1
+Pass,6,Best,claimBook,"40",1
+Pass,6,Best,claimBook,"50",1
+Pass,6,Best,claimBook,"60",1
+Pass,6,Best,claimMissions,"",46
+Pass,6,Best,setCards,"AllHands|Birthday",12
+Pass,6,Best,setCards,"AllHands|Birthday|Update",1
+Pass,6,Best,setCards,"AllHands|Drill",35
+Pass,6,Best,setCards,"AllHands|Drill|Lotto|Otp",14
+Pass,6,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",16
+Pass,6,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",16
+Pass,6,Best,setCards,"AllHands|Drill|Otp",27
+Pass,6,Best,setCards,"AllHands|Drill|Otp|Birthday",24
+Pass,6,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",22
+Pass,6,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",1
+Pass,6,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",2
+Pass,6,Best,setCards,"AllHands|Otp",11
+Pass,6,Best,setCards,"Birthday",9
+Pass,6,Best,setCards,"Birthday|Update",5
+Pass,7,Best,buyAssist,"과부하 깊이",514
+Pass,7,Best,buyAssist,"넓은 알림창",200
+Pass,7,Best,buyAssist,"샌드위치",532
+Pass,7,Best,buyAssist,"와일드 알림",445
+Pass,7,Best,buyEvent,"@모두 공지",73
+Pass,7,Best,buyEvent,"단체 문자",66
+Pass,7,Best,buyEvent,"방해 금지",73
+Pass,7,Best,buyEvent,"생일 축하",73
+Pass,7,Best,buyEvent,"알림훈련",73
+Pass,7,Best,buyEvent,"앱스토어 세일",70
+Pass,7,Best,buyEvent,"업데이트",73
+Pass,7,Best,buyEvent,"인증번호",73
+Pass,7,Best,buyEvent,"펌웨어 업데이트",57
+Pass,7,Best,buyEvent,"행운 알림",42
+Pass,7,Best,buyPro,"갤러리",42
+Pass,7,Best,buyPro,"계산기",7
+Pass,7,Best,buyPro,"그래브",3
+Pass,7,Best,buyPro,"글린츠츠",23
+Pass,7,Best,buyPro,"날씨",5
+Pass,7,Best,buyPro,"넷플러그",1
+Pass,7,Best,buyPro,"듀오링구",4
+Pass,7,Best,buyPro,"라자다다",2
+Pass,7,Best,buyPro,"래딧",39
+Pass,7,Best,buyPro,"링크드아웃",31
+Pass,7,Best,buyPro,"마마고",50
+Pass,7,Best,buyPro,"메롱",45
+Pass,7,Best,buyPro,"메모",12
+Pass,7,Best,buyPro,"메시지",55
+Pass,7,Best,buyPro,"모모모",15
+Pass,7,Best,buyPro,"배다른민족",23
+Pass,7,Best,buyPro,"비고고",12
+Pass,7,Best,buyPro,"설정",27
+Pass,7,Best,buyPro,"손전등",3
+Pass,7,Best,buyPro,"쇼피피",4
+Pass,7,Best,buyPro,"스팟티파이",1
+Pass,7,Best,buyPro,"시계",41
+Pass,7,Best,buyPro,"아고다다",1
+Pass,7,Best,buyPro,"아마좀",6
+Pass,7,Best,buyPro,"에어방앤방",3
+Pass,7,Best,buyPro,"연락처",54
+Pass,7,Best,buyPro,"위잿",10
+Pass,7,Best,buyPro,"음성 녹음",33
+Pass,7,Best,buyPro,"잘로로",54
+Pass,7,Best,buyPro,"잡스트리트",9
+Pass,7,Best,buyPro,"전화",56
+Pass,7,Best,buyPro,"주움",34
+Pass,7,Best,buyPro,"쥬욱스",15
+Pass,7,Best,buyPro,"카메라",47
+Pass,7,Best,buyPro,"컵컷",22
+Pass,7,Best,buyPro,"코코아T",24
+Pass,7,Best,buyPro,"쿠빵",1
+Pass,7,Best,buyPro,"텔레그림",2
+Pass,7,Best,buyPro,"토스트",17
+Pass,7,Best,buyPro,"트래블로까",7
+Pass,7,Best,buyPro,"틱특",3
+Pass,7,Best,buyPro,"핀트레스트",9
+Pass,7,Best,claimBook,"10",1
+Pass,7,Best,claimBook,"20",1
+Pass,7,Best,claimBook,"30",1
+Pass,7,Best,claimBook,"40",1
+Pass,7,Best,claimBook,"50",1
+Pass,7,Best,claimBook,"60",1
+Pass,7,Best,claimMissions,"",40
+Pass,7,Best,setCards,"AllHands|Birthday",14
+Pass,7,Best,setCards,"AllHands|Birthday|Update",3
+Pass,7,Best,setCards,"AllHands|Drill",35
+Pass,7,Best,setCards,"AllHands|Drill|Lotto|Otp",9
+Pass,7,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",18
+Pass,7,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",15
+Pass,7,Best,setCards,"AllHands|Drill|Otp",32
+Pass,7,Best,setCards,"AllHands|Drill|Otp|Birthday",25
+Pass,7,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",18
+Pass,7,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",4
+Pass,7,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",2
+Pass,7,Best,setCards,"AllHands|Otp",12
+Pass,7,Best,setCards,"AllHands|Otp|Birthday",1
+Pass,7,Best,setCards,"Birthday",11
+Pass,7,Best,setCards,"Birthday|Update",3
+Pass,7,Best,setCards,"Update",1
+Pass,8,Best,buyAssist,"과부하 깊이",512
+Pass,8,Best,buyAssist,"넓은 알림창",201
+Pass,8,Best,buyAssist,"샌드위치",533
+Pass,8,Best,buyAssist,"와일드 알림",449
+Pass,8,Best,buyEvent,"@모두 공지",73
+Pass,8,Best,buyEvent,"단체 문자",64
+Pass,8,Best,buyEvent,"방해 금지",73
+Pass,8,Best,buyEvent,"생일 축하",73
+Pass,8,Best,buyEvent,"알림훈련",73
+Pass,8,Best,buyEvent,"앱스토어 세일",70
+Pass,8,Best,buyEvent,"업데이트",73
+Pass,8,Best,buyEvent,"인증번호",73
+Pass,8,Best,buyEvent,"펌웨어 업데이트",57
+Pass,8,Best,buyEvent,"행운 알림",44
+Pass,8,Best,buyPro,"갤러리",44
+Pass,8,Best,buyPro,"계산기",5
+Pass,8,Best,buyPro,"글린츠츠",25
+Pass,8,Best,buyPro,"날씨",4
+Pass,8,Best,buyPro,"넷플러그",2
+Pass,8,Best,buyPro,"듀오링구",2
+Pass,8,Best,buyPro,"래딧",30
+Pass,8,Best,buyPro,"링크드아웃",26
+Pass,8,Best,buyPro,"마마고",52
+Pass,8,Best,buyPro,"메롱",46
+Pass,8,Best,buyPro,"메모",10
+Pass,8,Best,buyPro,"메시지",55
+Pass,8,Best,buyPro,"모모모",20
+Pass,8,Best,buyPro,"배다른민족",20
+Pass,8,Best,buyPro,"비고고",6
+Pass,8,Best,buyPro,"설정",31
+Pass,8,Best,buyPro,"손전등",2
+Pass,8,Best,buyPro,"쇼피피",1
+Pass,8,Best,buyPro,"스팟티파이",1
+Pass,8,Best,buyPro,"시계",41
+Pass,8,Best,buyPro,"아마좀",5
+Pass,8,Best,buyPro,"에어방앤방",13
+Pass,8,Best,buyPro,"연락처",55
+Pass,8,Best,buyPro,"위잿",5
+Pass,8,Best,buyPro,"음성 녹음",32
+Pass,8,Best,buyPro,"잘로로",53
+Pass,8,Best,buyPro,"잡스트리트",6
+Pass,8,Best,buyPro,"전화",55
+Pass,8,Best,buyPro,"주움",23
+Pass,8,Best,buyPro,"쥬욱스",9
+Pass,8,Best,buyPro,"카메라",49
+Pass,8,Best,buyPro,"컵컷",24
+Pass,8,Best,buyPro,"코코아T",23
+Pass,8,Best,buyPro,"텔레그림",1
+Pass,8,Best,buyPro,"토스트",20
+Pass,8,Best,buyPro,"트래블로까",14
+Pass,8,Best,buyPro,"틱특",2
+Pass,8,Best,buyPro,"핀트레스트",9
+Pass,8,Best,claimBook,"10",1
+Pass,8,Best,claimBook,"20",1
+Pass,8,Best,claimBook,"30",1
+Pass,8,Best,claimBook,"40",1
+Pass,8,Best,claimBook,"50",1
+Pass,8,Best,claimBook,"60",1
+Pass,8,Best,claimMissions,"",42
+Pass,8,Best,setCards,"AllHands|Birthday",14
+Pass,8,Best,setCards,"AllHands|Birthday|Update",2
+Pass,8,Best,setCards,"AllHands|Drill",36
+Pass,8,Best,setCards,"AllHands|Drill|Lotto|Otp",13
+Pass,8,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",15
+Pass,8,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",16
+Pass,8,Best,setCards,"AllHands|Drill|Otp",32
+Pass,8,Best,setCards,"AllHands|Drill|Otp|Birthday",20
+Pass,8,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",27
+Pass,8,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",3
+Pass,8,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",2
+Pass,8,Best,setCards,"AllHands|Otp",9
+Pass,8,Best,setCards,"Birthday",9
+Pass,8,Best,setCards,"Birthday|Update",3
+Spend30,1,Best,buyAssist,"과부하 깊이",371
+Spend30,1,Best,buyAssist,"넓은 알림창",144
+Spend30,1,Best,buyAssist,"샌드위치",384
+Spend30,1,Best,buyAssist,"와일드 알림",330
+Spend30,1,Best,buyEvent,"@모두 공지",52
+Spend30,1,Best,buyEvent,"단체 문자",47
+Spend30,1,Best,buyEvent,"방해 금지",52
+Spend30,1,Best,buyEvent,"생일 축하",52
+Spend30,1,Best,buyEvent,"알림훈련",52
+Spend30,1,Best,buyEvent,"앱스토어 세일",49
+Spend30,1,Best,buyEvent,"업데이트",52
+Spend30,1,Best,buyEvent,"인증번호",52
+Spend30,1,Best,buyEvent,"펌웨어 업데이트",42
+Spend30,1,Best,buyEvent,"행운 알림",33
+Spend30,1,Best,buyPro,"갤러리",31
+Spend30,1,Best,buyPro,"계산기",10
+Spend30,1,Best,buyPro,"그래브",4
+Spend30,1,Best,buyPro,"글린츠츠",14
+Spend30,1,Best,buyPro,"날씨",4
+Spend30,1,Best,buyPro,"넷플러그",2
+Spend30,1,Best,buyPro,"듀오링구",1
+Spend30,1,Best,buyPro,"라잉",1
+Spend30,1,Best,buyPro,"라자다다",1
+Spend30,1,Best,buyPro,"래딧",26
+Spend30,1,Best,buyPro,"링크드아웃",23
+Spend30,1,Best,buyPro,"마마고",40
+Spend30,1,Best,buyPro,"메롱",31
+Spend30,1,Best,buyPro,"메모",9
+Spend30,1,Best,buyPro,"메시지",37
+Spend30,1,Best,buyPro,"모모모",14
+Spend30,1,Best,buyPro,"배다른민족",12
+Spend30,1,Best,buyPro,"비고고",1
+Spend30,1,Best,buyPro,"설정",23
+Spend30,1,Best,buyPro,"손전등",3
+Spend30,1,Best,buyPro,"쇼피피",2
+Spend30,1,Best,buyPro,"스팟티파이",1
+Spend30,1,Best,buyPro,"시계",29
+Spend30,1,Best,buyPro,"아고다다",1
+Spend30,1,Best,buyPro,"아마좀",8
+Spend30,1,Best,buyPro,"에어방앤방",9
+Spend30,1,Best,buyPro,"연락처",38
+Spend30,1,Best,buyPro,"우바",1
+Spend30,1,Best,buyPro,"위잿",9
+Spend30,1,Best,buyPro,"음성 녹음",25
+Spend30,1,Best,buyPro,"잘로로",33
+Spend30,1,Best,buyPro,"잡스트리트",6
+Spend30,1,Best,buyPro,"전화",38
+Spend30,1,Best,buyPro,"주움",14
+Spend30,1,Best,buyPro,"쥬욱스",4
+Spend30,1,Best,buyPro,"카메라",34
+Spend30,1,Best,buyPro,"컵컷",27
+Spend30,1,Best,buyPro,"코코아T",13
+Spend30,1,Best,buyPro,"코코아톡",2
+Spend30,1,Best,buyPro,"텔레그림",1
+Spend30,1,Best,buyPro,"토스트",16
+Spend30,1,Best,buyPro,"트래블로까",4
+Spend30,1,Best,buyPro,"틱특",8
+Spend30,1,Best,buyPro,"핀트레스트",5
+Spend30,1,Best,claimBook,"10",1
+Spend30,1,Best,claimBook,"20",1
+Spend30,1,Best,claimBook,"30",1
+Spend30,1,Best,claimBook,"40",1
+Spend30,1,Best,claimBook,"50",1
+Spend30,1,Best,claimBook,"60",1
+Spend30,1,Best,claimMissions,"",31
+Spend30,1,Best,setCards,"AllHands|Birthday",7
+Spend30,1,Best,setCards,"AllHands|Birthday|Update",1
+Spend30,1,Best,setCards,"AllHands|Drill",26
+Spend30,1,Best,setCards,"AllHands|Drill|Lotto|Otp",10
+Spend30,1,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",17
+Spend30,1,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",6
+Spend30,1,Best,setCards,"AllHands|Drill|Otp",21
+Spend30,1,Best,setCards,"AllHands|Drill|Otp|Birthday",18
+Spend30,1,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",9
+Spend30,1,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",1
+Spend30,1,Best,setCards,"AllHands|Otp",8
+Spend30,1,Best,setCards,"Birthday",6
+Spend30,1,Best,setCards,"Birthday|Update",3
+Spend30,2,Best,buyAssist,"과부하 깊이",325
+Spend30,2,Best,buyAssist,"넓은 알림창",130
+Spend30,2,Best,buyAssist,"샌드위치",341
+Spend30,2,Best,buyAssist,"와일드 알림",285
+Spend30,2,Best,buyEvent,"@모두 공지",47
+Spend30,2,Best,buyEvent,"단체 문자",41
+Spend30,2,Best,buyEvent,"방해 금지",47
+Spend30,2,Best,buyEvent,"생일 축하",47
+Spend30,2,Best,buyEvent,"알림훈련",47
+Spend30,2,Best,buyEvent,"앱스토어 세일",45
+Spend30,2,Best,buyEvent,"업데이트",47
+Spend30,2,Best,buyEvent,"인증번호",47
+Spend30,2,Best,buyEvent,"펌웨어 업데이트",36
+Spend30,2,Best,buyEvent,"행운 알림",26
+Spend30,2,Best,buyPro,"갤러리",24
+Spend30,2,Best,buyPro,"계산기",9
+Spend30,2,Best,buyPro,"그래브",2
+Spend30,2,Best,buyPro,"글린츠츠",11
+Spend30,2,Best,buyPro,"날씨",2
+Spend30,2,Best,buyPro,"넷플러그",1
+Spend30,2,Best,buyPro,"듀오링구",2
+Spend30,2,Best,buyPro,"라자다다",1
+Spend30,2,Best,buyPro,"래딧",17
+Spend30,2,Best,buyPro,"로빈훗훗",1
+Spend30,2,Best,buyPro,"링크드아웃",12
+Spend30,2,Best,buyPro,"마마고",33
+Spend30,2,Best,buyPro,"메롱",29
+Spend30,2,Best,buyPro,"메모",6
+Spend30,2,Best,buyPro,"메시지",32
+Spend30,2,Best,buyPro,"모모모",15
+Spend30,2,Best,buyPro,"배다른민족",5
+Spend30,2,Best,buyPro,"비고고",6
+Spend30,2,Best,buyPro,"설정",16
+Spend30,2,Best,buyPro,"손전등",2
+Spend30,2,Best,buyPro,"쇼피피",1
+Spend30,2,Best,buyPro,"스팟티파이",2
+Spend30,2,Best,buyPro,"시계",22
+Spend30,2,Best,buyPro,"아고다다",1
+Spend30,2,Best,buyPro,"아마좀",2
+Spend30,2,Best,buyPro,"에어방앤방",5
+Spend30,2,Best,buyPro,"연락처",32
+Spend30,2,Best,buyPro,"와이",1
+Spend30,2,Best,buyPro,"위잿",2
+Spend30,2,Best,buyPro,"음성 녹음",19
+Spend30,2,Best,buyPro,"잘로로",29
+Spend30,2,Best,buyPro,"잡스트리트",3
+Spend30,2,Best,buyPro,"전화",33
+Spend30,2,Best,buyPro,"주움",10
+Spend30,2,Best,buyPro,"쥬욱스",3
+Spend30,2,Best,buyPro,"카메라",30
+Spend30,2,Best,buyPro,"컵컷",25
+Spend30,2,Best,buyPro,"코코아T",6
+Spend30,2,Best,buyPro,"코코아톡",2
+Spend30,2,Best,buyPro,"텔레그림",1
+Spend30,2,Best,buyPro,"토스트",6
+Spend30,2,Best,buyPro,"트래블로까",2
+Spend30,2,Best,buyPro,"틱특",6
+Spend30,2,Best,buyPro,"핀트레스트",1
+Spend30,2,Best,claimBook,"10",1
+Spend30,2,Best,claimBook,"20",1
+Spend30,2,Best,claimBook,"30",1
+Spend30,2,Best,claimBook,"40",1
+Spend30,2,Best,claimBook,"50",1
+Spend30,2,Best,claimBook,"60",1
+Spend30,2,Best,claimMissions,"",26
+Spend30,2,Best,setCards,"AllHands|Birthday",9
+Spend30,2,Best,setCards,"AllHands|Birthday|Update",1
+Spend30,2,Best,setCards,"AllHands|Drill",25
+Spend30,2,Best,setCards,"AllHands|Drill|Lotto|Otp",8
+Spend30,2,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",18
+Spend30,2,Best,setCards,"AllHands|Drill|Otp",21
+Spend30,2,Best,setCards,"AllHands|Drill|Otp|Birthday",21
+Spend30,2,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",6
+Spend30,2,Best,setCards,"AllHands|Otp",12
+Spend30,2,Best,setCards,"Birthday",5
+Spend30,2,Best,setCards,"Birthday|Update",1
+Spend30,3,Best,buyAssist,"과부하 깊이",352
+Spend30,3,Best,buyAssist,"넓은 알림창",138
+Spend30,3,Best,buyAssist,"샌드위치",363
+Spend30,3,Best,buyAssist,"와일드 알림",307
+Spend30,3,Best,buyEvent,"@모두 공지",50
+Spend30,3,Best,buyEvent,"단체 문자",43
+Spend30,3,Best,buyEvent,"방해 금지",50
+Spend30,3,Best,buyEvent,"생일 축하",50
+Spend30,3,Best,buyEvent,"알림훈련",50
+Spend30,3,Best,buyEvent,"앱스토어 세일",48
+Spend30,3,Best,buyEvent,"업데이트",50
+Spend30,3,Best,buyEvent,"인증번호",50
+Spend30,3,Best,buyEvent,"펌웨어 업데이트",39
+Spend30,3,Best,buyEvent,"행운 알림",30
+Spend30,3,Best,buyPro,"갤러리",29
+Spend30,3,Best,buyPro,"계산기",7
+Spend30,3,Best,buyPro,"그래브",2
+Spend30,3,Best,buyPro,"글린츠츠",17
+Spend30,3,Best,buyPro,"날씨",5
+Spend30,3,Best,buyPro,"넷플러그",2
+Spend30,3,Best,buyPro,"듀오링구",2
+Spend30,3,Best,buyPro,"라잉",1
+Spend30,3,Best,buyPro,"라자다다",1
+Spend30,3,Best,buyPro,"래딧",20
+Spend30,3,Best,buyPro,"링크드아웃",15
+Spend30,3,Best,buyPro,"마마고",36
+Spend30,3,Best,buyPro,"메롱",30
+Spend30,3,Best,buyPro,"메모",8
+Spend30,3,Best,buyPro,"메시지",35
+Spend30,3,Best,buyPro,"모모모",11
+Spend30,3,Best,buyPro,"배다른민족",13
+Spend30,3,Best,buyPro,"비고고",2
+Spend30,3,Best,buyPro,"설정",20
+Spend30,3,Best,buyPro,"손전등",3
+Spend30,3,Best,buyPro,"쇼피피",1
+Spend30,3,Best,buyPro,"스팟티파이",2
+Spend30,3,Best,buyPro,"시계",28
+Spend30,3,Best,buyPro,"아고다다",1
+Spend30,3,Best,buyPro,"아마좀",3
+Spend30,3,Best,buyPro,"에어방앤방",8
+Spend30,3,Best,buyPro,"연락처",35
+Spend30,3,Best,buyPro,"와이",3
+Spend30,3,Best,buyPro,"위잿",3
+Spend30,3,Best,buyPro,"음성 녹음",23
+Spend30,3,Best,buyPro,"잘로로",35
+Spend30,3,Best,buyPro,"잡스트리트",6
+Spend30,3,Best,buyPro,"전화",35
+Spend30,3,Best,buyPro,"주움",12
+Spend30,3,Best,buyPro,"쥬욱스",5
+Spend30,3,Best,buyPro,"카메라",29
+Spend30,3,Best,buyPro,"컵컷",19
+Spend30,3,Best,buyPro,"코코아T",14
+Spend30,3,Best,buyPro,"코코아톡",1
+Spend30,3,Best,buyPro,"텔레그림",1
+Spend30,3,Best,buyPro,"토스트",11
+Spend30,3,Best,buyPro,"트래블로까",2
+Spend30,3,Best,buyPro,"틱특",6
+Spend30,3,Best,buyPro,"핀트레스트",6
+Spend30,3,Best,claimBook,"10",1
+Spend30,3,Best,claimBook,"20",1
+Spend30,3,Best,claimBook,"30",1
+Spend30,3,Best,claimBook,"40",1
+Spend30,3,Best,claimBook,"50",1
+Spend30,3,Best,claimBook,"60",1
+Spend30,3,Best,claimMissions,"",27
+Spend30,3,Best,setCards,"AllHands|Birthday",9
+Spend30,3,Best,setCards,"AllHands|Birthday|Update",1
+Spend30,3,Best,setCards,"AllHands|Drill",25
+Spend30,3,Best,setCards,"AllHands|Drill|Lotto|Otp",9
+Spend30,3,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",14
+Spend30,3,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",7
+Spend30,3,Best,setCards,"AllHands|Drill|Otp",19
+Spend30,3,Best,setCards,"AllHands|Drill|Otp|Birthday",17
+Spend30,3,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",12
+Spend30,3,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",1
+Spend30,3,Best,setCards,"AllHands|Otp",9
+Spend30,3,Best,setCards,"Birthday",5
+Spend30,3,Best,setCards,"Birthday|Update",3
+Spend30,4,Best,buyAssist,"과부하 깊이",341
+Spend30,4,Best,buyAssist,"넓은 알림창",134
+Spend30,4,Best,buyAssist,"샌드위치",351
+Spend30,4,Best,buyAssist,"와일드 알림",299
+Spend30,4,Best,buyEvent,"@모두 공지",48
+Spend30,4,Best,buyEvent,"단체 문자",42
+Spend30,4,Best,buyEvent,"방해 금지",48
+Spend30,4,Best,buyEvent,"생일 축하",48
+Spend30,4,Best,buyEvent,"알림훈련",48
+Spend30,4,Best,buyEvent,"앱스토어 세일",45
+Spend30,4,Best,buyEvent,"업데이트",48
+Spend30,4,Best,buyEvent,"인증번호",48
+Spend30,4,Best,buyEvent,"펌웨어 업데이트",38
+Spend30,4,Best,buyEvent,"행운 알림",28
+Spend30,4,Best,buyPro,"갤러리",28
+Spend30,4,Best,buyPro,"계산기",7
+Spend30,4,Best,buyPro,"그래브",3
+Spend30,4,Best,buyPro,"글린츠츠",18
+Spend30,4,Best,buyPro,"날씨",5
+Spend30,4,Best,buyPro,"넷플러그",3
+Spend30,4,Best,buyPro,"라잉",5
+Spend30,4,Best,buyPro,"래딧",22
+Spend30,4,Best,buyPro,"링크드아웃",14
+Spend30,4,Best,buyPro,"마마고",34
+Spend30,4,Best,buyPro,"메롱",28
+Spend30,4,Best,buyPro,"메모",7
+Spend30,4,Best,buyPro,"메시지",35
+Spend30,4,Best,buyPro,"모모모",15
+Spend30,4,Best,buyPro,"미챗챗",2
+Spend30,4,Best,buyPro,"배다른민족",9
+Spend30,4,Best,buyPro,"비고고",4
+Spend30,4,Best,buyPro,"설정",21
+Spend30,4,Best,buyPro,"손전등",4
+Spend30,4,Best,buyPro,"스팟티파이",2
+Spend30,4,Best,buyPro,"시계",29
+Spend30,4,Best,buyPro,"아고다다",2
+Spend30,4,Best,buyPro,"아마좀",1
+Spend30,4,Best,buyPro,"에어방앤방",3
+Spend30,4,Best,buyPro,"연락처",35
+Spend30,4,Best,buyPro,"와이",5
+Spend30,4,Best,buyPro,"위잿",2
+Spend30,4,Best,buyPro,"음성 녹음",23
+Spend30,4,Best,buyPro,"잘로로",34
+Spend30,4,Best,buyPro,"잡스트리트",5
+Spend30,4,Best,buyPro,"전화",35
+Spend30,4,Best,buyPro,"주움",12
+Spend30,4,Best,buyPro,"쥬욱스",4
+Spend30,4,Best,buyPro,"카메라",30
+Spend30,4,Best,buyPro,"컵컷",23
+Spend30,4,Best,buyPro,"코코아T",10
+Spend30,4,Best,buyPro,"코코아톡",5
+Spend30,4,Best,buyPro,"토스트",9
+Spend30,4,Best,buyPro,"트래블로까",9
+Spend30,4,Best,buyPro,"틱특",4
+Spend30,4,Best,buyPro,"핀트레스트",7
+Spend30,4,Best,claimBook,"10",1
+Spend30,4,Best,claimBook,"20",1
+Spend30,4,Best,claimBook,"30",1
+Spend30,4,Best,claimBook,"40",1
+Spend30,4,Best,claimBook,"50",1
+Spend30,4,Best,claimBook,"60",1
+Spend30,4,Best,claimMissions,"",25
+Spend30,4,Best,setCards,"AllHands|Birthday",10
+Spend30,4,Best,setCards,"AllHands|Birthday|Update",1
+Spend30,4,Best,setCards,"AllHands|Drill",23
+Spend30,4,Best,setCards,"AllHands|Drill|Lotto|Otp",7
+Spend30,4,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",15
+Spend30,4,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",6
+Spend30,4,Best,setCards,"AllHands|Drill|Otp",18
+Spend30,4,Best,setCards,"AllHands|Drill|Otp|Birthday",19
+Spend30,4,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",7
+Spend30,4,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",1
+Spend30,4,Best,setCards,"AllHands|Otp",7
+Spend30,4,Best,setCards,"AllHands|Otp|Birthday",1
+Spend30,4,Best,setCards,"Birthday",7
+Spend30,4,Best,setCards,"Birthday|Update",2
+Spend30,5,Best,buyAssist,"과부하 깊이",393
+Spend30,5,Best,buyAssist,"넓은 알림창",156
+Spend30,5,Best,buyAssist,"샌드위치",411
+Spend30,5,Best,buyAssist,"와일드 알림",346
+Spend30,5,Best,buyEvent,"@모두 공지",56
+Spend30,5,Best,buyEvent,"단체 문자",50
+Spend30,5,Best,buyEvent,"방해 금지",56
+Spend30,5,Best,buyEvent,"생일 축하",56
+Spend30,5,Best,buyEvent,"알림훈련",56
+Spend30,5,Best,buyEvent,"앱스토어 세일",53
+Spend30,5,Best,buyEvent,"업데이트",56
+Spend30,5,Best,buyEvent,"인증번호",56
+Spend30,5,Best,buyEvent,"펌웨어 업데이트",44
+Spend30,5,Best,buyEvent,"행운 알림",33
+Spend30,5,Best,buyPro,"갤러리",32
+Spend30,5,Best,buyPro,"계산기",9
+Spend30,5,Best,buyPro,"그래브",6
+Spend30,5,Best,buyPro,"글린츠츠",15
+Spend30,5,Best,buyPro,"날씨",5
+Spend30,5,Best,buyPro,"너튜브",1
+Spend30,5,Best,buyPro,"넷플러그",3
+Spend30,5,Best,buyPro,"듀오링구",2
+Spend30,5,Best,buyPro,"라자다다",4
+Spend30,5,Best,buyPro,"래딧",24
+Spend30,5,Best,buyPro,"링크드아웃",23
+Spend30,5,Best,buyPro,"마마고",39
+Spend30,5,Best,buyPro,"메롱",36
+Spend30,5,Best,buyPro,"메모",12
+Spend30,5,Best,buyPro,"메시지",39
+Spend30,5,Best,buyPro,"모모모",16
+Spend30,5,Best,buyPro,"배다른민족",7
+Spend30,5,Best,buyPro,"비고고",9
+Spend30,5,Best,buyPro,"설정",22
+Spend30,5,Best,buyPro,"손전등",3
+Spend30,5,Best,buyPro,"쇼피피",3
+Spend30,5,Best,buyPro,"스팟티파이",1
+Spend30,5,Best,buyPro,"시계",35
+Spend30,5,Best,buyPro,"아고다다",4
+Spend30,5,Best,buyPro,"아마좀",6
+Spend30,5,Best,buyPro,"에어방앤방",8
+Spend30,5,Best,buyPro,"연락처",37
+Spend30,5,Best,buyPro,"와이",3
+Spend30,5,Best,buyPro,"위잿",3
+Spend30,5,Best,buyPro,"음성 녹음",26
+Spend30,5,Best,buyPro,"잘로로",36
+Spend30,5,Best,buyPro,"잡스트리트",8
+Spend30,5,Best,buyPro,"전화",39
+Spend30,5,Best,buyPro,"주움",19
+Spend30,5,Best,buyPro,"쥬욱스",10
+Spend30,5,Best,buyPro,"카메라",37
+Spend30,5,Best,buyPro,"컵컷",30
+Spend30,5,Best,buyPro,"코코아T",5
+Spend30,5,Best,buyPro,"큐글플레이",1
+Spend30,5,Best,buyPro,"텔레그림",2
+Spend30,5,Best,buyPro,"토스트",12
+Spend30,5,Best,buyPro,"트래블로까",4
+Spend30,5,Best,buyPro,"틱특",9
+Spend30,5,Best,buyPro,"핀트레스트",4
+Spend30,5,Best,claimBook,"10",1
+Spend30,5,Best,claimBook,"20",1
+Spend30,5,Best,claimBook,"30",1
+Spend30,5,Best,claimBook,"40",1
+Spend30,5,Best,claimBook,"50",1
+Spend30,5,Best,claimBook,"60",1
+Spend30,5,Best,claimMissions,"",33
+Spend30,5,Best,setCards,"AllHands|Birthday",10
+Spend30,5,Best,setCards,"AllHands|Birthday|Update",1
+Spend30,5,Best,setCards,"AllHands|Drill",27
+Spend30,5,Best,setCards,"AllHands|Drill|Lotto|Otp",9
+Spend30,5,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",13
+Spend30,5,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",11
+Spend30,5,Best,setCards,"AllHands|Drill|Otp",24
+Spend30,5,Best,setCards,"AllHands|Drill|Otp|Birthday",21
+Spend30,5,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",9
+Spend30,5,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",1
+Spend30,5,Best,setCards,"AllHands|Otp",10
+Spend30,5,Best,setCards,"Birthday",7
+Spend30,5,Best,setCards,"Birthday|Update",5
+Spend30,6,Best,buyAssist,"과부하 깊이",375
+Spend30,6,Best,buyAssist,"넓은 알림창",145
+Spend30,6,Best,buyAssist,"샌드위치",385
+Spend30,6,Best,buyAssist,"와일드 알림",328
+Spend30,6,Best,buyEvent,"@모두 공지",52
+Spend30,6,Best,buyEvent,"단체 문자",47
+Spend30,6,Best,buyEvent,"방해 금지",52
+Spend30,6,Best,buyEvent,"생일 축하",52
+Spend30,6,Best,buyEvent,"알림훈련",52
+Spend30,6,Best,buyEvent,"앱스토어 세일",49
+Spend30,6,Best,buyEvent,"업데이트",52
+Spend30,6,Best,buyEvent,"인증번호",52
+Spend30,6,Best,buyEvent,"펌웨어 업데이트",42
+Spend30,6,Best,buyEvent,"행운 알림",31
+Spend30,6,Best,buyPro,"갤러리",29
+Spend30,6,Best,buyPro,"계산기",11
+Spend30,6,Best,buyPro,"그래브",3
+Spend30,6,Best,buyPro,"글린츠츠",18
+Spend30,6,Best,buyPro,"날씨",6
+Spend30,6,Best,buyPro,"너튜브",1
+Spend30,6,Best,buyPro,"넷플러그",3
+Spend30,6,Best,buyPro,"듀오링구",2
+Spend30,6,Best,buyPro,"라자다다",1
+Spend30,6,Best,buyPro,"래딧",24
+Spend30,6,Best,buyPro,"링크드아웃",21
+Spend30,6,Best,buyPro,"마마고",39
+Spend30,6,Best,buyPro,"메롱",31
+Spend30,6,Best,buyPro,"메모",8
+Spend30,6,Best,buyPro,"메시지",38
+Spend30,6,Best,buyPro,"모모모",18
+Spend30,6,Best,buyPro,"배다른민족",12
+Spend30,6,Best,buyPro,"비고고",3
+Spend30,6,Best,buyPro,"설정",22
+Spend30,6,Best,buyPro,"손전등",4
+Spend30,6,Best,buyPro,"쇼피피",2
+Spend30,6,Best,buyPro,"스팟티파이",2
+Spend30,6,Best,buyPro,"시계",30
+Spend30,6,Best,buyPro,"아고다다",2
+Spend30,6,Best,buyPro,"아마좀",3
+Spend30,6,Best,buyPro,"에어방앤방",6
+Spend30,6,Best,buyPro,"연락처",38
+Spend30,6,Best,buyPro,"와이",1
+Spend30,6,Best,buyPro,"위잿",1
+Spend30,6,Best,buyPro,"음성 녹음",27
+Spend30,6,Best,buyPro,"잘로로",37
+Spend30,6,Best,buyPro,"잡스트리트",5
+Spend30,6,Best,buyPro,"전화",38
+Spend30,6,Best,buyPro,"주움",19
+Spend30,6,Best,buyPro,"쥬욱스",5
+Spend30,6,Best,buyPro,"카메라",34
+Spend30,6,Best,buyPro,"컵컷",24
+Spend30,6,Best,buyPro,"코코아T",12
+Spend30,6,Best,buyPro,"텔레그림",1
+Spend30,6,Best,buyPro,"토스트",17
+Spend30,6,Best,buyPro,"튄더",1
+Spend30,6,Best,buyPro,"트래블로까",5
+Spend30,6,Best,buyPro,"틱특",6
+Spend30,6,Best,buyPro,"핀트레스트",7
+Spend30,6,Best,claimBook,"10",1
+Spend30,6,Best,claimBook,"20",1
+Spend30,6,Best,claimBook,"30",1
+Spend30,6,Best,claimBook,"40",1
+Spend30,6,Best,claimBook,"50",1
+Spend30,6,Best,claimBook,"60",1
+Spend30,6,Best,claimMissions,"",30
+Spend30,6,Best,setCards,"AllHands|Birthday",10
+Spend30,6,Best,setCards,"AllHands|Birthday|Update",1
+Spend30,6,Best,setCards,"AllHands|Drill",26
+Spend30,6,Best,setCards,"AllHands|Drill|Lotto|Otp",8
+Spend30,6,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",16
+Spend30,6,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",7
+Spend30,6,Best,setCards,"AllHands|Drill|Otp",22
+Spend30,6,Best,setCards,"AllHands|Drill|Otp|Birthday",22
+Spend30,6,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",12
+Spend30,6,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",1
+Spend30,6,Best,setCards,"AllHands|Otp",8
+Spend30,6,Best,setCards,"Birthday",8
+Spend30,6,Best,setCards,"Birthday|Update",2
+Spend30,7,Best,buyAssist,"과부하 깊이",372
+Spend30,7,Best,buyAssist,"넓은 알림창",147
+Spend30,7,Best,buyAssist,"샌드위치",388
+Spend30,7,Best,buyAssist,"와일드 알림",328
+Spend30,7,Best,buyEvent,"@모두 공지",53
+Spend30,7,Best,buyEvent,"단체 문자",48
+Spend30,7,Best,buyEvent,"방해 금지",53
+Spend30,7,Best,buyEvent,"생일 축하",53
+Spend30,7,Best,buyEvent,"알림훈련",53
+Spend30,7,Best,buyEvent,"앱스토어 세일",50
+Spend30,7,Best,buyEvent,"업데이트",53
+Spend30,7,Best,buyEvent,"인증번호",53
+Spend30,7,Best,buyEvent,"펌웨어 업데이트",42
+Spend30,7,Best,buyEvent,"행운 알림",32
+Spend30,7,Best,buyPro,"갤러리",26
+Spend30,7,Best,buyPro,"계산기",5
+Spend30,7,Best,buyPro,"글린츠츠",20
+Spend30,7,Best,buyPro,"날씨",8
+Spend30,7,Best,buyPro,"넷플러그",2
+Spend30,7,Best,buyPro,"라자다다",1
+Spend30,7,Best,buyPro,"래딧",24
+Spend30,7,Best,buyPro,"링크드아웃",18
+Spend30,7,Best,buyPro,"마마고",38
+Spend30,7,Best,buyPro,"메롱",29
+Spend30,7,Best,buyPro,"메모",18
+Spend30,7,Best,buyPro,"메시지",37
+Spend30,7,Best,buyPro,"모모모",15
+Spend30,7,Best,buyPro,"배다른민족",14
+Spend30,7,Best,buyPro,"비고고",1
+Spend30,7,Best,buyPro,"설정",24
+Spend30,7,Best,buyPro,"손전등",4
+Spend30,7,Best,buyPro,"쇼피피",1
+Spend30,7,Best,buyPro,"스팟티파이",1
+Spend30,7,Best,buyPro,"시계",37
+Spend30,7,Best,buyPro,"아마좀",6
+Spend30,7,Best,buyPro,"에어방앤방",8
+Spend30,7,Best,buyPro,"연락처",37
+Spend30,7,Best,buyPro,"위잿",5
+Spend30,7,Best,buyPro,"음성 녹음",20
+Spend30,7,Best,buyPro,"잘로로",33
+Spend30,7,Best,buyPro,"잡스트리트",5
+Spend30,7,Best,buyPro,"전화",39
+Spend30,7,Best,buyPro,"주움",18
+Spend30,7,Best,buyPro,"쥬욱스",4
+Spend30,7,Best,buyPro,"카메라",27
+Spend30,7,Best,buyPro,"컵컷",21
+Spend30,7,Best,buyPro,"코코아T",15
+Spend30,7,Best,buyPro,"텔레그림",1
+Spend30,7,Best,buyPro,"토스트",17
+Spend30,7,Best,buyPro,"트래블로까",6
+Spend30,7,Best,buyPro,"틱특",8
+Spend30,7,Best,buyPro,"핀트레스트",6
+Spend30,7,Best,claimBook,"10",1
+Spend30,7,Best,claimBook,"20",1
+Spend30,7,Best,claimBook,"30",1
+Spend30,7,Best,claimBook,"40",1
+Spend30,7,Best,claimBook,"50",1
+Spend30,7,Best,claimBook,"60",1
+Spend30,7,Best,claimMissions,"",28
+Spend30,7,Best,setCards,"AllHands|Birthday",10
+Spend30,7,Best,setCards,"AllHands|Birthday|Update",2
+Spend30,7,Best,setCards,"AllHands|Drill",24
+Spend30,7,Best,setCards,"AllHands|Drill|Lotto|Otp",7
+Spend30,7,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",17
+Spend30,7,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday|Firmware",8
+Spend30,7,Best,setCards,"AllHands|Drill|Otp",22
+Spend30,7,Best,setCards,"AllHands|Drill|Otp|Birthday",20
+Spend30,7,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",10
+Spend30,7,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware|GroupText",1
+Spend30,7,Best,setCards,"AllHands|Drill|Otp|Birthday|GroupText",1
+Spend30,7,Best,setCards,"AllHands|Otp",9
+Spend30,7,Best,setCards,"Birthday",9
+Spend30,7,Best,setCards,"Birthday|Update",2
+Spend30,8,Best,buyAssist,"과부하 깊이",323
+Spend30,8,Best,buyAssist,"넓은 알림창",128
+Spend30,8,Best,buyAssist,"샌드위치",337
+Spend30,8,Best,buyAssist,"와일드 알림",287
+Spend30,8,Best,buyEvent,"@모두 공지",46
+Spend30,8,Best,buyEvent,"단체 문자",40
+Spend30,8,Best,buyEvent,"방해 금지",46
+Spend30,8,Best,buyEvent,"생일 축하",46
+Spend30,8,Best,buyEvent,"알림훈련",46
+Spend30,8,Best,buyEvent,"앱스토어 세일",44
+Spend30,8,Best,buyEvent,"업데이트",46
+Spend30,8,Best,buyEvent,"인증번호",46
+Spend30,8,Best,buyEvent,"펌웨어 업데이트",36
+Spend30,8,Best,buyEvent,"행운 알림",28
+Spend30,8,Best,buyPro,"갤러리",25
+Spend30,8,Best,buyPro,"계산기",6
+Spend30,8,Best,buyPro,"그래브",2
+Spend30,8,Best,buyPro,"글린츠츠",13
+Spend30,8,Best,buyPro,"날씨",4
+Spend30,8,Best,buyPro,"넷플러그",2
+Spend30,8,Best,buyPro,"듀오링구",1
+Spend30,8,Best,buyPro,"라자다다",1
+Spend30,8,Best,buyPro,"래딧",22
+Spend30,8,Best,buyPro,"링크드아웃",19
+Spend30,8,Best,buyPro,"마마고",35
+Spend30,8,Best,buyPro,"메롱",28
+Spend30,8,Best,buyPro,"메모",7
+Spend30,8,Best,buyPro,"메시지",32
+Spend30,8,Best,buyPro,"모모모",13
+Spend30,8,Best,buyPro,"배다른민족",10
+Spend30,8,Best,buyPro,"비고고",2
+Spend30,8,Best,buyPro,"설정",19
+Spend30,8,Best,buyPro,"손전등",2
+Spend30,8,Best,buyPro,"쇼피피",1
+Spend30,8,Best,buyPro,"스팟티파이",2
+Spend30,8,Best,buyPro,"시계",22
+Spend30,8,Best,buyPro,"아고다다",2
+Spend30,8,Best,buyPro,"아마좀",4
+Spend30,8,Best,buyPro,"에어방앤방",3
+Spend30,8,Best,buyPro,"연락처",32
+Spend30,8,Best,buyPro,"위잿",4
+Spend30,8,Best,buyPro,"음성 녹음",20
+Spend30,8,Best,buyPro,"잘로로",32
+Spend30,8,Best,buyPro,"잡스트리트",3
+Spend30,8,Best,buyPro,"전화",32
+Spend30,8,Best,buyPro,"주움",14
+Spend30,8,Best,buyPro,"쥬욱스",2
+Spend30,8,Best,buyPro,"카메라",29
+Spend30,8,Best,buyPro,"컵컷",22
+Spend30,8,Best,buyPro,"코코아T",11
+Spend30,8,Best,buyPro,"코코아톡",1
+Spend30,8,Best,buyPro,"텔레그림",2
+Spend30,8,Best,buyPro,"토스트",14
+Spend30,8,Best,buyPro,"트래블로까",5
+Spend30,8,Best,buyPro,"틱특",6
+Spend30,8,Best,buyPro,"핀트레스트",5
+Spend30,8,Best,claimBook,"10",1
+Spend30,8,Best,claimBook,"20",1
+Spend30,8,Best,claimBook,"30",1
+Spend30,8,Best,claimBook,"40",1
+Spend30,8,Best,claimBook,"50",1
+Spend30,8,Best,claimBook,"60",1
+Spend30,8,Best,claimMissions,"",30
+Spend30,8,Best,setCards,"AllHands|Birthday",9
+Spend30,8,Best,setCards,"AllHands|Drill",27
+Spend30,8,Best,setCards,"AllHands|Drill|Lotto|Otp",10
+Spend30,8,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",18
+Spend30,8,Best,setCards,"AllHands|Drill|Otp",21
+Spend30,8,Best,setCards,"AllHands|Drill|Otp|Birthday",20
+Spend30,8,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",6
+Spend30,8,Best,setCards,"AllHands|Otp",8
+Spend30,8,Best,setCards,"Birthday",6
+Spend30,8,Best,setCards,"Birthday|Update",2
+Spend100,1,Best,buyAssist,"과부하 깊이",216
+Spend100,1,Best,buyAssist,"넓은 알림창",86
+Spend100,1,Best,buyAssist,"샌드위치",224
+Spend100,1,Best,buyAssist,"와일드 알림",188
+Spend100,1,Best,buyEvent,"@모두 공지",31
+Spend100,1,Best,buyEvent,"단체 문자",28
+Spend100,1,Best,buyEvent,"방해 금지",31
+Spend100,1,Best,buyEvent,"생일 축하",31
+Spend100,1,Best,buyEvent,"알림훈련",31
+Spend100,1,Best,buyEvent,"앱스토어 세일",30
+Spend100,1,Best,buyEvent,"업데이트",31
+Spend100,1,Best,buyEvent,"인증번호",31
+Spend100,1,Best,buyEvent,"펌웨어 업데이트",23
+Spend100,1,Best,buyEvent,"행운 알림",19
+Spend100,1,Best,buyPro,"갤러리",12
+Spend100,1,Best,buyPro,"계산기",2
+Spend100,1,Best,buyPro,"그래브",1
+Spend100,1,Best,buyPro,"글린츠츠",13
+Spend100,1,Best,buyPro,"날씨",13
+Spend100,1,Best,buyPro,"너튜브",1
+Spend100,1,Best,buyPro,"넷플러그",2
+Spend100,1,Best,buyPro,"듀오링구",4
+Spend100,1,Best,buyPro,"라잉",1
+Spend100,1,Best,buyPro,"래딧",16
+Spend100,1,Best,buyPro,"링크드아웃",9
+Spend100,1,Best,buyPro,"마마고",20
+Spend100,1,Best,buyPro,"메롱",13
+Spend100,1,Best,buyPro,"메모",21
+Spend100,1,Best,buyPro,"메시지",17
+Spend100,1,Best,buyPro,"모모모",8
+Spend100,1,Best,buyPro,"미챗챗",1
+Spend100,1,Best,buyPro,"배다른민족",10
+Spend100,1,Best,buyPro,"비고고",1
+Spend100,1,Best,buyPro,"설정",11
+Spend100,1,Best,buyPro,"손전등",5
+Spend100,1,Best,buyPro,"쇼피피",1
+Spend100,1,Best,buyPro,"스팟티파이",2
+Spend100,1,Best,buyPro,"시계",24
+Spend100,1,Best,buyPro,"아마좀",1
+Spend100,1,Best,buyPro,"에어방앤방",2
+Spend100,1,Best,buyPro,"연락처",19
+Spend100,1,Best,buyPro,"와이",4
+Spend100,1,Best,buyPro,"음성 녹음",4
+Spend100,1,Best,buyPro,"잘로로",18
+Spend100,1,Best,buyPro,"잡스트리트",3
+Spend100,1,Best,buyPro,"전화",19
+Spend100,1,Best,buyPro,"주움",12
+Spend100,1,Best,buyPro,"쥬욱스",3
+Spend100,1,Best,buyPro,"카메라",8
+Spend100,1,Best,buyPro,"컵컷",12
+Spend100,1,Best,buyPro,"코코아T",11
+Spend100,1,Best,buyPro,"코코아톡",1
+Spend100,1,Best,buyPro,"텔레그림",1
+Spend100,1,Best,buyPro,"토스트",3
+Spend100,1,Best,buyPro,"튄더",1
+Spend100,1,Best,buyPro,"트래블로까",8
+Spend100,1,Best,buyPro,"틱특",2
+Spend100,1,Best,buyPro,"핀트레스트",8
+Spend100,1,Best,claimBook,"10",1
+Spend100,1,Best,claimBook,"20",1
+Spend100,1,Best,claimBook,"30",1
+Spend100,1,Best,claimBook,"40",1
+Spend100,1,Best,claimBook,"50",1
+Spend100,1,Best,claimBook,"60",1
+Spend100,1,Best,claimMissions,"",20
+Spend100,1,Best,setCards,"AllHands|Birthday",5
+Spend100,1,Best,setCards,"AllHands|Drill",19
+Spend100,1,Best,setCards,"AllHands|Drill|Lotto|Otp",8
+Spend100,1,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",11
+Spend100,1,Best,setCards,"AllHands|Drill|Otp",15
+Spend100,1,Best,setCards,"AllHands|Drill|Otp|Birthday",12
+Spend100,1,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",2
+Spend100,1,Best,setCards,"AllHands|Otp",4
+Spend100,1,Best,setCards,"Birthday",6
+Spend100,2,Best,buyAssist,"과부하 깊이",213
+Spend100,2,Best,buyAssist,"넓은 알림창",84
+Spend100,2,Best,buyAssist,"샌드위치",225
+Spend100,2,Best,buyAssist,"와일드 알림",192
+Spend100,2,Best,buyEvent,"@모두 공지",31
+Spend100,2,Best,buyEvent,"단체 문자",28
+Spend100,2,Best,buyEvent,"방해 금지",31
+Spend100,2,Best,buyEvent,"생일 축하",31
+Spend100,2,Best,buyEvent,"알림훈련",31
+Spend100,2,Best,buyEvent,"앱스토어 세일",30
+Spend100,2,Best,buyEvent,"업데이트",31
+Spend100,2,Best,buyEvent,"인증번호",31
+Spend100,2,Best,buyEvent,"펌웨어 업데이트",23
+Spend100,2,Best,buyEvent,"행운 알림",18
+Spend100,2,Best,buyPro,"갤러리",13
+Spend100,2,Best,buyPro,"계산기",3
+Spend100,2,Best,buyPro,"그래브",1
+Spend100,2,Best,buyPro,"글린츠츠",13
+Spend100,2,Best,buyPro,"날씨",15
+Spend100,2,Best,buyPro,"너튜브",1
+Spend100,2,Best,buyPro,"넷플러그",1
+Spend100,2,Best,buyPro,"듀오링구",5
+Spend100,2,Best,buyPro,"라잉",2
+Spend100,2,Best,buyPro,"래딧",13
+Spend100,2,Best,buyPro,"링크드아웃",6
+Spend100,2,Best,buyPro,"마마고",21
+Spend100,2,Best,buyPro,"메롱",13
+Spend100,2,Best,buyPro,"메모",23
+Spend100,2,Best,buyPro,"메시지",16
+Spend100,2,Best,buyPro,"모모모",6
+Spend100,2,Best,buyPro,"배다른민족",8
+Spend100,2,Best,buyPro,"비고고",8
+Spend100,2,Best,buyPro,"설정",11
+Spend100,2,Best,buyPro,"손전등",4
+Spend100,2,Best,buyPro,"쇼피피",1
+Spend100,2,Best,buyPro,"스팟티파이",2
+Spend100,2,Best,buyPro,"시계",25
+Spend100,2,Best,buyPro,"아고다다",1
+Spend100,2,Best,buyPro,"아마좀",1
+Spend100,2,Best,buyPro,"에어방앤방",3
+Spend100,2,Best,buyPro,"연락처",16
+Spend100,2,Best,buyPro,"와이",2
+Spend100,2,Best,buyPro,"음성 녹음",5
+Spend100,2,Best,buyPro,"잘로로",16
+Spend100,2,Best,buyPro,"잡스트리트",5
+Spend100,2,Best,buyPro,"전화",19
+Spend100,2,Best,buyPro,"주움",6
+Spend100,2,Best,buyPro,"쥬욱스",7
+Spend100,2,Best,buyPro,"카메라",9
+Spend100,2,Best,buyPro,"컵컷",11
+Spend100,2,Best,buyPro,"코코아T",10
+Spend100,2,Best,buyPro,"코코아톡",1
+Spend100,2,Best,buyPro,"토스트",3
+Spend100,2,Best,buyPro,"트래블로까",4
+Spend100,2,Best,buyPro,"틱특",4
+Spend100,2,Best,buyPro,"핀트레스트",3
+Spend100,2,Best,claimBook,"10",1
+Spend100,2,Best,claimBook,"20",1
+Spend100,2,Best,claimBook,"30",1
+Spend100,2,Best,claimBook,"40",1
+Spend100,2,Best,claimBook,"50",1
+Spend100,2,Best,claimBook,"60",1
+Spend100,2,Best,claimMissions,"",16
+Spend100,2,Best,setCards,"AllHands|Birthday",6
+Spend100,2,Best,setCards,"AllHands|Drill",16
+Spend100,2,Best,setCards,"AllHands|Drill|Lotto|Otp",5
+Spend100,2,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",13
+Spend100,2,Best,setCards,"AllHands|Drill|Otp",11
+Spend100,2,Best,setCards,"AllHands|Drill|Otp|Birthday",13
+Spend100,2,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",3
+Spend100,2,Best,setCards,"AllHands|Otp",5
+Spend100,2,Best,setCards,"Birthday",5
+Spend100,2,Best,setCards,"Birthday|Update",1
+Spend100,3,Best,buyAssist,"과부하 깊이",217
+Spend100,3,Best,buyAssist,"넓은 알림창",85
+Spend100,3,Best,buyAssist,"샌드위치",226
+Spend100,3,Best,buyAssist,"와일드 알림",190
+Spend100,3,Best,buyEvent,"@모두 공지",31
+Spend100,3,Best,buyEvent,"단체 문자",28
+Spend100,3,Best,buyEvent,"방해 금지",31
+Spend100,3,Best,buyEvent,"생일 축하",31
+Spend100,3,Best,buyEvent,"알림훈련",31
+Spend100,3,Best,buyEvent,"앱스토어 세일",30
+Spend100,3,Best,buyEvent,"업데이트",31
+Spend100,3,Best,buyEvent,"인증번호",31
+Spend100,3,Best,buyEvent,"펌웨어 업데이트",23
+Spend100,3,Best,buyEvent,"행운 알림",18
+Spend100,3,Best,buyPro,"갤러리",13
+Spend100,3,Best,buyPro,"계산기",7
+Spend100,3,Best,buyPro,"그래브",3
+Spend100,3,Best,buyPro,"글린츠츠",10
+Spend100,3,Best,buyPro,"날씨",5
+Spend100,3,Best,buyPro,"너튜브",2
+Spend100,3,Best,buyPro,"넷플러그",2
+Spend100,3,Best,buyPro,"듀오링구",5
+Spend100,3,Best,buyPro,"라잉",1
+Spend100,3,Best,buyPro,"래딧",10
+Spend100,3,Best,buyPro,"링크드아웃",8
+Spend100,3,Best,buyPro,"마마고",17
+Spend100,3,Best,buyPro,"메롱",15
+Spend100,3,Best,buyPro,"메모",16
+Spend100,3,Best,buyPro,"메시지",17
+Spend100,3,Best,buyPro,"모모모",5
+Spend100,3,Best,buyPro,"배다른민족",5
+Spend100,3,Best,buyPro,"비고고",4
+Spend100,3,Best,buyPro,"설정",12
+Spend100,3,Best,buyPro,"손전등",4
+Spend100,3,Best,buyPro,"쇼피피",2
+Spend100,3,Best,buyPro,"스팟티파이",2
+Spend100,3,Best,buyPro,"시계",24
+Spend100,3,Best,buyPro,"아고다다",1
+Spend100,3,Best,buyPro,"아마좀",3
+Spend100,3,Best,buyPro,"에어방앤방",2
+Spend100,3,Best,buyPro,"연락처",18
+Spend100,3,Best,buyPro,"와이",3
+Spend100,3,Best,buyPro,"위잿",3
+Spend100,3,Best,buyPro,"음성 녹음",10
+Spend100,3,Best,buyPro,"잘로로",18
+Spend100,3,Best,buyPro,"잡스트리트",4
+Spend100,3,Best,buyPro,"전화",19
+Spend100,3,Best,buyPro,"주움",10
+Spend100,3,Best,buyPro,"쥬욱스",6
+Spend100,3,Best,buyPro,"카메라",13
+Spend100,3,Best,buyPro,"컵컷",14
+Spend100,3,Best,buyPro,"코코아T",5
+Spend100,3,Best,buyPro,"텔레그림",1
+Spend100,3,Best,buyPro,"토스트",4
+Spend100,3,Best,buyPro,"트래블로까",6
+Spend100,3,Best,buyPro,"틱특",5
+Spend100,3,Best,buyPro,"핀트레스트",3
+Spend100,3,Best,claimBook,"10",1
+Spend100,3,Best,claimBook,"20",1
+Spend100,3,Best,claimBook,"30",1
+Spend100,3,Best,claimBook,"40",1
+Spend100,3,Best,claimBook,"50",1
+Spend100,3,Best,claimBook,"60",1
+Spend100,3,Best,claimMissions,"",17
+Spend100,3,Best,setCards,"AllHands|Birthday",6
+Spend100,3,Best,setCards,"AllHands|Drill",16
+Spend100,3,Best,setCards,"AllHands|Drill|Lotto|Otp",6
+Spend100,3,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",12
+Spend100,3,Best,setCards,"AllHands|Drill|Otp",12
+Spend100,3,Best,setCards,"AllHands|Drill|Otp|Birthday",12
+Spend100,3,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",3
+Spend100,3,Best,setCards,"AllHands|Otp",6
+Spend100,3,Best,setCards,"Birthday",4
+Spend100,4,Best,buyAssist,"과부하 깊이",223
+Spend100,4,Best,buyAssist,"넓은 알림창",88
+Spend100,4,Best,buyAssist,"샌드위치",232
+Spend100,4,Best,buyAssist,"와일드 알림",195
+Spend100,4,Best,buyEvent,"@모두 공지",32
+Spend100,4,Best,buyEvent,"단체 문자",29
+Spend100,4,Best,buyEvent,"방해 금지",32
+Spend100,4,Best,buyEvent,"생일 축하",32
+Spend100,4,Best,buyEvent,"알림훈련",32
+Spend100,4,Best,buyEvent,"앱스토어 세일",31
+Spend100,4,Best,buyEvent,"업데이트",32
+Spend100,4,Best,buyEvent,"인증번호",32
+Spend100,4,Best,buyEvent,"펌웨어 업데이트",25
+Spend100,4,Best,buyEvent,"행운 알림",19
+Spend100,4,Best,buyPro,"갤러리",13
+Spend100,4,Best,buyPro,"계산기",4
+Spend100,4,Best,buyPro,"그래브",3
+Spend100,4,Best,buyPro,"글린츠츠",9
+Spend100,4,Best,buyPro,"날씨",15
+Spend100,4,Best,buyPro,"넷플러그",3
+Spend100,4,Best,buyPro,"듀오링구",3
+Spend100,4,Best,buyPro,"라잉",2
+Spend100,4,Best,buyPro,"래딧",15
+Spend100,4,Best,buyPro,"링크드아웃",9
+Spend100,4,Best,buyPro,"마마고",19
+Spend100,4,Best,buyPro,"메롱",14
+Spend100,4,Best,buyPro,"메모",24
+Spend100,4,Best,buyPro,"메시지",18
+Spend100,4,Best,buyPro,"모모모",9
+Spend100,4,Best,buyPro,"배다른민족",11
+Spend100,4,Best,buyPro,"비고고",2
+Spend100,4,Best,buyPro,"설정",12
+Spend100,4,Best,buyPro,"손전등",5
+Spend100,4,Best,buyPro,"쇼피피",1
+Spend100,4,Best,buyPro,"스팟티파이",4
+Spend100,4,Best,buyPro,"시계",26
+Spend100,4,Best,buyPro,"아고다다",1
+Spend100,4,Best,buyPro,"아마좀",1
+Spend100,4,Best,buyPro,"에어방앤방",6
+Spend100,4,Best,buyPro,"연락처",20
+Spend100,4,Best,buyPro,"와이",1
+Spend100,4,Best,buyPro,"위잿",1
+Spend100,4,Best,buyPro,"음성 녹음",6
+Spend100,4,Best,buyPro,"잘로로",20
+Spend100,4,Best,buyPro,"잡스트리트",3
+Spend100,4,Best,buyPro,"전화",20
+Spend100,4,Best,buyPro,"주움",10
+Spend100,4,Best,buyPro,"쥬욱스",4
+Spend100,4,Best,buyPro,"카메라",7
+Spend100,4,Best,buyPro,"컵컷",12
+Spend100,4,Best,buyPro,"코코아T",12
+Spend100,4,Best,buyPro,"코코아톡",2
+Spend100,4,Best,buyPro,"쿠빵",1
+Spend100,4,Best,buyPro,"텔레그림",1
+Spend100,4,Best,buyPro,"토스트",1
+Spend100,4,Best,buyPro,"트래블로까",14
+Spend100,4,Best,buyPro,"틱특",4
+Spend100,4,Best,buyPro,"핀트레스트",3
+Spend100,4,Best,claimBook,"10",1
+Spend100,4,Best,claimBook,"20",1
+Spend100,4,Best,claimBook,"30",1
+Spend100,4,Best,claimBook,"40",1
+Spend100,4,Best,claimBook,"50",1
+Spend100,4,Best,claimBook,"60",1
+Spend100,4,Best,claimMissions,"",18
+Spend100,4,Best,setCards,"AllHands|Birthday",8
+Spend100,4,Best,setCards,"AllHands|Drill",17
+Spend100,4,Best,setCards,"AllHands|Drill|Lotto|Otp",6
+Spend100,4,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",13
+Spend100,4,Best,setCards,"AllHands|Drill|Otp",15
+Spend100,4,Best,setCards,"AllHands|Drill|Otp|Birthday",15
+Spend100,4,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",3
+Spend100,4,Best,setCards,"AllHands|Otp",5
+Spend100,4,Best,setCards,"Birthday",4
+Spend100,5,Best,buyAssist,"과부하 깊이",200
+Spend100,5,Best,buyAssist,"넓은 알림창",78
+Spend100,5,Best,buyAssist,"샌드위치",209
+Spend100,5,Best,buyAssist,"와일드 알림",174
+Spend100,5,Best,buyEvent,"@모두 공지",29
+Spend100,5,Best,buyEvent,"단체 문자",26
+Spend100,5,Best,buyEvent,"방해 금지",29
+Spend100,5,Best,buyEvent,"생일 축하",29
+Spend100,5,Best,buyEvent,"알림훈련",29
+Spend100,5,Best,buyEvent,"앱스토어 세일",28
+Spend100,5,Best,buyEvent,"업데이트",29
+Spend100,5,Best,buyEvent,"인증번호",29
+Spend100,5,Best,buyEvent,"펌웨어 업데이트",21
+Spend100,5,Best,buyEvent,"행운 알림",16
+Spend100,5,Best,buyPro,"갤러리",12
+Spend100,5,Best,buyPro,"계산기",4
+Spend100,5,Best,buyPro,"그래브",2
+Spend100,5,Best,buyPro,"글린츠츠",13
+Spend100,5,Best,buyPro,"날씨",13
+Spend100,5,Best,buyPro,"너튜브",1
+Spend100,5,Best,buyPro,"넷플러그",1
+Spend100,5,Best,buyPro,"듀오링구",5
+Spend100,5,Best,buyPro,"라잉",1
+Spend100,5,Best,buyPro,"래딧",13
+Spend100,5,Best,buyPro,"로빈훗훗",1
+Spend100,5,Best,buyPro,"링크드아웃",10
+Spend100,5,Best,buyPro,"마마고",16
+Spend100,5,Best,buyPro,"메롱",12
+Spend100,5,Best,buyPro,"메모",20
+Spend100,5,Best,buyPro,"메시지",14
+Spend100,5,Best,buyPro,"모모모",8
+Spend100,5,Best,buyPro,"배다른민족",7
+Spend100,5,Best,buyPro,"비고고",3
+Spend100,5,Best,buyPro,"설정",10
+Spend100,5,Best,buyPro,"손전등",4
+Spend100,5,Best,buyPro,"스팟티파이",1
+Spend100,5,Best,buyPro,"시계",21
+Spend100,5,Best,buyPro,"아고다다",1
+Spend100,5,Best,buyPro,"에어방앤방",6
+Spend100,5,Best,buyPro,"연락처",16
+Spend100,5,Best,buyPro,"와이",2
+Spend100,5,Best,buyPro,"음성 녹음",5
+Spend100,5,Best,buyPro,"잘로로",15
+Spend100,5,Best,buyPro,"잡스트리트",1
+Spend100,5,Best,buyPro,"전화",18
+Spend100,5,Best,buyPro,"주움",9
+Spend100,5,Best,buyPro,"쥬욱스",5
+Spend100,5,Best,buyPro,"카메라",8
+Spend100,5,Best,buyPro,"컵컷",11
+Spend100,5,Best,buyPro,"코코아T",8
+Spend100,5,Best,buyPro,"코코아톡",2
+Spend100,5,Best,buyPro,"토스트",5
+Spend100,5,Best,buyPro,"트래블로까",8
+Spend100,5,Best,buyPro,"틱특",3
+Spend100,5,Best,buyPro,"핀트레스트",4
+Spend100,5,Best,claimBook,"10",1
+Spend100,5,Best,claimBook,"20",1
+Spend100,5,Best,claimBook,"30",1
+Spend100,5,Best,claimBook,"40",1
+Spend100,5,Best,claimBook,"50",1
+Spend100,5,Best,claimBook,"60",1
+Spend100,5,Best,claimMissions,"",15
+Spend100,5,Best,setCards,"AllHands|Birthday",8
+Spend100,5,Best,setCards,"AllHands|Drill",16
+Spend100,5,Best,setCards,"AllHands|Drill|Lotto|Otp",5
+Spend100,5,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",11
+Spend100,5,Best,setCards,"AllHands|Drill|Otp",12
+Spend100,5,Best,setCards,"AllHands|Drill|Otp|Birthday",13
+Spend100,5,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",1
+Spend100,5,Best,setCards,"AllHands|Otp",2
+Spend100,5,Best,setCards,"Birthday",7
+Spend100,6,Best,buyAssist,"과부하 깊이",210
+Spend100,6,Best,buyAssist,"넓은 알림창",82
+Spend100,6,Best,buyAssist,"샌드위치",219
+Spend100,6,Best,buyAssist,"와일드 알림",182
+Spend100,6,Best,buyEvent,"@모두 공지",30
+Spend100,6,Best,buyEvent,"단체 문자",27
+Spend100,6,Best,buyEvent,"방해 금지",30
+Spend100,6,Best,buyEvent,"생일 축하",30
+Spend100,6,Best,buyEvent,"알림훈련",30
+Spend100,6,Best,buyEvent,"앱스토어 세일",29
+Spend100,6,Best,buyEvent,"업데이트",30
+Spend100,6,Best,buyEvent,"인증번호",30
+Spend100,6,Best,buyEvent,"펌웨어 업데이트",22
+Spend100,6,Best,buyEvent,"행운 알림",16
+Spend100,6,Best,buyPro,"갤러리",12
+Spend100,6,Best,buyPro,"계산기",4
+Spend100,6,Best,buyPro,"그래브",1
+Spend100,6,Best,buyPro,"글린츠츠",12
+Spend100,6,Best,buyPro,"날씨",9
+Spend100,6,Best,buyPro,"넷플러그",2
+Spend100,6,Best,buyPro,"듀오링구",6
+Spend100,6,Best,buyPro,"라자다다",1
+Spend100,6,Best,buyPro,"래딧",16
+Spend100,6,Best,buyPro,"링크드아웃",10
+Spend100,6,Best,buyPro,"마마고",14
+Spend100,6,Best,buyPro,"메롱",11
+Spend100,6,Best,buyPro,"메모",20
+Spend100,6,Best,buyPro,"메시지",15
+Spend100,6,Best,buyPro,"모모모",5
+Spend100,6,Best,buyPro,"배다른민족",8
+Spend100,6,Best,buyPro,"비고고",5
+Spend100,6,Best,buyPro,"설정",11
+Spend100,6,Best,buyPro,"손전등",3
+Spend100,6,Best,buyPro,"쇼피피",1
+Spend100,6,Best,buyPro,"스팟티파이",2
+Spend100,6,Best,buyPro,"시계",22
+Spend100,6,Best,buyPro,"아마좀",1
+Spend100,6,Best,buyPro,"에어방앤방",9
+Spend100,6,Best,buyPro,"연락처",16
+Spend100,6,Best,buyPro,"와이",1
+Spend100,6,Best,buyPro,"음성 녹음",6
+Spend100,6,Best,buyPro,"잘로로",17
+Spend100,6,Best,buyPro,"잡스트리트",3
+Spend100,6,Best,buyPro,"전화",20
+Spend100,6,Best,buyPro,"주움",9
+Spend100,6,Best,buyPro,"쥬욱스",7
+Spend100,6,Best,buyPro,"카메라",11
+Spend100,6,Best,buyPro,"컵컷",9
+Spend100,6,Best,buyPro,"코코아T",7
+Spend100,6,Best,buyPro,"텔레그림",1
+Spend100,6,Best,buyPro,"토스트",4
+Spend100,6,Best,buyPro,"튄더",1
+Spend100,6,Best,buyPro,"트래블로까",10
+Spend100,6,Best,buyPro,"틱특",2
+Spend100,6,Best,buyPro,"핀트레스트",2
+Spend100,6,Best,claimBook,"10",1
+Spend100,6,Best,claimBook,"20",1
+Spend100,6,Best,claimBook,"30",1
+Spend100,6,Best,claimBook,"40",1
+Spend100,6,Best,claimBook,"50",1
+Spend100,6,Best,claimBook,"60",1
+Spend100,6,Best,claimMissions,"",16
+Spend100,6,Best,setCards,"AllHands|Birthday",6
+Spend100,6,Best,setCards,"AllHands|Drill",16
+Spend100,6,Best,setCards,"AllHands|Drill|Lotto|Otp",6
+Spend100,6,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",10
+Spend100,6,Best,setCards,"AllHands|Drill|Otp",14
+Spend100,6,Best,setCards,"AllHands|Drill|Otp|Birthday",15
+Spend100,6,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",2
+Spend100,6,Best,setCards,"AllHands|Otp",4
+Spend100,6,Best,setCards,"Birthday",4
+Spend100,6,Best,setCards,"Birthday|Update",1
+Spend100,7,Best,buyAssist,"과부하 깊이",205
+Spend100,7,Best,buyAssist,"넓은 알림창",82
+Spend100,7,Best,buyAssist,"샌드위치",217
+Spend100,7,Best,buyAssist,"와일드 알림",183
+Spend100,7,Best,buyEvent,"@모두 공지",30
+Spend100,7,Best,buyEvent,"단체 문자",27
+Spend100,7,Best,buyEvent,"방해 금지",30
+Spend100,7,Best,buyEvent,"생일 축하",30
+Spend100,7,Best,buyEvent,"알림훈련",30
+Spend100,7,Best,buyEvent,"앱스토어 세일",29
+Spend100,7,Best,buyEvent,"업데이트",30
+Spend100,7,Best,buyEvent,"인증번호",30
+Spend100,7,Best,buyEvent,"펌웨어 업데이트",22
+Spend100,7,Best,buyEvent,"행운 알림",17
+Spend100,7,Best,buyPro,"갤러리",12
+Spend100,7,Best,buyPro,"계산기",5
+Spend100,7,Best,buyPro,"그래브",3
+Spend100,7,Best,buyPro,"글린츠츠",13
+Spend100,7,Best,buyPro,"날씨",11
+Spend100,7,Best,buyPro,"넷플러그",1
+Spend100,7,Best,buyPro,"듀오링구",3
+Spend100,7,Best,buyPro,"라잉",2
+Spend100,7,Best,buyPro,"라자다다",1
+Spend100,7,Best,buyPro,"래딧",8
+Spend100,7,Best,buyPro,"링크드아웃",5
+Spend100,7,Best,buyPro,"마마고",19
+Spend100,7,Best,buyPro,"메롱",13
+Spend100,7,Best,buyPro,"메모",22
+Spend100,7,Best,buyPro,"메시지",16
+Spend100,7,Best,buyPro,"모모모",6
+Spend100,7,Best,buyPro,"배다른민족",11
+Spend100,7,Best,buyPro,"비고고",2
+Spend100,7,Best,buyPro,"설정",10
+Spend100,7,Best,buyPro,"손전등",5
+Spend100,7,Best,buyPro,"쇼피피",1
+Spend100,7,Best,buyPro,"스팟티파이",1
+Spend100,7,Best,buyPro,"시계",24
+Spend100,7,Best,buyPro,"아고다다",1
+Spend100,7,Best,buyPro,"아마좀",1
+Spend100,7,Best,buyPro,"연락처",17
+Spend100,7,Best,buyPro,"음성 녹음",5
+Spend100,7,Best,buyPro,"잘로로",16
+Spend100,7,Best,buyPro,"잡스트리트",2
+Spend100,7,Best,buyPro,"전화",18
+Spend100,7,Best,buyPro,"주움",4
+Spend100,7,Best,buyPro,"쥐메일",1
+Spend100,7,Best,buyPro,"쥬욱스",4
+Spend100,7,Best,buyPro,"카메라",7
+Spend100,7,Best,buyPro,"컵컷",11
+Spend100,7,Best,buyPro,"코코아T",12
+Spend100,7,Best,buyPro,"코코아톡",2
+Spend100,7,Best,buyPro,"토스트",1
+Spend100,7,Best,buyPro,"트래블로까",9
+Spend100,7,Best,buyPro,"틱특",2
+Spend100,7,Best,buyPro,"핀트레스트",1
+Spend100,7,Best,claimBook,"10",1
+Spend100,7,Best,claimBook,"20",1
+Spend100,7,Best,claimBook,"30",1
+Spend100,7,Best,claimBook,"40",1
+Spend100,7,Best,claimBook,"50",1
+Spend100,7,Best,claimBook,"60",1
+Spend100,7,Best,claimMissions,"",17
+Spend100,7,Best,setCards,"AllHands|Birthday",7
+Spend100,7,Best,setCards,"AllHands|Drill",17
+Spend100,7,Best,setCards,"AllHands|Drill|Lotto|Otp",6
+Spend100,7,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",11
+Spend100,7,Best,setCards,"AllHands|Drill|Otp",13
+Spend100,7,Best,setCards,"AllHands|Drill|Otp|Birthday",14
+Spend100,7,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",3
+Spend100,7,Best,setCards,"AllHands|Otp",5
+Spend100,7,Best,setCards,"Birthday",5
+Spend100,7,Best,setCards,"Birthday|Update",1
+Spend100,8,Best,buyAssist,"과부하 깊이",217
+Spend100,8,Best,buyAssist,"넓은 알림창",84
+Spend100,8,Best,buyAssist,"샌드위치",225
+Spend100,8,Best,buyAssist,"와일드 알림",189
+Spend100,8,Best,buyEvent,"@모두 공지",31
+Spend100,8,Best,buyEvent,"단체 문자",27
+Spend100,8,Best,buyEvent,"방해 금지",31
+Spend100,8,Best,buyEvent,"생일 축하",31
+Spend100,8,Best,buyEvent,"알림훈련",31
+Spend100,8,Best,buyEvent,"앱스토어 세일",30
+Spend100,8,Best,buyEvent,"업데이트",31
+Spend100,8,Best,buyEvent,"인증번호",31
+Spend100,8,Best,buyEvent,"펌웨어 업데이트",23
+Spend100,8,Best,buyEvent,"행운 알림",17
+Spend100,8,Best,buyPro,"갤러리",13
+Spend100,8,Best,buyPro,"계산기",6
+Spend100,8,Best,buyPro,"글린츠츠",9
+Spend100,8,Best,buyPro,"날씨",7
+Spend100,8,Best,buyPro,"너튜브",1
+Spend100,8,Best,buyPro,"넷플러그",3
+Spend100,8,Best,buyPro,"듀오링구",3
+Spend100,8,Best,buyPro,"라자다다",1
+Spend100,8,Best,buyPro,"래딧",15
+Spend100,8,Best,buyPro,"링크드아웃",12
+Spend100,8,Best,buyPro,"마마고",22
+Spend100,8,Best,buyPro,"메롱",14
+Spend100,8,Best,buyPro,"메모",12
+Spend100,8,Best,buyPro,"메시지",20
+Spend100,8,Best,buyPro,"모모모",6
+Spend100,8,Best,buyPro,"배다른민족",10
+Spend100,8,Best,buyPro,"비고고",4
+Spend100,8,Best,buyPro,"설정",11
+Spend100,8,Best,buyPro,"손전등",5
+Spend100,8,Best,buyPro,"쇼피피",2
+Spend100,8,Best,buyPro,"스팟티파이",3
+Spend100,8,Best,buyPro,"시계",22
+Spend100,8,Best,buyPro,"아마좀",3
+Spend100,8,Best,buyPro,"에어방앤방",6
+Spend100,8,Best,buyPro,"연락처",19
+Spend100,8,Best,buyPro,"와이",3
+Spend100,8,Best,buyPro,"위잿",2
+Spend100,8,Best,buyPro,"음성 녹음",12
+Spend100,8,Best,buyPro,"잘로로",17
+Spend100,8,Best,buyPro,"잡스트리트",3
+Spend100,8,Best,buyPro,"전화",20
+Spend100,8,Best,buyPro,"주움",11
+Spend100,8,Best,buyPro,"쥬욱스",7
+Spend100,8,Best,buyPro,"카메라",13
+Spend100,8,Best,buyPro,"컵컷",12
+Spend100,8,Best,buyPro,"코코아T",10
+Spend100,8,Best,buyPro,"텔레그림",2
+Spend100,8,Best,buyPro,"토스트",5
+Spend100,8,Best,buyPro,"트래블로까",2
+Spend100,8,Best,buyPro,"틱특",3
+Spend100,8,Best,buyPro,"핀트레스트",4
+Spend100,8,Best,claimBook,"10",1
+Spend100,8,Best,claimBook,"20",1
+Spend100,8,Best,claimBook,"30",1
+Spend100,8,Best,claimBook,"40",1
+Spend100,8,Best,claimBook,"50",1
+Spend100,8,Best,claimBook,"60",1
+Spend100,8,Best,claimMissions,"",16
+Spend100,8,Best,setCards,"AllHands|Birthday",8
+Spend100,8,Best,setCards,"AllHands|Drill",16
+Spend100,8,Best,setCards,"AllHands|Drill|Lotto|Otp",5
+Spend100,8,Best,setCards,"AllHands|Drill|Lotto|Otp|Birthday",12
+Spend100,8,Best,setCards,"AllHands|Drill|Otp",13
+Spend100,8,Best,setCards,"AllHands|Drill|Otp|Birthday",14
+Spend100,8,Best,setCards,"AllHands|Drill|Otp|Birthday|Firmware",4
+Spend100,8,Best,setCards,"AllHands|Otp",5
+Spend100,8,Best,setCards,"Birthday",5

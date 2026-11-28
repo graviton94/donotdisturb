@@ -1,0 +1,55 @@
+diff --git a/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Engine.kt b/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Engine.kt
+index 4219131..628afed 100644
+--- a/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Engine.kt
++++ b/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Engine.kt
+@@ -1329,7 +1329,7 @@ class Engine(val rules: RuleSet = RuleSet(), val tuning: LiveTuning = LiveTuning
+         val app = Catalog.app(appId)
+         val rank = s.appLevels[appId] ?: 1
+         var p = rules.upgradePrice(app, rank)
+-        if (rules.firstRunRankPricePermille != 1_000 && firstRun(s) && s.level >= 8 && app.tier <= 2 && rank < 25)
++        if (rules.firstRunRankPricePermille != 1_000 && firstRun(s) && s.level >= 8 && app.tier <= 2 && rank < rules.firstRunDiscountedRankCap)
+             p = (p * BigInteger.valueOf(rules.firstRunRankPricePermille.toLong()) / BigInteger.valueOf(1_000)).max(BigInteger.ONE)
+         if ((on(s, "glints") && app.category == Category.Work) || (on(s, "paypal") && app.category == Category.Money)) p = p * BigInteger.valueOf(9) / BigInteger.TEN
+         return p
+diff --git a/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Rules.kt b/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Rules.kt
+index fcc4404..f79604a 100644
+--- a/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Rules.kt
++++ b/core/src/main/kotlin/com/graviton94/notificationcleaner/core/Rules.kt
+@@ -148,7 +148,9 @@ data class RuleSet(
+     /** Candidate onboarding prices. Neutral values preserve the launch economy. */
+     val firstRunTier2PricePermille: Int = 1_000,
+     val firstRunRankPricePermille: Int = 1_000,
++    val firstRunDiscountedRankCap: Int = 25,
+     val firstRunEarlyPro: Boolean = false,
++    val openingLevelRelief: Int = 0,
+     val appPriceTierRatio: Long = 60,
+     val appPriceOrderPermille: List<Int> = listOf(1_000, 1_600, 2_500, 4_000, 6_300, 10_000),
+     val appPriceLevelPermille: Int = 100,
+@@ -238,7 +240,11 @@ data class RuleSet(
+         var q = java.math.BigDecimal(levelPBase)
+         var ratio = levelRatioPermille
+         for (l in 2..400) {
+-            t += q.toBigInteger()
++            val early = if (openingLevelRelief != 0 && l in 8..29) {
++                val weight = minOf((l - 7) / 10.0, (30 - l) / 13.0)
++                q * java.math.BigDecimal.valueOf(kotlin.math.exp(-openingLevelRelief / 1_000.0 * weight))
++            } else q
++            t += early.toBigInteger()
+             if (l >= levelLateFrom) ratio += levelRatioStepPermille
+             val lateMultiplier = if (l >= lateGrowthFrom) lateGrowthPermille else 1_000
+             q = q * java.math.BigDecimal(ratio.toLong() * lateMultiplier) / java.math.BigDecimal(1_000_000)
+diff --git a/tools/economy-sim/src/main/kotlin/Daily.kt b/tools/economy-sim/src/main/kotlin/Daily.kt
+index c50fb8a..d0bddcf 100644
+--- a/tools/economy-sim/src/main/kotlin/Daily.kt
++++ b/tools/economy-sim/src/main/kotlin/Daily.kt
+@@ -64,8 +64,10 @@ internal fun simRules(): com.graviton94.notificationcleaner.core.RuleSet {
+             "recentIncomeWindow" -> r.copy(recentIncomeWindow = v.toInt())
+             "offlineAutoPermille" -> r.copy(offlineAutoPermille = v.toInt())
+             "autoSwipePermille" -> r.copy(autoSwipePermille = v.toInt())
++            "openingLevelRelief" -> r.copy(openingLevelRelief = v.toInt())
+             "firstRunEarlyPro" -> r.copy(firstRunEarlyPro = v.toBooleanStrict())
+             "firstRunRankPricePermille" -> r.copy(firstRunRankPricePermille = v.toInt())
++            "firstRunDiscountedRankCap" -> r.copy(firstRunDiscountedRankCap = v.toInt())
+             "firstRunTier2PricePermille" -> r.copy(firstRunTier2PricePermille = v.toInt())
+             "appPriceLevelPermille" -> r.copy(appPriceLevelPermille = v.toInt())
+             "tierBase" -> r.copy(tierBase = v.toLong())
