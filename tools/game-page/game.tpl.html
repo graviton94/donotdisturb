@@ -236,7 +236,7 @@ body{-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:trans
 #cf.on{display:grid}
 #sheet .pro{display:inline-block;font:900 10px/1 var(--font);padding:3px 5px;border-radius:5px;background:var(--soft2);color:var(--m-on-sv);letter-spacing:.04em;vertical-align:1px}#sheet .pro.on{background:linear-gradient(135deg,#FFE27A,#F0A000);color:#2A1800}
 #sheet .pro-b{height:30px;padding:0 10px;margin-top:6px;font-size:12px}#sheet .cardi{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--soft2);flex:none}#sheet .it.eq .cardi{background:linear-gradient(135deg,#FFE27A,#F0A000);color:#2A1800}
-#sheet .rank .rk{display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;padding:9px 12px;border-radius:14px;background:var(--g-card);border:1px solid var(--g-line);margin-bottom:6px;font:600 14px/1.2 var(--font)}#sheet .rank .rk b{font:900 15px/1 var(--font);text-align:center}#sheet .rank .rk:nth-child(-n+3) b{color:#FFB020}#sheet .rank .rk.me{border-color:rgba(255,176,32,.7)}#sheet .rank .rk.last{margin-top:10px;border-style:dashed;grid-template-columns:28px 1fr}#sheet .rank em{font-style:normal;font-size:11px;opacity:.7}
+#sheet .rank .rk{display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;padding:9px 12px;border-radius:14px;background:var(--g-card);border:1px solid var(--g-line);margin-bottom:6px;font:600 14px/1.2 var(--font)}#sheet .rank .rk b{font:900 15px/1 var(--font);text-align:center}#sheet .rank .rk:nth-child(-n+3) b{color:#FFB020}#sheet .rank .rk.me{border-color:rgba(255,176,32,.7)}#sheet .rank .rk.last b{color:inherit}#sheet .rank .rk.last{margin-top:10px;border-style:dashed;grid-template-columns:28px 1fr}#sheet .rank em{font-style:normal;font-size:11px;opacity:.7}
 #signing{position:fixed;inset:0;z-index:90;display:none;place-items:center;background:rgba(0,0,0,.45)}#signing.on{display:grid}
 #signing .b{display:flex;align-items:center;gap:12px;padding:16px 22px;border-radius:18px;background:var(--sheet);color:var(--ink);font:700 15px/1.3 "Pretendard",system-ui,sans-serif;box-shadow:0 12px 40px #0008}
 #signing i{width:22px;height:22px;border-radius:50%;border:3px solid currentColor;border-right-color:transparent;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
@@ -1306,8 +1306,12 @@ function drawCard(c, r, y) {
   if (d.merges) {
     // count toward the burst: filled pips + "2/4"
     const n = d.threshold || 4;
+    if (n <= 2) {  // burst on any pair (threshold 2): "one more" would sit on every row, so show the stack size instead
+      for (let k = 0; k < Math.min(d.count, 4); k++) { c.fillStyle = col; c.beginPath(); c.arc(CX0 + CW - 18 - k * 9, y + 24, 3.5, 0, 6.28); c.fill(); }
+      c.fillStyle = sub; c.font = `700 11px ${FB}`; c.textAlign = 'right'; c.fillText($t('n_alerts', d.count), CX0 + CW - 14, y + 46);
+    } else
     for (let k = 0; k < n; k++) { c.fillStyle = k < d.count ? col : (day ? 'rgba(30,42,80,.15)' : 'rgba(255,255,255,.15)'); c.beginPath(); c.arc(CX0 + CW - 18 - (n - 1 - k) * 13, y + 24, 4.5, 0, 6.28); c.fill(); }
-    c.fillStyle = d.count >= n - 1 ? (day ? '#B25F00' : '#FFD66B') : sub; c.font = `700 11px ${FB}`; c.textAlign = 'right'; c.fillText(d.count >= n - 1 ? $t('one_more') : `${d.count}/${n}`, CX0 + CW - 14, y + 46);
+    if (n > 2) { c.fillStyle = d.count >= n - 1 ? (day ? '#B25F00' : '#FFD66B') : sub; c.font = `700 11px ${FB}`; c.textAlign = 'right'; c.fillText(d.count >= n - 1 ? $t('one_more') : `${d.count}/${n}`, CX0 + CW - 14, y + 46); }
   } else {
     c.fillStyle = danger ? (day ? '#D81E2A' : '#FF8A80') : ev ? (day ? '#B25F00' : '#FFD66B') : sub; c.font = `700 11px ${FB}`; c.textAlign = 'right'; c.fillText(danger ? $t('doesn_t_merge') : ev ? $t('reward') : $t('handled'), CX0 + CW - 14, y + 34);
   }
@@ -3374,14 +3378,13 @@ async function loadRank() {
   const mine = r.mine && !r.top.some(x => x.me) ? `<div class="rk me"><b>${r.mine.rank}</b><span>${$t('rank_me')}</span><span class="t-gold">${r.mine.score} P</span></div>` : '';
   const guest = r.signedIn ? '' : `<button class="btn tonal big" id="rank-in" style="margin-top:8px">${$t('rank_sign_in')}</button>`;
   el.innerHTML = rows + mine + guest + '<div id="rank-last"></div>';
-  if (r.signedIn) loadLastWeek();
+  if (r.signedIn || !window.Game) loadLastWeek();
   const g = $('rank-in'); if (g) g.onclick = () => openSheet('settings');
 }
 // last week's settled result (server settles Monday 00:10 KST); shown once settled
 const RANK_TIER = { first: 'rank_tier_first', top10: 'rank_tier_top10', top100: 'rank_tier_top100', joined: 'rank_tier_joined' };
 async function loadLastWeek() {
-  if (!(window.Game && window.Game.rankResult)) return;
-  const o = await rankAsk('rankResult', rankBoard(new Date(Date.now() - 7 * 864e5))), el = $('rank-last');
+  const o = window.Game ? (window.Game.rankResult ? await rankAsk('rankResult', rankBoard(new Date(Date.now() - 7 * 864e5))) : {}) : { ok: true, info: { rank: 7, tier: 'top10', of: 214 } }, el = $('rank-last');  // browser preview
   if (!el || !o.ok || !o.info || !o.info.rank) return;
   const k = RANK_TIER[o.info.tier];
   el.innerHTML = `<div class="rk last"><b>${o.info.rank}</b><span>${$t('rank_last_week', o.info.of)}${k ? ` <em>${$t(k)}</em>` : ''}</span></div>`;
