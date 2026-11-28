@@ -10,6 +10,7 @@ import android.webkit.JavascriptInterface
 import com.graviton94.notificationcleaner.core.AwayClock
 import com.graviton94.notificationcleaner.core.SaveCodec
 import com.graviton94.notificationcleaner.core.WebSession
+import com.graviton94.notificationcleaner.core.WeeklyTier
 import com.graviton94.notificationcleaner.core.account
 import androidx.activity.ComponentActivity
 import androidx.lifecycle.lifecycleScope
@@ -38,10 +39,9 @@ class GameBridge(private val context: Context) {
     }
     // Remote Config knobs (platform/Tuning): applied to every session this bridge creates, never saved.
     private var tuning = "{}"
-    /** Calls WebSession.applyTuning(json) once the balance session's core has it (v1.6 §5-1); a no-op before. */
+    /** Remote Config knobs into the core (docs/balance/remote-tuning.md): out-of-range values fall back to defaults there. */
     private fun tune(s: WebSession) {
-        if (tuning == "{}") return
-        runCatching { s.javaClass.getMethod("applyTuning", String::class.java).invoke(s, tuning) }
+        if (tuning != "{}") s.applyTuning(tuning)
     }
     fun applyTuning(json: String) = synchronized(lock) { tuning = json; tune(session) }
 
@@ -237,6 +237,28 @@ class GameBridge(private val context: Context) {
         act.lifecycleScope.launch {
             try { acc.submitWeekly(board, scoreLog, scoreShort); cb("onRank", id, true, "ok", null) }
             catch (e: CancellationException) { throw e } catch (e: Exception) { cb("onRank", id, false, "error", JSONObject().put("type", e.javaClass.simpleName)) }
+        }
+    }
+
+    /**
+     * Weekly ranking reward: reads the server-written settlement for this account (weekly/{board}/results/{uid},
+     * owner-read-only, written by Functions settleWeekly) and grants it through the core once per account and week.
+     * The page never names the tier itself; it only asks to claim a board.
+     */
+    @JavascriptInterface
+    fun rankClaim(id: String, board: String) {
+        val act = activity ?: return cb("onRank", id, false, "unavailable", null)
+        val acc = account?.takeIf { it.enabled && it.uid != null } ?: return cb("onRank", id, false, "guest", null)
+        act.lifecycleScope.launch {
+            try {
+                val r = acc.weeklyResult(board) ?: return@launch cb("onRank", id, false, "none", null)
+                val tier = r.optString("tier")
+                val pieces = WeeklyTier.entries.firstOrNull { it.id == tier }?.pieces ?: 0
+                val res = JSONObject(synchronized(lock) { session.grantWeekly("${acc.uid}:$board", tier, now()) })
+                val ok = res.optBoolean("ok")
+                if (ok) save()
+                cb("onRank", id, ok, if (ok) "ok" else "claimed", JSONObject().put("tier", tier).put("pieces", pieces).put("state", res.optJSONObject("state")))
+            } catch (e: CancellationException) { throw e } catch (e: Exception) { cb("onRank", id, false, "error", JSONObject().put("type", e.javaClass.simpleName)) }
         }
     }
 

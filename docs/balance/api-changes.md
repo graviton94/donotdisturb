@@ -273,7 +273,7 @@ Firestore 동기화에서 쓰는 저장 데이터는 `SaveCodec` JSON 버전 1�
 - **원격 조정**: 앱이 Remote Config 문자열 매개변수 `tuning_json`(평평한 JSON 객체, 기본 `"{}"`)을 읽는다.
   - 시작할 때 지난 실행에서 활성화된 값을 `WebSession.applyTuning(json: String)`으로 한 번 넣는다. 새 값은 백그라운드에서 받아 **다음 실행부터** 적용한다. 판 도중에는 숫자가 바뀌지 않는다.
   - 데이터 초기화·클라우드 복원으로 세션을 새로 만들 때도 다시 넣는다.
-  - 밸런스 세션이 `applyTuning(String)`을 추가하면 바로 연결된다. 그 전에는 아무 일도 하지 않는다(리플렉션 호출, 추가 후 직접 호출로 바꾼다).
+  - 코어의 `applyTuning(String)`을 직접 호출한다(v1.6 병합 뒤).
   - 키 이름·범위는 `docs/balance/remote-tuning.md`(밸런스 세션 작성)를 따른다. 범위 검사는 코어가 한다.
 - **분석 이벤트 추가**(`track()`): `level_up{level}`, `chain{k,bursts,end}`, `buy_app`·`upgrade`·`buy_pro`·`buy_card`·`buy_boost`·`buyBackup`·`buyCloud`·`use_item`·`premium`·`attend`·`missions_claim`·`ad_reward_claim`, `reset{amount,level}`·`sync{amount,level}`, `offline_return{away_min,paid}`, `challenge_end{score,new_best}`. 더 필요한 이벤트는 KPI 정의서에 적어 주면 붙인다.
 - **주간 순위 정산**: Functions `settleWeekly`가 월요일 00:10 UTC(한국 09:10)에 막 끝난 UTC ISO 주 판을 정산해 `weekly/{board}/results/{uid} = {rank, tier, of}`를 쓴다. tier는 `first`·`top10`·`top100`·`participant`(코어 grantWeekly와 같은 ID). 정산은 월요일 00:10 UTC(한국 09:10), 막 끝난 UTC ISO 주. 보상 수치와 `grantWeekly(claimId, tier)`는 밸런스 세션 몫이다. claimId는 `{board}`(예: `2026-W48-L0`)를 쓸 예정이다.
