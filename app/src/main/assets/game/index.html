@@ -3478,7 +3478,7 @@ async function loadRank() {
   const g = $('rank-in'); if (g) g.onclick = () => openSheet('settings');
 }
 // last week's settled result (server settles Monday 00:10 KST); shown once settled
-const RANK_TIER = { first: 'rank_tier_first', top10: 'rank_tier_top10', top100: 'rank_tier_top100', joined: 'rank_tier_joined' };
+const RANK_TIER = { first: 'rank_tier_first', top10: 'rank_tier_top10', top100: 'rank_tier_top100', participant: 'rank_tier_joined' };
 async function loadLastWeek() {
   const o = window.Game ? (window.Game.rankResult ? await rankAsk('rankResult', rankBoard(new Date(Date.now() - 7 * 864e5))) : {}) : { ok: true, info: { rank: 7, tier: 'top10', of: 214 } }, el = $('rank-last');  // browser preview
   if (!el || !o.ok || !o.info || !o.info.rank) return;

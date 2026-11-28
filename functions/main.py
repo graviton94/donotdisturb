@@ -113,16 +113,17 @@ def _board(day: datetime.date) -> str:
 
 
 def _tier(rank: int) -> str:
-    return 'first' if rank == 1 else 'top10' if rank <= 10 else 'top100' if rank <= 100 else 'joined'
+    return 'first' if rank == 1 else 'top10' if rank <= 10 else 'top100' if rank <= 100 else 'participant'  # core grantWeekly tier ids
 
 
-@scheduler_fn.on_schedule(schedule='10 0 * * 1', timezone=scheduler_fn.Timezone('Asia/Seoul'), region=REGION)
+@scheduler_fn.on_schedule(schedule='10 0 * * 1', timezone=scheduler_fn.Timezone('UTC'), region=REGION)
 def settleWeekly(event: scheduler_fn.ScheduledEvent) -> None:  # noqa: N802
-    """Monday 00:10 KST: rank last week's daily-challenge board once and leave each player their result
-    (weekly/{board}/results/{uid} = {rank, tier, of}); the app claims the reward through the core, once per board."""
+    """Monday 00:10 UTC (09:10 KST): rank the UTC ISO week that just closed, once, and leave each player their result
+    (weekly/{board}/results/{uid} = {rank, tier, of}). Boards are UTC ISO weeks on the client too (rankBoard), so
+    settling on Korean Monday would close the week 9 hours early. The app claims the reward through the core, once per board."""
     db = firestore.client()
-    kst = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).date()
-    board = _board(kst - datetime.timedelta(days=7))
+    today = datetime.datetime.now(datetime.timezone.utc).date()
+    board = _board(today - datetime.timedelta(days=7))
     ref = db.collection('weekly').document(board)
     if (snap := ref.get()).exists and snap.to_dict().get('settled'):
         return
