@@ -15,17 +15,40 @@ import java.math.BigInteger
  * and answers JSON the page can replay. The Android bridge and the desktop dev server both sit on top of it, so the
  * page behaves the same in a browser as on the phone. Persistence and clocks are the host's job.
  */
-class WebSession(val engine: Engine = Engine(), state: GameState? = null, now: Long = System.currentTimeMillis()) {
+class WebSession(engine: Engine = Engine(), state: GameState? = null, now: Long = System.currentTimeMillis()) {
     private data class OfflineAdOffer(val day: Long, val paid: BigInteger)
     private var offlineAdOffer: OfflineAdOffer? = null
-    private val meta = Meta(engine)
-    val shop = Shop(engine)
-    var state: GameState = installed(engine.restoreBoard(state ?: engine.newGame(now, now)).migrateRewardClaims(now).expireRewardClaims(now), now)
+    private val baseEngine = engine
+    private val challengeEngine = if (engine.tuning == LiveTuning()) engine else Engine(engine.rules)
+    private var mainEngine = engine
+    val engine: Engine get() = if (home == null) mainEngine else challengeEngine
+    private val meta = Meta(challengeEngine)
+    val shop = Shop(challengeEngine)
+    var state: GameState = installed(engine.restoreBoard(state ?: engine.newGame(now, now)).rememberCollection().migrateRewardClaims(now).expireRewardClaims(now), now)
         private set
 
     private fun tick(now: Long): GameState {
         state = shop.claimPassDaily(engine.tick(state, now).expireRewardClaims(now), now)
         return state
+    }
+
+    /** Used by the trusted native config bridge. Kept in memory and the challenge stays on its fixed rules. */
+    fun applyTuning(json: String): String {
+        val tuning = LiveTuning.parse(json)
+        mainEngine = if (tuning == baseEngine.tuning) baseEngine else Engine(baseEngine.rules, tuning)
+        return "{\"ok\":true}"
+    }
+
+    fun claimBook(at: Int, now: Long = System.currentTimeMillis()): String =
+        act(now) { if (home != null) it else CollectionRewards.claimBook(it, at, shop) ?: it }
+
+    /** Trusted host entry point for a verified server settlement. Never expose it as a WebView action. */
+    fun grantWeekly(claimId: String, tier: String, now: Long = System.currentTimeMillis()): String {
+        val parked = home
+        if (parked == null) return act(now) { CollectionRewards.grantWeekly(it, claimId, tier, shop) ?: it }
+        val granted = CollectionRewards.grantWeekly(parked, claimId, tier, shop)
+        if (granted != null) home = granted
+        return buildJsonObject { put("ok", granted != null); put("state", snap(state, now)) }.toString()
     }
 
     /** Board, HUD and shop data. */
@@ -319,6 +342,23 @@ class WebSession(val engine: Engine = Engine(), state: GameState? = null, now: L
         val progress = if (hi > lo) ((s.runEarned - lo).max(BigInteger.ZERO) * BigInteger.valueOf(1000) / (hi - lo)).toInt().coerceIn(0, 1000) else 1000
         return buildJsonObject {
             put("state", snap(s, now))
+            val book = home ?: s
+            putJsonObject("book") {
+                put("owned", CollectionRewards.owned(book).count { Catalog.hasApp(it) })
+                put("total", Catalog.apps.size)
+                putJsonArray("milestones") {
+                    CollectionRewards.milestones.forEach { (at, reward) ->
+                        if (at > Catalog.apps.size) return@forEach
+                        add(buildJsonObject {
+                            put("at", at)
+                            putJsonObject("reward") {
+                                put("data", reward.data); put("pieces", reward.pieces); put("vouchers", reward.vouchers)
+                            }
+                            put("claimed", at in book.account.claimedBook)
+                        })
+                    }
+                }
+            }
             put("levelProgress", progress)
             put("nextLevelP", big(hi))
             put("bestChain", s.bestChain)
@@ -345,8 +385,8 @@ class WebSession(val engine: Engine = Engine(), state: GameState? = null, now: L
                             val (rs, cs) = engine.synergy(s, a.id)
                             put("synRegion", rs); put("synCat", cs)
                             put("pro", a.id in s.pro)
-                            put("proLevel", Catalog.proLevel[a.id] ?: 0)
-                            if (a.id !in s.pro && Catalog.proLevel.containsKey(a.id)) put("proPrice", big(r.proPrice(a.id)))
+                            put("proLevel", engine.proLevel(s, a.id))
+                            if (a.id !in s.pro && Catalog.proLevel.containsKey(a.id)) put("proPrice", big(engine.proPrice(s, a.id)))
                         } else if (open) put("price", big(engine.appPrice(s, a.id)))
                     })
                 }
@@ -504,6 +544,13 @@ class WebSession(val engine: Engine = Engine(), state: GameState? = null, now: L
     }
 
     private fun snap(s: GameState, now: Long): JsonObject = buildJsonObject {
+        engine.tuning.eventAt(now)?.let { e ->
+            putJsonObject("liveEvent") {
+                put("id", e.event.id); put("title", e.event.title)
+                put("startsAt", e.startAt); put("endsAt", e.endAt); put("leftMs", e.endAt - now)
+                put("bonusBp", e.event.bonusPermille * engine.tuning.eventBonusScalePermille / 100)
+            }
+        }
         put("offlineBonus", bonusJson(engine.offlineBonus(s, now)))
         put("wallet", big(s.wallet))
         put("level", s.level)
@@ -547,6 +594,10 @@ class WebSession(val engine: Engine = Engine(), state: GameState? = null, now: L
         put("chain", o.chain)
         put("overload", o.overload)
         put("capped", big(o.capped))
+        if (engine.tuning.eventAt(now) != null) {
+            put("liveEventExtraP", big(o.liveEventExtra))
+            put("liveEventExtraPShort", short(o.liveEventExtra))
+        }
         val tierMax = o.beats.filterIsInstance<Beat.Burst>().maxOfOrNull { Catalog.app(it.valueApp).tier }
         put("beats", JsonArray(o.beats.map { beat(it, prevLast, tierMax) }))
         put("state", snap(state, now))

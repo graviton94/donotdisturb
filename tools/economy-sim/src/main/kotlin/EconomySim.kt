@@ -94,7 +94,7 @@ fun spend(input: GameState, policy: DeckPolicy): Pair<GameState, List<String>> {
         if (card != null) { s = e.buyEvent(s, card); bought += "카드:${card.label}"; continue }
         val assist = Assist.entries.firstOrNull { s.level >= it.unlockLevel && s.assist(it) < it.max(s.level) && e.rules.assistPrice(it, s.assist(it)) <= half }
         if (assist != null) { s = e.buyAssist(s, assist); bought += "판:${assist.label}"; continue }
-        val pro = s.active.firstOrNull { it !in s.pro && s.level >= Catalog.proLevel.getValue(it) && e.rules.proPrice(it) <= half }
+        val pro = s.active.firstOrNull { it !in s.pro && s.level >= e.proLevel(s, it) && e.proPrice(s, it) <= half }
         if (pro != null) { s = e.buyPro(s, pro); bought += "프로:${Catalog.app(pro).name}"; continue }
         // 3. The upgrade with the best value gain per P, unless saving for an app it would delay a lot.
         val ups = s.active.asSequence().map { id -> id to e.upgradePrice(s, id) }
@@ -193,6 +193,7 @@ fun p50(xs: List<Double>) = pct(xs, .5)
 fun fmtMin(m: Double) = when { m.isNaN() -> "-"; m < 2 -> "%.0f초".format(m * 60); m < 60 -> "%.0f분".format(m); else -> "%.1f시간".format(m / 60) }
 
 fun main(args: Array<String>) {
+    if (args.firstOrNull() == "opening") return opening(java.io.File(args[1]), args[2].toInt())
     if (args.firstOrNull() == "launch-v1") return launchV1(java.io.File(args[1]), args[2].toInt(), args[3].toInt(),
         profilesFor(args.getOrNull(4)), (args.getOrNull(5) ?: "Best").split(',').toSet())
     if (args.firstOrNull() == "challenge-star-audit") return challengeStarAudit(java.io.File(args.getOrNull(1) ?: error("Choose a CSV output file")))

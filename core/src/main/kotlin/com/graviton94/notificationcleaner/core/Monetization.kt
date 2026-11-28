@@ -131,6 +131,8 @@ data class Account(
     val missionProgressDay: Long = -1,
     /** 꾸미기 조각 from achievements and the daily challenge: 10 = one free cosmetic. */
     val pieces: Int = 0,
+    val collectedApps: Set<String> = emptySet(),
+    val claimedBook: Set<Int> = emptySet(),
     /** 일일 도전: day of the last key use, keys used that day, personal best score. */
     val challengeDay: Long = -1,
     val challengeKeys: Int = 0,
@@ -181,7 +183,7 @@ private const val AD_CLAIM_DAYS = 7
 private val AD_CLAIM_LIMIT = AD_CLAIM_DAYS * AdSlot.entries.sumOf { it.daily }
 private val rewardIdEncoding = Base64.getUrlEncoder().withoutPadding()
 
-private fun rewardKey(id: String): String = rewardIdEncoding.encodeToString(
+internal fun rewardKey(id: String): String = rewardIdEncoding.encodeToString(
     MessageDigest.getInstance("SHA-256").digest(id.toByteArray(Charsets.UTF_8)).copyOf(16)
 )
 
