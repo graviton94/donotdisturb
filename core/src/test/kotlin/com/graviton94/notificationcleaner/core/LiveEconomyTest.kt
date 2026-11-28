@@ -4,6 +4,7 @@ import java.math.BigInteger
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.boolean
 import kotlinx.serialization.json.int
+import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
 import kotlin.test.Test
@@ -27,7 +28,9 @@ class LiveEconomyTest {
         val oldSave = SaveCodec.encode(original)
         assertFalse("collectedApps" in oldSave)
         val session = WebSession(engine, SaveCodec.decode(oldSave), now)
-        assertEquals(10, value(session.panel(now), "book").jsonObject.getValue("owned").jsonPrimitive.int)
+        val book = value(session.panel(now), "book").jsonObject
+        assertEquals(10, book.getValue("owned").jsonPrimitive.int)
+        assertEquals(ownedApps.keys, book.getValue("collectedIds").jsonArray.map { it.jsonPrimitive.content }.toSet())
         assertFalse(ok(session.claimBook(20, now)))
         assertFalse(ok(session.claimBook(11, now)))
         assertTrue(ok(session.claimBook(10, now)))
@@ -127,6 +130,31 @@ class LiveEconomyTest {
         }
         assertTrue(paidSwipes > 0)
         assertTrue(untouchedSwipes > 0)
+    }
+
+    @Test
+    fun regionalEventRequiresBothTheDeckAndTheBurstAndUsesTheConfiguredScale() {
+        val state = engine.newGame(now, 5).copy(
+            level = 40,
+            appLevels = mapOf("alarm" to 1, "papago" to 8, "music" to 8),
+            active = listOf("alarm", "papago", "music"),
+            rows = listOf(
+                Row(1, RowKind.App, "music", count = 2),
+                Row(2, RowKind.App, "alarm", count = 1),
+                Row(3, RowKind.App, "music", count = 2),
+            ),
+            nextId = 4,
+        )
+        val base = engine.swipe(state, 2, now)!!
+        val window = LiveEventWindow(LiveEvent.AsiaWeek, now, now + DAY_MS)
+        for ((scale, bonus) in listOf(900 to 162, 1100 to 198)) {
+            val tuned = Engine(tuning = LiveTuning(event = window, eventBonusScalePermille = scale))
+            val outcome = tuned.swipe(state, 2, now)!!
+            assertTrue(outcome.liveEventExtra.signum() > 0)
+            assertEquals(base.earned * BigInteger.valueOf(bonus.toLong()) / BigInteger.valueOf(1000), outcome.liveEventExtra)
+            val withoutRegionPair = state.copy(active = listOf("alarm", "music", "memo"))
+            assertEquals(BigInteger.ZERO, tuned.swipe(withoutRegionPair, 2, now)!!.liveEventExtra)
+        }
     }
 
     @Test

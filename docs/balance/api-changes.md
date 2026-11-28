@@ -271,10 +271,10 @@ Firestore 동기화에서 쓰는 저장 데이터는 `SaveCodec` JSON 버전 1�
 
 ## v1.6 도감·주간 지급·기간 한정 콘텐츠
 
-`panel().book`의 `owned`는 지금 활성화된 카탈로그에서 한 번이라도 보유한 앱의 수다. 기본 앱과 백업으로 기억된 앱도 포함한다. 버전 1 옛 저장에 수집 이력이 없으면 현재 회차 보유 앱부터 센다. 화면의 출시 전 도감 목록은 회차별 `apps[].owned`를 쓰므로, 수집률·보상 자격은 새 `book.owned`로 표시한다. 개별 항목의 회차 보유 상태는 그대로 읽는다.
+`panel().book`의 `owned`는 지금 활성화된 카탈로그에서 한 번이라도 보유한 앱의 수다. 기본 앱과 백업으로 기억된 앱도 포함한다. 버전 1 옛 저장에 수집 이력이 없으면 현재 회차 보유 앱부터 센다. 화면의 출시 전 도감 목록은 회차별 `apps[].owned`를 쓰므로, 수집률·보상 자격은 새 `book.owned`로 표시한다. 개별 항목은 `book.collectedIds`를 현재 카탈로그의 앱 ID와 대조한다. 회차 보유 여부는 `apps[].owned`를 계속 읽는다.
 
 ```json
-{"book":{"owned":10,"total":60,"milestones":[{"at":10,"reward":{"data":0,"pieces":1,"vouchers":0},"claimed":false}]}}
+{"book":{"owned":3,"total":60,"collectedIds":["alarm","memo","weather"],"milestones":[{"at":10,"reward":{"data":0,"pieces":1,"vouchers":0},"claimed":false}]}}
 ```
 
 `claimBook(at)`를 일반 게임에서 호출한다. `owned >= at && !claimed`일 때 받기 버튼을 켠다. 반환은 기존 동작의 `{"ok":true,"state":{…}}` 형식이며 이후 `panel()`과 `meta()`를 새로 읽는다. 같은 목표를 다시 청구하거나 도전 중에 호출하면 `ok:false`다. 앱 수·마일스톤·이미 청구 여부는 초기화·동기화·저장 로드 뒤에도 유지된다.

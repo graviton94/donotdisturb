@@ -343,8 +343,10 @@ class WebSession(engine: Engine = Engine(), state: GameState? = null, now: Long 
         return buildJsonObject {
             put("state", snap(s, now))
             val book = home ?: s
+            val collected = CollectionRewards.owned(book).filter(Catalog::hasApp).sorted()
             putJsonObject("book") {
-                put("owned", CollectionRewards.owned(book).count { Catalog.hasApp(it) })
+                put("owned", collected.size)
+                put("collectedIds", JsonArray(collected.map(::JsonPrimitive)))
                 put("total", Catalog.apps.size)
                 putJsonArray("milestones") {
                     CollectionRewards.milestones.forEach { (at, reward) ->
