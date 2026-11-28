@@ -38,6 +38,8 @@ data class LiveTuning(
 
     fun eventAt(now: Long): LiveEventWindow? = event?.takeIf { it.active(now) }
 
+    fun bonusBasisPoints(event: LiveEvent): Int = event.bonusPermille * eventBonusScalePermille / 100
+
     companion object {
         /** A fetched document replaces the last one. Each invalid or absent field falls back independently. */
         fun parse(json: String): LiveTuning {

@@ -1033,8 +1033,8 @@ class Engine(val rules: RuleSet = RuleSet(), val tuning: LiveTuning = LiveTuning
         val beforeEvent = earned
         val event = if (auto) null else tuning.eventAt(now)?.event
         if (event != null && event.qualifies(s.active, bursts)) {
-            val bp = event.bonusPermille * tuning.eventBonusScalePermille
-            earned += earned * BigInteger.valueOf(bp.toLong()) / BigInteger.valueOf(1_000_000)
+            val bp = tuning.bonusBasisPoints(event)
+            earned += earned * BigInteger.valueOf(bp.toLong()) / BigInteger.valueOf(10_000)
         }
         // Jackpot cap: luck may jump a few levels, never the whole run.
         val capSteps = rules.swipeLevelCap + if (s.level >= rules.lateGrowthFrom) rules.lateSwipeCapSteps else 0

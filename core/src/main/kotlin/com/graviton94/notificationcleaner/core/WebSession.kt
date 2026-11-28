@@ -550,7 +550,7 @@ class WebSession(engine: Engine = Engine(), state: GameState? = null, now: Long 
             putJsonObject("liveEvent") {
                 put("id", e.event.id); put("title", e.event.title)
                 put("startsAt", e.startAt); put("endsAt", e.endAt); put("leftMs", e.endAt - now)
-                put("bonusBp", e.event.bonusPermille * engine.tuning.eventBonusScalePermille / 100)
+                put("bonusBp", engine.tuning.bonusBasisPoints(e.event))
             }
         }
         put("offlineBonus", bonusJson(engine.offlineBonus(s, now)))
