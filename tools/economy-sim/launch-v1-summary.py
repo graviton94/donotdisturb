@@ -162,9 +162,9 @@ def render_release(directory, rows, expected, variant=False):
         raise ValueError("Release requires SIM_SCREEN_ONLY=1 and the v1.5 screen action audit")
     if not manifest.startswith("launch-v1;") or (not variant and ";rules=;" not in manifest):
         raise ValueError("Release requires the operating engine without probe overrides")
-    if not variant and ("bookClaims=false;" in manifest or "stopPaidAfterDay=" in manifest
+    if not variant and ("bookClaims=true;" in manifest or "stopPaidAfterDay=" in manifest
                         or ("liveTuning=" in manifest and ";liveTuning=;" not in manifest)):
-        raise ValueError("Release requires default live settings and the visible collection claim policy")
+        raise ValueError("Release requires default live settings and actions wired in the shipping screen")
     if "adsPlan=scheduled" in manifest:
         raise ValueError("Use the baseline ad policy for the release verdict")
     cohorts = checked_screen_cohorts(rows, expected)

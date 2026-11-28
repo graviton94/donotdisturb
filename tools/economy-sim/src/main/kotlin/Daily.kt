@@ -82,7 +82,8 @@ internal fun simRules(): com.graviton94.notificationcleaner.core.RuleSet {
     return r
 }
 internal val simTuningJson = System.getenv("SIM_LIVE_TUNING").orEmpty()
-internal val claimBookRewards = System.getenv("SIM_BOOK_CLAIMS") != "off"
+/** The screen team will wire the new claim button. Model that version as an explicit comparison. */
+internal val claimBookRewards = System.getenv("SIM_BOOK_CLAIMS") == "on"
 private val engine = Engine(simRules(), LiveTuning.parse(simTuningJson))
 private val shop = com.graviton94.notificationcleaner.core.Shop(engine)
 private val meta = Meta(engine)
