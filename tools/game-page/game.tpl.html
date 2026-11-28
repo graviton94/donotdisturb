@@ -644,7 +644,7 @@ svg.ic{width:16px;height:16px;flex:none;vertical-align:-3px;margin-right:4px}
 #chres .amt{display:flex;align-items:baseline;justify-content:center;gap:6px;margin:14px 0 10px}#chres .v{font:800 46px/1 var(--font);font-variant-numeric:tabular-nums}#chres .u{font:800 22px var(--font);color:var(--m-primary)}
 #chres .nb{display:inline-flex;height:30px;align-items:center;padding:0 14px;border-radius:15px;font:800 14px var(--font);color:#fff;background:linear-gradient(135deg,#FF5F6D,#E0261C)}
 #chres .got{display:flex;justify-content:center;gap:6px;margin:14px 0 16px}#chres .btn{width:100%;height:52px}
-.pc{width:20px;height:20px;vertical-align:-4px;margin-right:2px;flex:none}
+.pc{width:20px;height:20px;vertical-align:middle;margin-right:2px;flex:none}
 .achsum b .pc{width:22px;height:22px;margin-right:4px}
 .rwd{display:flex;flex-direction:column;align-items:center;gap:6px;margin:14px 0 4px;font:500 13px/1 var(--font);color:var(--m-on-sv)}
 .rwd span{display:inline-flex;align-items:center;gap:4px;white-space:nowrap}.rwd b{color:var(--m-on-surface);font-weight:800}
@@ -710,8 +710,8 @@ svg.ic{width:16px;height:16px;flex:none;vertical-align:-3px;margin-right:4px}
 #sheet #chal-go{margin:4px 0 14px}
 .ch2r{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
 .ch2r>div{display:flex;align-items:center;gap:8px;padding:9px 12px;border-radius:16px;background:var(--g-card);border:1px solid var(--g-line);font:600 12.5px/1.25 var(--font);min-width:0}
-.ch2r img{width:30px;height:30px;flex:none}.ch2r b{display:block;font:900 15px/1.1 var(--font);color:#7B4DFF}.ch2r .pc{width:16px;height:16px;vertical-align:-3px}
-.ch2h{display:flex;align-items:center;gap:8px;margin:4px 0 8px;font:800 16px/1 var(--font)}.ch2h img{width:26px;height:26px}.ch2h .note{margin-left:auto;font-weight:500}
+.ch2r img{width:30px;height:30px;flex:none}.ch2r b{display:flex;align-items:center;gap:3px;margin-top:3px;font:900 15px/1 var(--font);color:#7B4DFF}.ch2r b .pc{width:17px;height:17px;flex:none;vertical-align:0;margin:0}
+.ch2h{display:flex;align-items:center;gap:8px;margin:4px 0 8px;font:800 16px/1 var(--font)}.ch2h img{width:26px;height:26px;flex:none;transform:translateY(-2px)}.ch2h .note{margin-left:auto;font-weight:500}
 #sheet .rank .rk:nth-child(1) b,#sheet .rank .rk:nth-child(2) b,#sheet .rank .rk:nth-child(3) b{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:13px;color:#fff;margin:0 auto}
 #sheet .rank .rk:nth-child(1) b{background:linear-gradient(135deg,#FFE27A,#F0A000);color:#5A3A00;box-shadow:0 2px 6px rgba(240,160,0,.5)}
 #sheet .rank .rk:nth-child(2) b{background:linear-gradient(135deg,#F2F4F8,#AEB6C4);color:#3A4250}
@@ -3414,7 +3414,7 @@ function renderAch(b) {
 
 // ---------- 일일 도전: today's shared board, 60 seconds, best score ----------
 // pictograms: 꾸미기 조각 (puzzle piece) and the challenge key
-const PIECE = '<svg class="pc" viewBox="0 0 24 24"><defs><linearGradient id="pcg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9A2FF"/><stop offset="1" stop-color="#7B4DFF"/></linearGradient></defs><path d="M4 8h3.2a2.3 2.3 0 1 1 4.6 0H15v3.2a2.3 2.3 0 1 1 0 4.6V19H4v-3.4a2.3 2.3 0 1 0 0-4.4z" fill="url(#pcg)" stroke="rgba(0,0,0,.18)" stroke-width=".8"/><path d="M5.2 9.2h2.4" stroke="rgba(255,255,255,.6)" stroke-width="1.2" stroke-linecap="round"/></svg>';
+const PIECE = '<svg class="pc" viewBox="0.5 3.35 18 18"><defs><linearGradient id="pcg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9A2FF"/><stop offset="1" stop-color="#7B4DFF"/></linearGradient></defs><path d="M4 8h3.2a2.3 2.3 0 1 1 4.6 0H15v3.2a2.3 2.3 0 1 1 0 4.6V19H4v-3.4a2.3 2.3 0 1 0 0-4.4z" fill="url(#pcg)" stroke="rgba(0,0,0,.18)" stroke-width=".8"/><path d="M5.2 9.2h2.4" stroke="rgba(255,255,255,.6)" stroke-width="1.2" stroke-linecap="round"/></svg>';
 const KEY = '<svg viewBox="0 0 24 24"><circle cx="8" cy="12" r="4.6" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M12.4 12H21M18 12v3.4M15.4 12v2.4" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>';
 let chal = null;  // { ends, timer }
 function renderChal(b) {
