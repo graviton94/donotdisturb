@@ -6,7 +6,7 @@ function frameCSS(FRAMES, TINTS) {
   const GREYS = ['#1a1a1a', '#595959', '#a6a6a6', '#d9d9d9'];
   const tint = (svg, ramp) => svg.replace(/#[0-9a-fA-F]{6}/g, h => { const i = GREYS.indexOf(h.toLowerCase()); return i < 0 ? h : ramp[i]; });
   const url = s => `url("data:image/svg+xml;charset=utf-8,${encodeURIComponent(s)}")`;
-  let css = 'ui-fr{display:inline-flex}button.uf{cursor:pointer;font-family:inherit;-webkit-tap-highlight-color:transparent}.uf{--s:.5;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;white-space:nowrap;line-height:1;vertical-align:middle;border-style:solid;border-color:transparent;background:none}\n';
+  let css = 'ui-fr{display:inline-flex}.uf{overflow:visible}button.uf{cursor:pointer;font-family:inherit;-webkit-tap-highlight-color:transparent}.uf{--s:.5;display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;white-space:nowrap;line-height:1;vertical-align:middle;border-style:solid;border-color:transparent;background:none}\n';
   for (const [id, f] of Object.entries(FRAMES)) {
     const k = `.uf-${id}`;
     if (f.ins) {

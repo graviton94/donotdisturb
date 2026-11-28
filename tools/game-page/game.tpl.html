@@ -661,6 +661,41 @@ svg.ic{width:16px;height:16px;flex:none;vertical-align:-3px;margin-right:4px}
 @keyframes ufspark{0%,100%{opacity:0;transform:scale(.6) rotate(0)}12%,30%{opacity:1;transform:scale(1.15) rotate(20deg)}50%{opacity:0;transform:scale(.8) rotate(40deg)}}
 @media (prefers-reduced-motion:reduce){.uf-fx,.uf-fx::after,.uf-fx::before{animation:none}}
 .uf-fx.uf-burst{font:900 15px/1 var(--font);color:#FFF6B0;text-shadow:0 2px 0 #6A0A00,1.5px 0 0 #6A0A00,-1.5px 0 0 #6A0A00,0 -1.5px 0 #6A0A00,0 0 10px rgba(255,120,0,.6)}
+
+/* ---- data shop: promotion banner, starter/pass cards, tiered packs ---- */
+.sx-promo{position:relative;isolation:isolate;overflow:hidden;border-radius:24px;padding:44px 128px 16px 18px;margin:6px 0 14px;color:#fff;
+  background:radial-gradient(120% 120% at 90% 10%,#FFB547 0%,#FF5A1F 38%,#C2185B 75%,#6A0F49 100%);box-shadow:0 12px 30px rgba(194,24,91,.35),inset 0 1px 0 rgba(255,255,255,.35)}
+.sx-promo::before{content:"";position:absolute;right:-60px;top:-80px;width:300px;height:300px;z-index:-1;background:repeating-conic-gradient(from 0deg,rgba(255,255,255,.18) 0 8deg,transparent 8deg 20deg);-webkit-mask:radial-gradient(closest-side,#000 25%,transparent 100%);mask:radial-gradient(closest-side,#000 25%,transparent 100%);animation:bkspin 18s linear infinite}
+.sx-promo::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,transparent 38%,rgba(255,255,255,.22) 50%,transparent 62%) 0 0/250% 100%;animation:sheen 3.2s ease-in-out infinite;pointer-events:none}
+.sx-promo .art{position:absolute;right:8px;bottom:6px;width:116px;height:auto;filter:drop-shadow(0 8px 14px rgba(0,0,0,.35));animation:bkbob 2.4s ease-in-out infinite}
+.sx-promo .tg{position:absolute;left:12px;top:8px;--s:.34;font:900 12px/1 var(--font);color:#fff}
+.sx-promo h3{margin:0;font:900 30px/1.05 var(--font);letter-spacing:-.03em;text-shadow:0 3px 0 rgba(90,0,30,.45)}
+.sx-promo p{margin:6px 0 0;font:700 13px/1.35 var(--font);color:#FFE9D6}
+.sx-chips{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 12px;position:relative;z-index:1}
+.sx-chip{display:inline-flex;align-items:center;gap:5px;height:30px;padding:0 10px 0 4px;border-radius:15px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);font:700 12px/1 var(--font);color:#fff;white-space:nowrap}
+.sx-chip img{width:24px;height:24px;object-fit:contain}
+.sx-starter{display:block!important;text-align:left;padding:14px 14px 12px!important;cursor:pointer}
+.sx-starter .top{display:flex;align-items:center;gap:10px;padding-right:84px}.sx-starter .top .art{width:68px;height:68px;object-fit:contain;flex:none;filter:drop-shadow(0 6px 10px rgba(0,0,0,.35))}
+.sx-starter b{display:block;margin-bottom:6px}
+.starter .d{display:inline-flex;align-items:center;gap:4px;font-size:12px;font-weight:800;background:#00000033;border-radius:999px;padding:3px 10px;font-variant-numeric:tabular-nums}
+.starter .d img,.starter .d svg{width:16px;height:16px}
+.sx-buy{--s:.5;width:100%;font:900 17px/1 var(--font);color:#4A2600;text-shadow:0 1px 0 rgba(255,240,190,.6)}
+.rookie .sx-chips{padding-right:92px}.rookie .sx-chip{white-space:normal;height:auto;min-height:30px;padding-top:3px;padding-bottom:3px;line-height:1.2}
+.rookie .rk-art{bottom:62px!important}
+.sx-h{display:flex;align-items:center;gap:6px;margin:16px 0 4px;font:800 16px/1 var(--font)}.sx-h img{width:22px;height:22px}
+.sx-packs{gap:26px 10px!important;padding-top:18px!important}.sx-pack .pb-first{--s:.27;font:900 11px/1 var(--font);letter-spacing:-.03em;top:-17px}
+.sx-pack{color:#fff!important;border:0!important;padding:30px 6px 10px!important;box-shadow:0 8px 20px rgba(0,0,0,.22),inset 0 1px 0 rgba(255,255,255,.3)!important;cursor:pointer}
+.sx-pack.t0{background:linear-gradient(160deg,#2FA36B,#13624A)!important}.sx-pack.t1{background:linear-gradient(160deg,#21A3A0,#0E5C70)!important}.sx-pack.t2{background:linear-gradient(160deg,#3D7BFF,#1D3FB8)!important}
+.sx-pack.t3{background:linear-gradient(160deg,#8B5CF6,#4B2A9E)!important}.sx-pack.t4{background:linear-gradient(160deg,#E0479E,#8A1858)!important}.sx-pack.t5{background:linear-gradient(160deg,#FFC23A,#D9730D 55%,#8A3A00)!important}
+.sx-pack.rec{box-shadow:0 0 0 3px #FFD66B,0 10px 26px rgba(255,180,40,.45)!important}
+.sx-pack .glow{display:grid;place-items:center;width:72px;height:72px;margin:0 auto;border-radius:50%;background:radial-gradient(closest-side,rgba(255,255,255,.55),rgba(255,255,255,0))}
+.sx-pack .glow img{width:62px;height:62px;object-fit:contain;filter:drop-shadow(0 4px 6px rgba(0,0,0,.3))}
+.sx-pack .n{display:flex;align-items:center;justify-content:center;gap:4px;font:900 19px/1 var(--font)!important;margin:4px 0 6px!important;text-shadow:0 2px 0 rgba(0,0,0,.25)}.sx-pack .n img{width:18px;height:18px}
+.sx-pack .tag.gain{background:#FFE27A!important;color:#6A3A00!important;box-shadow:none!important}.sx-pack .tag.base{background:rgba(255,255,255,.2)!important;color:#fff!important}
+.sx-pack .basep{color:#D9FFE6!important;font-weight:800!important}
+.sx-pack .won.uf{--s:.4;display:flex!important;overflow:visible!important;text-overflow:clip!important;width:100%;margin-top:2px;border-style:solid!important;border-width:calc(36px*var(--s)) calc(40px*var(--s)) calc(44px*var(--s)) calc(40px*var(--s))!important;border-radius:0!important;background:none!important;box-shadow:none!important;height:calc(96px*var(--s))!important;padding:0 0 calc(7px*var(--s))!important;font:900 14px/1 var(--font)!important;color:#fff!important;text-shadow:0 1px 0 rgba(0,60,20,.55)}
+.sx-pack .tag.best{background:linear-gradient(135deg,#FF5F6D,#E0261C)!important;color:#fff!important}
+@media (prefers-reduced-motion:reduce){.sx-promo::before,.sx-promo::after,.sx-promo .art{animation:none}}
 /* best-chain x2 offer: a celebration card over a paused board */
 #bestpop{position:fixed;inset:0;z-index:62;display:grid;place-items:center;padding:24px;background:rgba(6,8,24,.55);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);opacity:0;pointer-events:none;transition:opacity .18s var(--ease-std)}
 #bestpop.on{opacity:1;pointer-events:auto}
@@ -3044,40 +3079,40 @@ setInterval(() => {
 function renderData(b) {
   const m = P.bm; starterAt = Date.now();
   $('sheet-t').textContent = $t('top_up_data'); $('sheet-w').innerHTML = `${DIMG.replace('<img', '<img style="width:18px;vertical-align:-3px"')} ${fmt(m.data)}`;
-  const di = '<img src="img/bm/currency-data.webp" style="width:15px;height:15px;vertical-align:-3px">';
+  const di = '<img src="img/bm/currency-data.webp" alt="">';
+  const chip = (img, t) => `<span class="sx-chip"><img src="img/bm/${img}.webp" alt="">${t}</span>`;
   let h = '';
+  // first-purchase promotion: a banner, not a line of text
+  if (m.firstData) h += `<div class="sx-promo"><img class="art" src="img/bm/shop-data-6.webp" alt=""><ui-fr class="uf uf-ribbon ut-red tg">${$t('promo_tag')}</ui-fr>
+      <h3>${$t('promo_title')}</h3><p>${$t('promo_sub', m.firstBonusCap.toLocaleString())}</p></div>`;
   if (m.starterLeftMs > 0) {
     const x = gainX(m.starterValue, m.starterWon);
-    h += `<button class="starter" data-act="buyStarter" style="position:relative;padding-right:96px">${sticker('burst', [xStr(x) + $t('times_suffix'), $t('value')], 84, 'right:4px;top:50%;transform:translateY(-50%) rotate(8deg)')}
-      <img src="img/bm/shop-starter.webp"><div style="flex:1;min-width:0"><b>${$t('starter_pack_2', priceOf('starter_pack', m.starterWon))}</b>
-      <div style="margin:6px 0 6px">${sticker('bolt', '<span class="cd">' + hms(m.starterLeftMs) + '</span>', 84, 'left:0;top:0')}</div>
-      <div class="note">${$t('data_voucher_1_worth_data', m.starterData, m.voucherData)}<br>${$t('income_boost_3_overclock_3')}</div></div></button>`;
+    h += `<button class="starter sx-starter" data-act="buyStarter">${sticker('burst', [xStr(x) + $t('times_suffix'), $t('value')], 84)}
+      <div class="top"><img class="art" src="img/bm/shop-starter.webp" alt=""><div><b>${$t('starter_pack')}</b><span class="d">${ic('clock')}<span class="cd">${hms(m.starterLeftMs)}</span></span></div></div>
+      <div class="sx-chips">${chip('currency-data', $t('chip_data', m.starterData))}${chip('badge-star-on', $t('chip_voucher'))}${chip('boost-income-boost', $t('chip_boost_3'))}${chip('perk-overclock', $t('chip_overclock_3'))}</div>
+      <span class="uf uf-btn-l ut-gold sx-buy">${priceOf('starter_pack', m.starterWon)}</span></button>`;
   }
   if (m.rookieOpen || (m.rookieBought && m.rookieDay <= 7)) {
     const x = gainX(m.rookieValue, m.rookieWon);
     h += `<div class="rookie">${m.rookieBought ? '' : sticker('burst', [xStr(x) + $t('times_suffix'), $t('value')], 84, 'right:6px;top:6px;transform:rotate(10deg)')}
       <img class="rk-art" src="img/bm/shop-growth.webp" alt=""><h3>${$t('beginner_pass')}</h3><span class="d">${ic('clock')}${m.rookieBought ? $t('day_7', m.rookieDay) : $t('first_7_days_only_days', m.rookieDaysLeft)}</span>
-      <ul><li>${$t('data_300_right_now')}</li><li>${$t('data_7_daily_for_50')}</li><li>${$t('premium_voucher_1_worth_data', m.voucherData)}</li></ul>
+      <div class="sx-chips">${chip('perk-instant-data', $t('data_300_right_now'))}${chip('perk-daily-data', $t('data_7_daily_for_50'))}${chip('badge-star-on', $t('premium_voucher_1'))}</div>
       ${m.rookieBought ? `<button class="btn skin claim" data-act="claimRookie" ${m.rookieCanClaim ? '' : 'disabled'}>${m.rookieCanClaim ? $t('claim_today_s_50') : $t('claimed_today_back_tomorrow')}</button>`
-        : `<button class="btn skin gold" data-act="buyRookie">${priceOf(P.bm.rookieProductId || 'rookie_pass', m.rookieWon)}</button>`}</div>`;
+        : `<button class="uf uf-btn-l ut-gold sx-buy" data-act="buyRookie">${priceOf(P.bm.rookieProductId || 'rookie_pass', m.rookieWon)}</button>`}</div>`;
   }
-  if (m.firstData) h += `<div class="note" style="text-align:center;margin:4px 0 0;font-weight:800;color:var(--hot)">${$t('first_data_purchase_1_time', m.firstBonusCap.toLocaleString())}</div>`;
-  h += `<div class="packs" style="padding-top:22px">${m.packs.map((p, i) => {
-      const x = gainX(p.gets, p.won), bonus = p.gets - p.data;
-      const rib = m.firstData ? sticker('ribbon', bonus >= p.data ? $t('first_buy_2') : $t('first_buy', bonus.toLocaleString()), 112, 'left:50%;top:-24px;transform:translateX(-50%)') : '';
-      const ros = p.id === 'data_1200' ? sticker('rosette', $t('pick'), 44, 'right:-8px;top:14px;transform:rotate(12deg)') : '';
-      const bst = x >= 1.05 ? sticker('burst', [xStr(x) + $t('times_suffix'), $t('value')], 58, 'left:-8px;top:14px;transform:rotate(-10deg)') : '';
-      // tags live in the card's flow (one row under the amount) so they never cover the art
-      const tags = (x >= 1.05 ? `<span class="tag gain">${$t('value_2', xStr(x))}</span>` : `<span class="tag base">${$t('base_price')}</span>`) ; const rc = p.id === 'data_1200' ? `<span class="tag rec corner">${$t('pick_2')}</span>` : '';
-      return `<button class="pack ${p.id === 'data_1200' ? 'rec' : ''}" data-act="buyData" data-pack="${p.id}">${rib}${rc}
-        <img src="img/bm/shop-data-${i + 1}.webp"><div class="n">${di} ${p.gets.toLocaleString()}</div>
-        <span class="tags">${tags}</span>
-        <span class="basep">${bonus ? `${p.data.toLocaleString()} + ${bonus.toLocaleString()}` : '\u00a0'}</span>
-        <span class="won skin gold">${priceOf(p.id, p.won)}</span></button>`;
+  // data packs: each tier its own colour, the art on a glow, the bonus spelled out, a real buy button
+  h += `<div class="sx-h"><img src="img/bm/currency-data.webp" alt="">${$t('data_packs')}</div><div class="packs sx-packs">${m.packs.map((p, i) => {
+      const x = gainX(p.gets, p.won), bonus = p.gets - p.data, rec = p.id === 'data_1200', top = i === m.packs.length - 1;
+      const rib = m.firstData ? sticker('ribbon', bonus >= p.data ? $t('first_buy_2') : $t('first_buy', bonus.toLocaleString())) : '';
+      return `<button class="pack sx-pack t${i} ${rec ? 'rec' : ''}" data-act="buyData" data-pack="${p.id}">${rib}${rec ? `<span class="tag rec corner">${$t('pick_2')}</span>` : top ? `<span class="tag rec corner best">${$t('best_value')}</span>` : ''}
+        <span class="glow"><img src="img/bm/shop-data-${i + 1}.webp" alt=""></span><div class="n">${di}${p.gets.toLocaleString()}</div>
+        <span class="tags">${x >= 1.05 ? `<span class="tag gain">${$t('value_2', xStr(x))}</span>` : `<span class="tag base">${$t('base_price')}</span>`}</span>
+        <span class="basep">${bonus ? $t('bonus_n', bonus.toLocaleString()) : ' '}</span>
+        <span class="uf uf-btn-l ut-green won">${priceOf(p.id, p.won)}</span></button>`;
     }).join('')}</div>`;
-  h += `<div class="h3">${$t('data_shop')}</div>` + m.items.map(it => `<div class="it"><img src="img/bm/${ITEM_IMG[it.id]}.webp"><div class="t"><b class="fit1" style="display:block">${it.label.split(' (')[0]}</b>${it.label.includes(' (') ? `<div class="m fit1">(${it.label.split(' (')[1]}</div>` : ''}<div class="m">${$t('left_today_icon', ic('clock'), it.left, it.tickets ? $t('free_tickets', it.tickets) : '')}</div></div>
+  h += `<div class="sx-h"><img src="img/bm/boost-income-boost.webp" alt="">${$t('data_shop')}</div>` + m.items.map(it => `<div class="it"><img src="img/bm/${ITEM_IMG[it.id]}.webp"><div class="t"><b class="fit1" style="display:block">${it.label.split(' (')[0]}</b>${it.label.includes(' (') ? `<div class="m fit1">(${it.label.split(' (')[1]}</div>` : ''}<div class="m">${$t('left_today_icon', ic('clock'), it.left, it.tickets ? $t('free_tickets', it.tickets) : '')}</div></div>
       <button class="dbtn skin green" data-act="buyItem" data-item="${it.id}" ${it.left > 0 && (it.tickets || m.data >= it.price) ? '' : 'disabled'}>${it.tickets ? $t('free') : DIMG + it.price}</button></div>`).join('')
-    + `<div class="h3">${m.passActive ? $t('pass_claim_no_ad') : $t('watch_ad_to_claim')}</div>` + m.ads.filter(a => a.id !== 'BestDouble' && a.id !== 'OfflineDouble').map(a => `<div class="it"><img src="img/bm/${AD_IMG[a.id]}.webp"><div class="t"><b>${a.label}</b><div class="m">${$t('today', a.left, a.daily)}</div></div>
+    + `<div class="sx-h"><img src="img/ui/ad.webp" alt="">${m.passActive ? $t('pass_claim_no_ad') : $t('watch_ad_to_claim')}</div>` + m.ads.filter(a => a.id !== 'BestDouble' && a.id !== 'OfflineDouble').map(a => `<div class="it"><img src="img/bm/${AD_IMG[a.id]}.webp"><div class="t"><b>${a.label}</b><div class="m">${$t('today', a.left, a.daily)}</div></div>
       <button class="dbtn skin blue" data-act="watchAd" data-slot="${a.id}" ${a.left > 0 ? '' : 'disabled'}>${m.passActive ? $t('accept') : `<img src="img/ui/ad.webp">${$t('ad')}`}</button></div>`).join('')
     + foot([$t('n_value_is_based_on'), $t('vouchers_and_boosts_valued_at'), $t('no_random_chance_items'), ...(STORE.ready ? [] : [$t('purchases_are_test_only_for')])]);
   b.innerHTML = h;
