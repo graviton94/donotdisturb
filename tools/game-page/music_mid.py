@@ -6,7 +6,7 @@ import json, pathlib, re, struct
 HERE = pathlib.Path(__file__).parent
 OUT = HERE.parent.parent / "docs" / "design" / "music"
 NOTE = {"C": 0, "C#": 1, "D": 2, "D#": 3, "E": 4, "F": 5, "F#": 6, "G": 7, "G#": 8, "A": 9, "A#": 10, "B": 11}
-CHORD = {"C": [0, 4, 7], "Dm": [2, 5, 9], "Em": [4, 7, 11], "F": [5, 9, 12], "G": [7, 11, 14], "Am": [9, 12, 16], "E": [4, 8, 11]}
+CHORD = {"C": [0, 4, 7], "Dm": [2, 5, 9], "Em": [4, 7, 11], "F": [5, 9, 12], "G": [7, 11, 14], "Am": [9, 12, 16], "E": [4, 8, 11], "D": [2, 6, 9], "A": [9, 13, 16], "Bm": [11, 14, 18]}
 TPQ, STEP = 480, 120  # 16th note = 120 ticks
 
 
