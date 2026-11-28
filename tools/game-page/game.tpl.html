@@ -236,7 +236,7 @@ body{-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:trans
 #cf.on{display:grid}
 #sheet .pro{display:inline-block;font:900 10px/1 var(--font);padding:3px 5px;border-radius:5px;background:var(--soft2);color:var(--m-on-sv);letter-spacing:.04em;vertical-align:1px}#sheet .pro.on{background:linear-gradient(135deg,#FFE27A,#F0A000);color:#2A1800}
 #sheet .pro-b{height:30px;padding:0 10px;margin-top:6px;font-size:12px}#sheet .cardi{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--soft2);flex:none}#sheet .it.eq .cardi{background:linear-gradient(135deg,#FFE27A,#F0A000);color:#2A1800}
-#sheet .rank .rk{display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;padding:9px 12px;border-radius:14px;background:var(--g-card);border:1px solid var(--g-line);margin-bottom:6px;font:600 14px/1.2 var(--font)}#sheet .rank .rk b{font:900 15px/1 var(--font);text-align:center}#sheet .rank .rk:nth-child(-n+3) b{color:#FFB020}#sheet .rank .rk.me{border-color:rgba(255,176,32,.7)}#sheet .rank .rk.last b{color:inherit}#sheet .rank .rk.last{margin-top:10px;border-style:dashed;grid-template-columns:28px 1fr}#sheet .rank em{font-style:normal;font-size:11px;opacity:.7}
+#sheet .rank .rk{display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;padding:9px 12px;border-radius:14px;background:var(--g-card);border:1px solid var(--g-line);margin-bottom:6px;font:600 14px/1.2 var(--font)}#sheet .rank .rk b{font:900 15px/1 var(--font);text-align:center}#sheet .rank .rk:nth-child(-n+3) b{color:#FFB020}#sheet .rank .rk.me{border-color:rgba(255,176,32,.7)}#sheet .rank .rk.last b{color:inherit}#sheet .rank .rk.last{margin:4px 0 6px;border-style:dashed;grid-template-columns:28px 1fr}#sheet .rank em{font-style:normal;font-size:11px;opacity:.7}
 #signing{position:fixed;inset:0;z-index:90;display:none;place-items:center;background:rgba(0,0,0,.45)}#signing.on{display:grid}
 #signing .b{display:flex;align-items:center;gap:12px;padding:16px 22px;border-radius:18px;background:var(--sheet);color:var(--ink);font:700 15px/1.3 "Pretendard",system-ui,sans-serif;box-shadow:0 12px 40px #0008}
 #signing i{width:22px;height:22px;border-radius:50%;border:3px solid currentColor;border-right-color:transparent;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
@@ -249,9 +249,6 @@ body{-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:trans
 .cd{font-variant-numeric:tabular-nums}
 #adov{position:fixed;inset:0;background:#000;color:#fff;display:none;place-items:center;text-align:center;font:16px "Pretendard","Noto Sans KR",system-ui,sans-serif;z-index:50}
 #adov.on{display:grid}#adov b{display:block;font:800 28px/1.15 "Pretendard",sans-serif;letter-spacing:-.02em;margin-bottom:8px}
-#offer{position:fixed;left:50%;bottom:110px;transform:translateX(-50%) scale(.8);opacity:0;pointer-events:none;transition:.25s;height:52px;padding:0 24px 4px;white-space:nowrap;font:800 15px "Pretendard","Noto Sans KR",system-ui,sans-serif;
- background:linear-gradient(180deg,#7CC4FF,#2F7BF5);color:#fff;box-shadow:0 8px 24px #2F7BF566;z-index:20}
-#offer.on{opacity:1;transform:translateX(-50%) scale(1);pointer-events:auto}
 
 
 /* ==== Material 3 controls: the game imitates an Android phone, so every control looks like the system's own ====
@@ -396,7 +393,7 @@ input[type=range]{accent-color:var(--m-primary)}
 #shade .grid{grid-template-columns:repeat(2,1fr);gap:8px;margin:16px 0 12px}#shade .grid>.tile:last-child:nth-child(odd){grid-column:1/-1}
 #sheet .book-hero{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:20px;background:var(--g-card);border:1px solid var(--g-line);margin-bottom:10px}#sheet .book-hero b{font:900 30px/1 var(--font)}#sheet .book-hero .bk{flex:1;min-width:0}
 #sheet .book-g{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:6px 0 14px}#sheet .book-i{display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 2px;border-radius:14px;background:var(--g-card);border:1px solid var(--g-line);font:600 11px/1.2 var(--font);color:inherit;min-width:0}
-#sheet .book-i span{max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#sheet .book-i>img,#sheet .book-i>.fr{width:44px;height:44px;border-radius:11px;flex:none;position:relative}#sheet .book-i.lock>img{filter:brightness(0);opacity:.28}@media (prefers-color-scheme: dark){#sheet .book-i.lock>img{filter:brightness(0) invert(1);opacity:.22}}#sheet .book-i.lock span{opacity:.55}#sheet .book-i{position:relative}#sheet .book-i.seen>img,#sheet .book-i.seen>.fr{filter:grayscale(.85);opacity:.6}#sheet .book-i .bdg{position:absolute;font-style:normal;font:800 9.5px/1 var(--font);border-radius:999px}#sheet .book-i .bdg.own{top:4px;right:6px;width:16px;height:16px;display:grid;place-items:center;background:#FFB020;color:#3A2400}#sheet .book-i .bdg.buy{top:36px;left:50%;transform:translateX(-50%);padding:3px 6px;background:#2E6BE6;color:#fff;white-space:nowrap}#sheet .book-i.own{border-color:rgba(255,200,90,.45)}
+#sheet .book-i span{max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#sheet .book-i>img,#sheet .book-i>.fr{width:44px;height:44px;border-radius:11px;flex:none;position:relative}#sheet .book-i.lock>img{filter:brightness(0);opacity:.28}@media (prefers-color-scheme: dark){#sheet .book-i.lock>img{filter:brightness(0) invert(1);opacity:.22}}#sheet .book-i.lock span{opacity:.55}#sheet .book-i{position:relative}#sheet .book-i.seen>img,#sheet .book-i.seen>.fr{filter:grayscale(1) contrast(.8);opacity:.38}#sheet .book-i.seen,#sheet .book-i.lock{background:transparent;border-style:dashed}#sheet .book-i.seen span{opacity:.6;font-weight:500}#sheet .book-i.own{background:linear-gradient(180deg,rgba(255,196,80,.30),rgba(255,176,32,.10));border:1.5px solid rgba(255,176,32,.85);box-shadow:0 4px 14px rgba(255,160,20,.22)}#sheet .book-i.own>img,#sheet .book-i.own>.fr{box-shadow:0 3px 10px rgba(0,0,0,.18)}#sheet .book-i.own span{font-weight:800}#sheet .book-i .bdg{position:absolute;font-style:normal;font:800 9.5px/1 var(--font);border-radius:999px}#sheet .book-i .bdg.own{top:4px;right:6px;width:16px;height:16px;display:grid;place-items:center;background:#FFB020;color:#3A2400}#sheet .book-i .bdg.buy{top:36px;left:50%;transform:translateX(-50%);padding:3px 6px;background:#2E6BE6;color:#fff;white-space:nowrap}
 #shade .tile{flex-direction:row;justify-content:flex-start;gap:clamp(8px,2.6vw,12px);height:64px;padding:0 clamp(10px,3.4vw,14px);border-radius:22px;text-align:left;
  background:var(--g-card);border:1px solid var(--g-line);color:var(--m-on-surface);box-shadow:inset 0 1px 0 var(--g-hi);transition:background .2s var(--ease-std)}
 #shade .tile span.c{width:auto;height:auto;background:none!important;box-shadow:none!important;color:inherit}
@@ -667,7 +664,7 @@ svg.ic{width:16px;height:16px;flex:none;vertical-align:-3px;margin-right:4px}
  <div class="start"><div class="panel"><button class="opt go" id="boot-go" data-i18n="tap_to_start"></button><div id="boot-acct" style="display:contents"></div><div class="bfoot" id="boot-foot2"></div></div></div>
  <div class="bfoot" id="boot-foot"></div></div>
 <canvas id="stage" data-i18n-aria="notification_board"></canvas><canvas id="stage-ui" aria-hidden="true"></canvas>
-<div id="signing" role="status"><div class="b"><i></i><span data-i18n="signing_in"></span></div></div><div id="scrim"></div><div id="toasts"></div><div id="appd"></div><div id="ret"></div><div id="chres"></div><div id="chud"><span class="lb" data-i18n="daily_challenge"></span><b id="chud-t">1:00</b><span id="chud-s">+0 P</span><button id="chud-x" data-i18n-aria="quit" data-i18n="stop"></button></div><div id="coach"></div><div id="cf"><div class="box"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="cf-ico"><path d="M6 6h15l-1.5 9h-12zM6 6 5 3H2M9 20a1 1 0 1 0 0-.01M18 20a1 1 0 1 0 0-.01"/></svg><h3 id="cf-t"></h3><div class="what" id="cf-w"></div><div class="price" id="cf-p"></div><div class="row"><button class="no" id="cf-no" data-i18n="cancel"></button><button id="cf-ok" data-i18n="pay"></button></div></div></div><div id="adov"><div><b data-i18n="ad"></b><span data-i18n="ad_placeholder"></span><br><span id="adt">3</span><span data-i18n="s_to_reward"></span></div></div><button id="offer" class="skin blue"></button><div id="shade"></div><div id="sheet"><div class="sheet-h"><h2 id="sheet-t"></h2><span class="w" id="sheet-w"></span><button class="x" id="sheet-x" data-i18n-aria="close">✕</button></div><div class="sheet-b" id="sheet-b"></div></div>
+<div id="signing" role="status"><div class="b"><i></i><span data-i18n="signing_in"></span></div></div><div id="scrim"></div><div id="toasts"></div><div id="appd"></div><div id="ret"></div><div id="chres"></div><div id="chud"><span class="lb" data-i18n="daily_challenge"></span><b id="chud-t">1:00</b><span id="chud-s">+0 P</span><button id="chud-x" data-i18n-aria="quit" data-i18n="stop"></button></div><div id="coach"></div><div id="cf"><div class="box"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" id="cf-ico"><path d="M6 6h15l-1.5 9h-12zM6 6 5 3H2M9 20a1 1 0 1 0 0-.01M18 20a1 1 0 1 0 0-.01"/></svg><h3 id="cf-t"></h3><div class="what" id="cf-w"></div><div class="price" id="cf-p"></div><div class="row"><button class="no" id="cf-no" data-i18n="cancel"></button><button id="cf-ok" data-i18n="pay"></button></div></div></div><div id="adov"><div><b data-i18n="ad"></b><span data-i18n="ad_placeholder"></span><br><span id="adt">3</span><span data-i18n="s_to_reward"></span></div></div><div id="shade"></div><div id="sheet"><div class="sheet-h"><h2 id="sheet-t"></h2><span class="w" id="sheet-w"></span><button class="x" id="sheet-x" data-i18n-aria="close">✕</button></div><div class="sheet-b" id="sheet-b"></div></div>
 <script>
 // ---------- i18n: every on-screen string is a key in tools/game-page/i18n/<lang>.json ----------
 // Code calls $t(<key>, ...args) with {0}{1}… placeholders; no display text lives in the code (build.py fails on Hangul literals
@@ -1308,7 +1305,7 @@ function drawCard(c, r, y) {
     const n = d.threshold || 4;
     if (n <= 2) {  // burst on any pair (threshold 2): "one more" would sit on every row, so show the stack size instead
       for (let k = 0; k < Math.min(d.count, 4); k++) { c.fillStyle = col; c.beginPath(); c.arc(CX0 + CW - 18 - k * 9, y + 24, 3.5, 0, 6.28); c.fill(); }
-      c.fillStyle = sub; c.font = `700 11px ${FB}`; c.textAlign = 'right'; c.fillText($t('n_alerts', d.count), CX0 + CW - 14, y + 46);
+      c.fillStyle = sub; c.font = `700 11px ${FB}`; c.textAlign = 'right'; c.fillStyle = d.count >= 3 ? (day ? '#B25F00' : '#FFD66B') : sub; c.fillText('×' + d.count, CX0 + CW - 14, y + 46);
     } else
     for (let k = 0; k < n; k++) { c.fillStyle = k < d.count ? col : (day ? 'rgba(30,42,80,.15)' : 'rgba(255,255,255,.15)'); c.beginPath(); c.arc(CX0 + CW - 18 - (n - 1 - k) * 13, y + 24, 4.5, 0, 6.28); c.fill(); }
     if (n > 2) { c.fillStyle = d.count >= n - 1 ? (day ? '#B25F00' : '#FFD66B') : sub; c.font = `700 11px ${FB}`; c.textAlign = 'right'; c.fillText(d.count >= n - 1 ? $t('one_more') : `${d.count}/${n}`, CX0 + CW - 14, y + 46); }
@@ -2514,7 +2511,6 @@ window.onBack = () => {
   return true;
 };
 async function openShade() {
-  $('offer').classList.remove('on');
   if (!canOpenShade()) return;  // the guide owns the screen until it asks for the shade
   await loadPanel(); renderShade();
   shadeSettle(true);
@@ -2639,7 +2635,7 @@ shadeEl.addEventListener('pointerup', shadeUp); shadeEl.addEventListener('pointe
 
 async function openSheet(kind) {
   sheetKind = kind; if (!P || !P.bm) await loadPanel();
-  shadeEl.classList.remove('open'); scrimEl.classList.add('open'); $('offer').classList.remove('on');  // the board's ad offer must not float over a sheet
+  shadeEl.classList.remove('open'); scrimEl.classList.add('open');
   renderSheet(); sheetEl.classList.add('open'); sfx.snap(); ftue('sheet', kind);
 }
 // ---- in-run progression (balance v1.4): pro versions, board assists, event cards ----
@@ -3148,15 +3144,18 @@ async function sheetAct(x) {
     track(act, { amount: String(act === 'reset' ? P.state.backupFilesNow : P.gbNow), level: P.state.level }); const got = act === 'reset' ? P.state.backupFilesNow : P.gbNow; closeAll(); armSync = false; prestigeShow(act, got, o.state); }
   afterAct(o, null, act);
 }
-const offerEl = $('offer');
-let offerT = null;
 async function offerDouble(total) {
   if (chal) return;  // the challenge board is a side run: no ad offers on it
-  const m = await api('bm'); const ad = m.ads.find(a => a.id === 'BestDouble'); if (!ad || ad.left <= 0 || m.state.level < 20 || scrimEl.classList.contains('open')) return;
-  offerEl.innerHTML = (m.passActive ? $t('pass_perk') : `<img src="img/ui/ad.webp" style="width:22px;vertical-align:-5px"> ${$t('watch_ad')} `) + $t('best_2', fmtL(total)); offerEl.classList.add('on');
-  clearTimeout(offerT); offerT = setTimeout(() => offerEl.classList.remove('on'), 5000);
-  offerEl.onclick = async () => { offerEl.classList.remove('on'); if (!m.passActive && !(await fakeAd())) return;
-    const before = L(S.wallet); const o = await api('watchAd', { slot: 'BestDouble' }); if (o.ok) { addWallet(Lsub(L(o.state.wallet), before)); say2($t('best_2_2'), 300, 30); sfx.unit(); } applyState(o.state); };
+  const m = await api('bm'); const ad = m.ads.find(a => a.id === 'BestDouble'); if (!ad || ad.left <= 0 || m.state.level < 20 || scrimEl.classList.contains('open') || $('cf').classList.contains('on')) return;
+  // a popup over a paused board: the dialog blocks swipes and auto-clean waits while it is open
+  const wasAuto = autoOn; autoOn = false;
+  const pr = choose($t('new_best'), `${$t('best_offer_what', fmtL(total))}<div class="price t-gold" style="margin-top:6px">+${fmtL(total)} P</div>`,
+    m.passActive ? $t('pass_perk') + $t('claim_x2') : $t('watch_ad_x2'), $t('no_thanks'));
+  $('cf-ico').innerHTML = '<rect x="3" y="5" width="18" height="13" rx="2"/><path d="M10 9l5 2.5-5 2.5zM8 21h8"/>';  // a screen with a play mark
+  const yes = await pr; autoOn = wasAuto;
+  if (!yes) return;
+  if (!m.passActive && !(await fakeAd('BestDouble'))) return;
+  const before = L(S.wallet); const o = await api('watchAd', { slot: 'BestDouble' }); if (o.ok) { addWallet(Lsub(L(o.state.wallet), before)); say2($t('best_2_2'), 300, 30); sfx.unit(); } applyState(o.state);
 }
 // Rewarded ad: the app's AdMob host when there is one (window.Game.showAd), else the 3-second stand-in for the browser
 const adWait = {};
@@ -3188,7 +3187,7 @@ document.addEventListener('pointerdown', e => {
 }, true);
 // test hook for tools/game-page/*.js (browser only; the app has window.Game)
 document.getElementById('chud-x').onclick = () => { if (chal) chal.ends = Date.now(); };
-if (!window.Game) window.__dbg = { audio: () => ({ A, BGM, sfx, phone, phoneLoad }), dnd: () => dndLeft(), aspect: () => gl ? gl.getUniform(U.prog, U.A) : W / H, refresh: () => api('snapshot').then(st => { applyState(st); reconcile(st); }), auto: v => { autoOn = v; }, rowY: id => { const r = byId(id); return r ? r.y.t : -1; }, ev: () => ev && ev.type, ids: () => board.map(r => r.id + ':' + r.d.kind).join(' '), flags: () => JSON.stringify({ busy, boardBusy, pendingCall, phase: plate.phase, S: !!S }), open: k => openSheet(k), shade: () => openShade(), fx: (k, a) => {  // visual QA only: fire one effect on its own
+if (!window.Game) window.__dbg = { offer: t => offerDouble(L(t)), audio: () => ({ A, BGM, sfx, phone, phoneLoad }), dnd: () => dndLeft(), aspect: () => gl ? gl.getUniform(U.prog, U.A) : W / H, refresh: () => api('snapshot').then(st => { applyState(st); reconcile(st); }), auto: v => { autoOn = v; }, rowY: id => { const r = byId(id); return r ? r.y.t : -1; }, ev: () => ev && ev.type, ids: () => board.map(r => r.id + ':' + r.d.kind).join(' '), flags: () => JSON.stringify({ busy, boardBusy, pendingCall, phase: plate.phase, S: !!S }), open: k => openSheet(k), shade: () => openShade(), fx: (k, a) => {  // visual QA only: fire one effect on its own
     if (EVENTS[k]) { ev = null; busy = false; startEvent(k, a || {}); return; }
     if (k === 'wave') return waveHit(a || 0);
     if (k === 'reset' && a === 'real') return api('snapshot').then(b4 => api('reset').then(o => { if (o.ok) prestigeShow('reset', b4.backupFilesNow, o.state); return o.ok; }));
@@ -3359,7 +3358,7 @@ function renderChal(b) {
     <div class="cols"><div><h4>${$t('my_best_2')}</h4><b class="cbest t-gold">${m.bestShort} P</b></div><div><h4>${$t('keys_left_today')}</h4><div class="keys">${keys}</div><span class="note fit1">${m.keyCap === 3 ? $t('keys_lv52') : $t('from_lv52_3_a_day')}</span></div></div>
     <button class="btn big skin gold ${m.keys ? 'fx-shine' : ''}" id="chal-go" ${m.keys ? '' : 'disabled'}>${m.keys ? $t('start_1_keys') : $t('keys_tomorrow')}</button>
     <div class="rwd"><span>${$t('on_completion', PIECE)}<b>×1</b></span><span>${$t('on_a_new_best', PIECE)}<b>×2</b></span></div>
-    <div class="h3">${$t('rank_week')} <span class="note">${$t('rank_resets')}</span></div><div id="rank-list" class="rank"><div class="note">${$t('loading')}</div></div>`;
+    <div id="rank-last" class="rank"></div><div class="h3">${$t('rank_week')} <span class="note">${$t('rank_resets')}</span></div><div id="rank-list" class="rank"><div class="note">${$t('loading')}</div></div>`;
   const go = $('chal-go'); if (go) go.onclick = startChallenge;
   loadRank();
 }
@@ -3379,7 +3378,7 @@ async function loadRank() {
   const rows = r.top.map((x, i) => `<div class="rk ${x.me ? 'me' : ''}"><b>${i + 1}</b><span>${x.name}${x.me ? ` <em>${$t('rank_me')}</em>` : ''}</span><span class="t-gold">${x.score} P</span></div>`).join('') || `<div class="note">${$t('rank_empty')}</div>`;
   const mine = r.mine && !r.top.some(x => x.me) ? `<div class="rk me"><b>${r.mine.rank}</b><span>${$t('rank_me')}</span><span class="t-gold">${r.mine.score} P</span></div>` : '';
   const guest = r.signedIn ? '' : `<button class="btn tonal big" id="rank-in" style="margin-top:8px">${$t('rank_sign_in')}</button>`;
-  el.innerHTML = rows + mine + guest + '<div id="rank-last"></div>';
+  el.innerHTML = rows + mine + guest;
   if (r.signedIn || !window.Game) loadLastWeek();
   const g = $('rank-in'); if (g) g.onclick = () => openSheet('settings');
 }
