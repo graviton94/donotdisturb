@@ -62,7 +62,7 @@ keystore/              sideload.jks.gpg · upload.jks.gpg (GPG 잠금, README.md
 | 확인 | CI 테스트 빌드 로그에 "Firebase on", `processDebugGoogleServices` · Crashlytics 작업 성공 (11-26) |
 | Authentication | **Google 로그인 사용 설정 완료**. 카카오는 Cloud Functions 커스텀 토큰 방식 예정(민트앤프렌즈와 같은 방식) |
 | 서비스 계정 | Firebase Admin SDK 서비스 계정, 키 JSON = 시크릿 `FIREBASE_SERVICE_ACCOUNT` |
-| IAM | 사용자가 미리 추가함: Firebase Rules 관리자, Cloud Datastore 색인 관리자, Firebase 원격 구성 관리자, Cloud Functions 관리자, 서비스 계정 사용자, Artifact Registry 작성자, Firebase App Distribution 관리자 |
+| IAM | 사용자가 미리 추가함: Firebase Rules 관리자, Cloud Datastore 색인 관리자, Firebase 원격 구성 관리자, Cloud Functions 관리자, 서비스 계정 사용자, Artifact Registry 작성자, Firebase App Distribution 관리자. **추가 필요(11-28)**: Cloud Scheduler 관리자(주간 순위 정산 settleWeekly 배포), Artifact Registry 관리자(이미지 정리 정책, 선택) |
 | API | Google Play Android Developer API 사용 설정 |
 
 ### 4-2. Google Play Console
