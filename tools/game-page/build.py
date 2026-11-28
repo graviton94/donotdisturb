@@ -41,8 +41,6 @@ if problems: raise SystemExit("i18n check failed:\n  " + "\n  ".join(problems[:6
 TITLE_DIR = ROOT / "docs/design/title"  # title/loading art (commission pass-title); only files that exist are requested
 title_art = sorted(f.stem for f in TITLE_DIR.glob("*.webp")) if TITLE_DIR.exists() else []
 page = page.replace("__TITLE_ART__", json.dumps(title_art))
-FRAMES_DIR = ROOT / "docs/design/ui-assets/frames"  # greyscale UI frames, recoloured and stretched at runtime (tools/game-page/frames.js)
-page = page.replace("/*__FRAMES_JS__*/", (pathlib.Path(__file__).parent / "frames.js").read_text()).replace("__FRAMES__", (FRAMES_DIR / "frames.json").read_text())
 page = page.replace("__MUSIC__", json.dumps(json.load(open(pathlib.Path(__file__).parent / "music.json", encoding="utf-8")), ensure_ascii=False))  # background music score
 page = page.replace("__I18N__", json.dumps(locs, ensure_ascii=False)).replace("__I18N_CORE__", json.dumps(core, ensure_ascii=False)).replace("__TEXTS_EN__", json.dumps(texts_en, ensure_ascii=False))
 page = page.replace("__COLORS__", json.dumps(colors)).replace("__TEXTS__", json.dumps(texts, ensure_ascii=False)).replace("__HANDSET__", repr((FX / "handset.b64").read_text().strip())).replace("__PHONE__", (FX / "phone-sfx.json").read_text())
