@@ -2,6 +2,123 @@
  "spec": "Sticker-style game icon. Thick dark ink outline #1A0E06 (about 5% of icon width), rounded corners. Hard drop shadow in the same ink colour offset straight down about 4%, no blur. Fill with a vertical two-colour gradient (light top, rich bottom) plus one glossy highlight shape at the top left (white 25-35%). Light from the top left, slightly chubby bevelled volume. No realistic texture, no noise, no glow. No letters, numbers, emoji or logos. Do not imitate real brands (battery makers, carriers, app stores). Must stay recognisable by silhouette at 48 px. Keep size, outline weight and angle consistent within a set. Subject centred inside an 80% safe area.",
  "pending": [
   {
+   "id": "ui-frames",
+   "title": "상호작용 UI 틀 15종 · 회색조 벡터, 늘어나는 구조",
+   "priority": 1,
+   "format": "svg",
+   "spec": "Flat vector UI component in a chunky sticker style, delivered as a clean SVG (no embedded raster, no filters, no masks, no text). GREYSCALE ONLY: use exactly these five values and nothing else, so the game can recolour each one by hex: #1A1A1A = thick ink outline and the hard drop shadow; #595959 = bottom bevel / inner shade band; #A6A6A6 = base fill (bottom); #D9D9D9 = base fill (top); #FFFFFF at 35% opacity = one glossy highlight strip. Fills are flat or a two-stop vertical linear gradient #D9D9D9 (top) to #A6A6A6 (bottom). Outline stroke 6 units, round joins. Hard shadow = the same shape in #1A1A1A offset straight down 6 units, no blur. Light from the top. Transparent background. Every element lives inside the stated viewBox; nothing is cropped.",
+   "intro": "Game UI component kit: buttons, banners, badges, bubbles and frames that the game recolours and stretches to fit text. Same construction, outline weight and shadow on every item.",
+   "rules": "STRETCH RULE (9-slice / 3-slice): the component is drawn on the stated viewBox and will be scaled with CSS border-image using the stated insets (left, top, right, bottom, in viewBox units). All curves, tails, notches, holes and highlight ends must sit INSIDE the corner/edge zones defined by the insets. Between the insets every edge must be perfectly straight and uniform along its length (same outline, bevel, gradient and highlight at every point), so the middle can stretch to any width/height without distortion. The centre area is a plain fill with no decoration. Items marked 'fixed' are never stretched, only scaled uniformly. Deliver one SVG file per item named <id>.svg, viewBox exactly as stated, with the five greys used verbatim (lowercase or uppercase hex is fine). No text, letters, numbers or icons on any item; the game adds labels and glyphs.",
+   "dest": "docs/design/ui-assets/frames/",
+   "items": [
+    {
+     "id": "btn-l",
+     "note": "큰 버튼 · 기본",
+     "viewBox": "240x96",
+     "insets": "40,36,40,44",
+     "desc": "a large rounded-rectangle button, corner radius 30, ink outline, hard shadow 6 units below, a thin #595959 bevel band along the bottom inside edge, a white 35% highlight strip along the top inside edge that stops 8 units before the side curves"
+    },
+    {
+     "id": "btn-l-pressed",
+     "note": "큰 버튼 · 눌림",
+     "viewBox": "240x96",
+     "insets": "40,36,40,44",
+     "desc": "the same large button pressed: the whole body moved down 5 units, the hard shadow reduced to 1 unit, bevel band thinner, highlight dimmer (20%)"
+    },
+    {
+     "id": "btn-l-off",
+     "note": "큰 버튼 · 비활성",
+     "viewBox": "240x96",
+     "insets": "40,36,40,44",
+     "desc": "the same large button disabled: flat #A6A6A6 fill, no highlight, no bevel, outline #595959 instead of ink, shadow 2 units"
+    },
+    {
+     "id": "btn-s",
+     "note": "작은 알약 버튼",
+     "viewBox": "120x56",
+     "insets": "28,24,28,30",
+     "desc": "a small fully rounded pill button (radius = half height), same construction as the large button, shadow 4 units"
+    },
+    {
+     "id": "icon-btn",
+     "note": "원형 아이콘 버튼 (fixed)",
+     "viewBox": "96x96",
+     "insets": "fixed",
+     "desc": "a round button for close/back/info glyphs added by code: circle with ink outline, hard shadow, top highlight crescent, bottom bevel; empty centre"
+    },
+    {
+     "id": "ribbon",
+     "note": "제목 리본 배너 (가로 3-slice)",
+     "viewBox": "320x96",
+     "insets": "76,0,76,0",
+     "desc": "a classic title ribbon banner: a straight horizontal band in the middle; at each end the band folds back behind itself into a forked swallow-tail end piece in #595959 (darker, the back side), with the fold shading; the band's top edge has the highlight strip; both end pieces fit entirely inside 76 units from each side"
+    },
+    {
+     "id": "sash",
+     "note": "모서리 띠 (fixed)",
+     "viewBox": "120x120",
+     "insets": "fixed",
+     "desc": "a diagonal corner sash for the top-left corner of a card: a straight band crossing the corner at 45 degrees with small folded tabs at both ends tucked behind the card edges; empty band for a short label"
+    },
+    {
+     "id": "burst",
+     "note": "별모양 배지 (fixed)",
+     "viewBox": "160x160",
+     "insets": "fixed",
+     "desc": "a 16-point starburst badge with slightly rounded points, ink outline, hard shadow, a smooth inner circle area (no lines) for a number like x2"
+    },
+    {
+     "id": "bubble",
+     "note": "말풍선 (9-slice)",
+     "viewBox": "160x112",
+     "insets": "40,32,32,48",
+     "desc": "a speech bubble: rounded rectangle body with a short chunky tail pointing down-left from the bottom-left corner; the tail sits completely inside the bottom-left zone (40 units from the left, 48 from the bottom)"
+    },
+    {
+     "id": "tag",
+     "note": "가격표 (가로 3-slice)",
+     "viewBox": "200x80",
+     "insets": "56,0,28,0",
+     "desc": "a price tag lying horizontally: pointed/notched left end with a round string hole, rounded right end; the hole and notch are inside the left 56 units"
+    },
+    {
+     "id": "pill-socket",
+     "note": "아이콘 홈 라벨 (가로 3-slice)",
+     "viewBox": "220x64",
+     "insets": "64,0,32,0",
+     "desc": "a label pill with a round socket on the left: a circle (diameter 64) overlapping the left end of a horizontal pill, the circle slightly raised with its own outline, for an icon placed by code; the pill continues to a rounded right end"
+    },
+    {
+     "id": "count",
+     "note": "숫자·NEW 배지 (가로 3-slice)",
+     "viewBox": "64x40",
+     "insets": "20,0,20,0",
+     "desc": "a small fully rounded notification count badge, thick outline, tiny highlight; stretches to fit text like NEW or 99+"
+    },
+    {
+     "id": "panel",
+     "note": "팝업 패널 틀 (9-slice)",
+     "viewBox": "320x320",
+     "insets": "64,64,64,72",
+     "desc": "a dialog panel frame: big rounded rectangle (radius 44), chunky ink outline, hard shadow 8 units, a soft #FFFFFF 35% inner highlight line along the top inside edge, #595959 bevel along the bottom inside edge; flat plain centre"
+    },
+    {
+     "id": "bar-track",
+     "note": "진행 막대 바탕 (가로 3-slice)",
+     "viewBox": "240x40",
+     "insets": "20,0,20,0",
+     "desc": "a progress bar track: fully rounded inset groove, #595959 fill with a darker inner top shadow line in #1A1A1A at 40%, ink outline"
+    },
+    {
+     "id": "bar-fill",
+     "note": "진행 막대 채움 (가로 3-slice)",
+     "viewBox": "240x40",
+     "insets": "20,0,20,0",
+     "desc": "the progress bar fill that sits inside the track: fully rounded, #D9D9D9 to #A6A6A6 gradient with the white 35% highlight strip on top; no outline"
+    }
+   ]
+  },
+  {
    "id": "title-bg",
    "title": "타이틀·로딩 배경 일러스트 (세로)",
    "priority": 1,

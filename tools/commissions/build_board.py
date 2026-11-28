@@ -10,6 +10,12 @@ d = json.loads((ROOT / "docs/design/commissions.json").read_text())
 PRI = {1: "1순위 · 그레이박스 상점", 2: "2순위 · 프리미엄 화면", 3: "3순위 · 메타", 4: "4순위 · 소프트런치 전"}
 
 def prompt(g):
+    if g.get("format") == "svg":  # vector kit: one SVG per item, each with its viewBox and stretch insets
+        lines = [g.get("spec", d["spec"]), "", g["intro"], "", f'Deliver {len(g["items"])} separate SVG files:']
+        for it in g["items"]:
+            ins = "fixed size, scale uniformly only" if it["insets"] == "fixed" else f'stretch insets (left,top,right,bottom) = {it["insets"]}'
+            lines.append(f'- {it["id"]}.svg, viewBox 0 0 {it["viewBox"].replace("x", " ")}, {ins}: {it["desc"]}.')
+        return "\n".join(lines + ["", g["rules"]])
     cw, ch = g["cell"]
     lines = [g.get("spec", d["spec"]), "", g["intro"], "",
              f'Sprite sheet: {g["cols"]} columns x {g["rows"]} rows of equal cells, each cell {cw}x{ch} px, whole sheet {cw * g["cols"]}x{ch * g["rows"]} px.']
@@ -20,10 +26,19 @@ def prompt(g):
     return "\n".join(lines)
 
 def grid(g):
+    if g.get("format") == "svg":
+        return '<div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(130px,1fr));max-width:none">' + "".join(
+            f'<div class="cell"><b>{html.escape(it["id"])}.svg</b><span>{html.escape(it["note"])}</span><span>{it["viewBox"]} · {"고정" if it["insets"] == "fixed" else "늘림 " + it["insets"]}</span></div>' for it in g["items"]) + '</div>'
     cells = "".join(
         '<div class="cell empty">비움</div>' if it is None else f'<div class="cell"><b>{html.escape(it["id"])}</b><span>{html.escape(it["note"])}</span></div>'
         for it in g["items"])
     return f'<div class="grid" style="grid-template-columns:repeat({g["cols"]},minmax(0,1fr));aspect-ratio:{g["cell"][0] * g["cols"]}/{g["cell"][1] * g["rows"]}">{cells}</div>'
+
+def meta(g):
+    n = sum(1 for it in g["items"] if it); dest = html.escape(g.get("dest", "docs/design/ui-assets/" + g["id"] + "/"))
+    if g.get("format") == "svg":
+        return f'SVG {n}개 · 회색 5단계만 사용(색은 게임이 헥스로 입힘) · 늘림 수치는 border-image 기준(왼,위,오른,아래) · 받으면 <code>{dest}</code>에 저장'
+    return f'시트 1장 · {g["cols"]}×{g["rows"]}칸 · 요소 {n}개 · 받으면 칸별로 잘라 <code>{dest}</code>에 저장'
 
 def card(g):
     full = prompt(g)
@@ -31,7 +46,7 @@ def card(g):
     return f'''<article class="card">
   <header><div><p class="pri">{PRI[g["priority"]]}</p><h2>{html.escape(g["title"])}</h2></div>
   <button type="button" class="copy" data-copy="{html.escape(full, quote=True)}">프롬프트 복사</button></header>
-  <p class="meta">시트 1장 · {g["cols"]}×{g["rows"]}칸 · 요소 {n}개 · 받으면 칸별로 잘라 <code>{html.escape(g.get("dest", "docs/design/ui-assets/" + g["id"] + "/"))}</code>에 저장</p>
+  <p class="meta">{meta(g)}</p>
   {grid(g)}
   <details><summary>프롬프트 보기</summary><pre>{html.escape(full)}</pre></details>
 </article>'''
