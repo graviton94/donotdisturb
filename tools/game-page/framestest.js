@@ -12,14 +12,14 @@ const LABELS = { 'btn-l': ['확인', '광고 보고 ×2', '무료로 받기 · �
 (async () => {
   const b = await chromium.launch(); const p = await b.newPage({ viewport: { width: 1000, height: 800 } });
   const font = 'file://' + root + '/app/src/main/assets/game/fonts/pretendard/index.css';
-  const rows = Object.entries(LABELS).map(([id, ls]) => `<h3>${id}</h3><div class="r">${['gold', 'blue', 'green', 'red', 'purple', 'grey'].map(t => ls.map(l => id === 'sash' ? `<b class="fr fr-sash t-${t}" data-id="sash"><i>${l}</i></b>` : `<b class="fr fr-${id} t-${t}" data-id="${id}">${l}</b>`).join('')).join('')}</div>`).join('');
+  const rows = Object.entries(LABELS).map(([id, ls]) => `<h3>${id}</h3><div class="r">${['gold', 'blue', 'green', 'red', 'purple', 'grey'].map(t => ls.map(l => id === 'sash' ? `<b class="uf uf-sash ut-${t}" data-id="sash"><i>${l}</i></b>` : `<b class="uf uf-${id} ut-${t}" data-id="${id}">${l}</b>`).join('')).join('')}</div>`).join('');
   await p.setContent(`<html><head><link rel="stylesheet" href="${font}"><style>body{margin:16px;background:#2b2f3a;color:#ddd;font:900 15px Pretendard Variable,Pretendard,sans-serif}h3{font:600 12px sans-serif;margin:12px 0 6px}.r{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-    .t-gold{color:#4A2600}.fr:not(.t-gold){color:#fff}.fr-count{font-size:12px}.fr-btn-s{font-size:13px}.fr-sash i{font:900 13px Pretendard Variable,sans-serif;font-style:normal}.t-gold i{color:#4A2600}.fr-sash:not(.t-gold) i{color:#fff}.fr-sash{--s:.7}</style>
+    .ut-gold{color:#4A2600}.uf:not(.ut-gold){color:#fff}.uf-count{font-size:12px}.uf-btn-s{font-size:13px}.uf-sash i{font:900 13px Pretendard Variable,sans-serif;font-style:normal}.ut-gold i{color:#4A2600}.uf-sash:not(.ut-gold) i{color:#fff}.uf-sash{--s:.7}</style>
     <script>${JS}; const s = document.createElement('style'); s.textContent = frameCSS(${JSON.stringify(FRAMES)}, FRAME_TINTS); document.head.appendChild(s);</script></head><body>${rows}</body></html>`);
   await p.evaluate(() => document.fonts.ready); await p.waitForTimeout(300);
   await p.screenshot({ path: out + '/frames.png', fullPage: true });
   // label ink centre vs face centre, using a range over the text node
-  const off = await p.evaluate(F => [...document.querySelectorAll('.fr.t-gold:not(.fr-sash)')].map(el => {
+  const off = await p.evaluate(F => [...document.querySelectorAll('.uf.ut-gold:not(.uf-sash)')].map(el => {
     const f = F[el.dataset.id], r = el.getBoundingClientRect(), rg = document.createRange(); rg.selectNodeContents(el); const t = rg.getBoundingClientRect();
     const scale = r.height / f.h, face = r.top + f.face * scale, ink = t.top + t.height / 2;
     return [el.dataset.id, el.textContent, +(ink - face).toFixed(1)]; }), FRAMES);
