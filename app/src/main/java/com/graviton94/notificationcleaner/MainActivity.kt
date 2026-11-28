@@ -24,6 +24,7 @@ import com.graviton94.notificationcleaner.platform.Account
 import com.graviton94.notificationcleaner.platform.Ads
 import com.graviton94.notificationcleaner.platform.Billing
 import com.graviton94.notificationcleaner.platform.Telemetry
+import com.graviton94.notificationcleaner.platform.Tuning
 
 /**
  * The game screen is the approved FX demo page (assets/game) running the real core engine through [GameBridge] (22 §0).
@@ -42,6 +43,9 @@ class MainActivity : ComponentActivity() {
         WebView.setWebContentsDebuggingEnabled(debuggable)
         val testQuery = if (debuggable && intent.getBooleanExtra("balance_smoke", false)) "?auto=0" else ""
         bridge = GameBridge(applicationContext)
+        Tuning.init(applicationContext)
+        bridge.applyTuning(Tuning.launchJson())
+        Tuning.refresh()
         val ads = Ads(this)
         bridge.ads = ads
         bridge.activity = this

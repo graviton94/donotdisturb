@@ -36,6 +36,15 @@ class GameBridge(private val context: Context) {
         val saved = runCatching { SaveCodec.decode(saveFile.readText()) }.getOrNull()
         WebSession(state = saved, now = now())
     }
+    // Remote Config knobs (platform/Tuning): applied to every session this bridge creates, never saved.
+    private var tuning = "{}"
+    /** Calls WebSession.applyTuning(json) once the balance session's core has it (v1.6 §5-1); a no-op before. */
+    private fun tune(s: WebSession) {
+        if (tuning == "{}") return
+        runCatching { s.javaClass.getMethod("applyTuning", String::class.java).invoke(s, tuning) }
+    }
+    fun applyTuning(json: String) = synchronized(lock) { tuning = json; tune(session) }
+
     @Suppress("DEPRECATION")
     private val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator
 
@@ -57,7 +66,7 @@ class GameBridge(private val context: Context) {
             "challengeEnd" -> session.challengeEnd(t)
             "buyCloud" -> session.buyCloud(a.optString("item"), t)
             "info" -> JSONObject().put("billing", billing?.ready == true).put("version", runCatching { context.packageManager.getPackageInfo(context.packageName, 0).versionName }.getOrNull() ?: "").put("package", context.packageName).put("adPrivacy", ads?.privacyRequired == true).toString()
-            "wipe" -> { saveFile.delete(); File(saveFile.path + ".tmp").delete(); prefs.edit().clear().apply(); session = WebSession(now = t); session.snapshot(t) }
+            "wipe" -> { saveFile.delete(); File(saveFile.path + ".tmp").delete(); prefs.edit().clear().apply(); session = WebSession(now = t); tune(session); session.snapshot(t) }
             "swipe" -> session.swipe(a.optString("id").toLong(), t)
             "auto" -> session.auto(t)
             "hint" -> session.hint(t)
@@ -201,7 +210,7 @@ class GameBridge(private val context: Context) {
 
     private fun useCloud(cloud: Account.Cloud) {
         val st = runCatching { SaveCodec.decode(cloud.save) }.getOrNull() ?: return
-        synchronized(lock) { session = WebSession(state = st, now = now()); save() }
+        synchronized(lock) { session = WebSession(state = st, now = now()); tune(session); save() }
         reload?.invoke()
     }
 
