@@ -137,6 +137,14 @@ class Account(private val context: Context) {
         }.await()
     }
 
+    /** Last week's settled result for this player ({rank, tier, of}), or null before settlement / when absent. */
+    suspend fun weeklyResult(board: String): JSONObject? {
+        val u = uid ?: return null
+        val d = db.collection("weekly").document(board).collection("results").document(u).get().await()
+        if (!d.exists()) return null
+        return JSONObject().put("rank", d.getLong("rank") ?: 0).put("tier", d.getString("tier") ?: "").put("of", d.getLong("of") ?: 0)
+    }
+
     /** Top 20 of a board, plus this player's entry and rank when signed in. */
     suspend fun topWeekly(board: String): JSONObject {
         val col = db.collection("weekly").document(board).collection("scores")

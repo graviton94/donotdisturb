@@ -566,5 +566,10 @@
  "rank_me": "나",
  "rank_empty": "아직 기록이 없어요 · 첫 번째가 되어 보세요",
  "rank_sign_in": "로그인하면 순위에 올라요",
+ "rank_last_week": "지난주 내 순위 · {0}명 중",
+ "rank_tier_first": "1위",
+ "rank_tier_top10": "상위 10",
+ "rank_tier_top100": "상위 100",
+ "rank_tier_joined": "참가",
  "rank_posted": "이번 주 순위에 올랐어요!"
 }

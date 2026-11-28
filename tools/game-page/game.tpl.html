@@ -236,7 +236,7 @@ body{-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:trans
 #cf.on{display:grid}
 #sheet .pro{display:inline-block;font:900 10px/1 var(--font);padding:3px 5px;border-radius:5px;background:var(--soft2);color:var(--m-on-sv);letter-spacing:.04em;vertical-align:1px}#sheet .pro.on{background:linear-gradient(135deg,#FFE27A,#F0A000);color:#2A1800}
 #sheet .pro-b{height:30px;padding:0 10px;margin-top:6px;font-size:12px}#sheet .cardi{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--soft2);flex:none}#sheet .it.eq .cardi{background:linear-gradient(135deg,#FFE27A,#F0A000);color:#2A1800}
-#sheet .rank .rk{display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;padding:9px 12px;border-radius:14px;background:var(--g-card);border:1px solid var(--g-line);margin-bottom:6px;font:600 14px/1.2 var(--font)}#sheet .rank .rk b{font:900 15px/1 var(--font);text-align:center}#sheet .rank .rk:nth-child(-n+3) b{color:#FFB020}#sheet .rank .rk.me{border-color:rgba(255,176,32,.7)}#sheet .rank em{font-style:normal;font-size:11px;opacity:.7}
+#sheet .rank .rk{display:grid;grid-template-columns:28px 1fr auto;gap:8px;align-items:center;padding:9px 12px;border-radius:14px;background:var(--g-card);border:1px solid var(--g-line);margin-bottom:6px;font:600 14px/1.2 var(--font)}#sheet .rank .rk b{font:900 15px/1 var(--font);text-align:center}#sheet .rank .rk:nth-child(-n+3) b{color:#FFB020}#sheet .rank .rk.me{border-color:rgba(255,176,32,.7)}#sheet .rank .rk.last{margin-top:10px;border-style:dashed;grid-template-columns:28px 1fr}#sheet .rank em{font-style:normal;font-size:11px;opacity:.7}
 #signing{position:fixed;inset:0;z-index:90;display:none;place-items:center;background:rgba(0,0,0,.45)}#signing.on{display:grid}
 #signing .b{display:flex;align-items:center;gap:12px;padding:16px 22px;border-radius:18px;background:var(--sheet);color:var(--ink);font:700 15px/1.3 "Pretendard",system-ui,sans-serif;box-shadow:0 12px 40px #0008}
 #signing i{width:22px;height:22px;border-radius:50%;border:3px solid currentColor;border-right-color:transparent;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
@@ -1989,9 +1989,10 @@ function play(o, quiet = false) {
       after(t, () => { if (byId(d.id)) return; const r = mkRow(d, rowY(0) - 70 - rnd() * 20); r.a = 0; r.y.v = 260; board.splice(Math.min(slot, board.length), 0, r); layout(); if (!quiet) sfx.whoosh(); });
       t += .05 * sp;
     } else if (b.t === 'chainEnd') {
+      if (!quiet) track('chain', { k: b.chain || 0, bursts: b.bursts || 0, end: b.reason || '' });
       if (b.reason === 'spam') after(t + .05, () => say2($t('chain_end_spam'), 150, 22));
     } else if (b.t === 'spawned') arrivals.push(b.row.id);
-    else if (b.t === 'levelUp') { const lv = b.level; after(t + .1, () => { say2($t('level_up', lv), 150, 28); phone('ui.levelup', .4); const o = opensAt(lv); if (o) after(.35, () => say(o, 182, 17, '#FFFFFF', '#9FE3FF', 1.8)); refreshGoal(true); }); }
+    else if (b.t === 'levelUp') { const lv = b.level; track('level_up', { level: lv }); after(t + .1, () => { say2($t('level_up', lv), 150, 28); phone('ui.levelup', .4); const o = opensAt(lv); if (o) after(.35, () => say(o, 182, 17, '#FFFFFF', '#9FE3FF', 1.8)); refreshGoal(true); }); }
     else if (b.t === 'freeUpgrade') { const n = b.name, lv = b.level; after(t, () => say2($t('free_upgrade_to', n, lv), 150, 22)); }
   }
   window.__lastPlay = { beats: o.beats.map(b => b.t[0]).join(''), t: +t.toFixed(2), sp: +sp.toFixed(2) };  // QA: replay length
@@ -3117,6 +3118,7 @@ function backupShopHTML(full) {
       <button class="btn skin gold" data-act="buyBackup" data-item="${x.id}" ${x.open && !done && geq(P.files, x.price) ? '' : 'disabled'}>${done ? $t('done') : `<img src="img/bm/currency-backup.webp" alt="">${shortOf(x.price)}`}</button>${isNew ? '<span class="new">NEW</span>' : ''}</div>`;
   }).join('');
 }
+const ACT_EVENT = { buy: 'buy_app', upgradeN: 'upgrade', buyPro: 'buy_pro', buyEvent: 'buy_card', buyAssist: 'buy_boost', buyBackup: 'buy_backup', buyCloud: 'buy_cloud', buyItem: 'use_item', premium: 'premium', attend: 'attend', claimMissions: 'missions_claim', watchAd: 'ad_reward_claim' };
 async function sheetAct(x) {
   const act = x.dataset.act;
   const playId = STORE.ready ? playIdOf(x) : null;
@@ -3134,8 +3136,10 @@ async function sheetAct(x) {
   if (act === 'watchAd' && !P.bm.passActive) { if (!(await fakeAd(x.dataset.slot))) return; }
   const args = act === 'buyCloud' ? { item: x.dataset.item } : act === 'buyData' ? { pack: x.dataset.pack } : act === 'buyItem' ? { item: x.dataset.item } : act === 'watchAd' ? { slot: x.dataset.slot } : act === 'buyPass' ? { kind: x.dataset.kind } : act === 'premium' ? { app: x.dataset.id, voucher: x.dataset.voucher || '0' } : act === 'buy' ? { app: x.dataset.id } : act === 'upgradeN' ? { app: x.dataset.id, n: x.dataset.n } : act === 'buyBackup' ? { item: x.dataset.item } : act === 'buyPro' ? { app: x.dataset.id } : act === 'buyEvent' ? { card: x.dataset.item } : act === 'buyAssist' ? { item: x.dataset.item } : {};
   const o = await api(act, args);
+  if (o.ok && ACT_EVENT[act]) track(ACT_EVENT[act], { id: args.app || args.item || args.card || args.pack || args.kind || '', level: o.state ? o.state.level : 0 });
   if (act === 'buyBackup' && o.ok) { bkPop = x.dataset.item; sfx.unit(); buzz([20, 30, 40]); setTimeout(() => { bkPop = null; }, 700); }
-  if ((act === 'reset' || act === 'sync') && o.ok) { const got = act === 'reset' ? P.state.backupFilesNow : P.gbNow; closeAll(); armSync = false; prestigeShow(act, got, o.state); }
+  if ((act === 'reset' || act === 'sync') && o.ok) {
+    track(act, { amount: String(act === 'reset' ? P.state.backupFilesNow : P.gbNow), level: P.state.level }); const got = act === 'reset' ? P.state.backupFilesNow : P.gbNow; closeAll(); armSync = false; prestigeShow(act, got, o.state); }
   afterAct(o, null, act);
 }
 const offerEl = $('offer');
@@ -3369,8 +3373,18 @@ async function loadRank() {
   const rows = r.top.map((x, i) => `<div class="rk ${x.me ? 'me' : ''}"><b>${i + 1}</b><span>${x.name}${x.me ? ` <em>${$t('rank_me')}</em>` : ''}</span><span class="t-gold">${x.score} P</span></div>`).join('') || `<div class="note">${$t('rank_empty')}</div>`;
   const mine = r.mine && !r.top.some(x => x.me) ? `<div class="rk me"><b>${r.mine.rank}</b><span>${$t('rank_me')}</span><span class="t-gold">${r.mine.score} P</span></div>` : '';
   const guest = r.signedIn ? '' : `<button class="btn tonal big" id="rank-in" style="margin-top:8px">${$t('rank_sign_in')}</button>`;
-  el.innerHTML = rows + mine + guest;
+  el.innerHTML = rows + mine + guest + '<div id="rank-last"></div>';
+  if (r.signedIn) loadLastWeek();
   const g = $('rank-in'); if (g) g.onclick = () => openSheet('settings');
+}
+// last week's settled result (server settles Monday 00:10 KST); shown once settled
+const RANK_TIER = { first: 'rank_tier_first', top10: 'rank_tier_top10', top100: 'rank_tier_top100', joined: 'rank_tier_joined' };
+async function loadLastWeek() {
+  if (!(window.Game && window.Game.rankResult)) return;
+  const o = await rankAsk('rankResult', rankBoard(new Date(Date.now() - 7 * 864e5))), el = $('rank-last');
+  if (!el || !o.ok || !o.info || !o.info.rank) return;
+  const k = RANK_TIER[o.info.tier];
+  el.innerHTML = `<div class="rk last"><b>${o.info.rank}</b><span>${$t('rank_last_week', o.info.of)}${k ? ` <em>${$t(k)}</em>` : ''}</span></div>`;
 }
 async function submitRank(o) {
   if (!(window.Game && window.Game.rankSubmit) || !acctInfo().signedIn) return;
@@ -3389,6 +3403,7 @@ async function startChallenge() {
 async function endChallenge() {
   if (!chal) return; clearInterval(chal.timer); autoOn = chal.auto; chal = null; $('chud').classList.remove('on');
   const o = await api('challengeEnd'); if (!o.ok) return;
+  track('challenge_end', { score: o.scoreShort, new_best: !!o.newBest });
   submitRank(o);
   applyState(o.state); wallet.v = wallet.to = wallet.shown = L(o.state.wallet); wallet.unit = splitL(wallet.v).unit; reconcile(o.state);
   const el = $('chres');
@@ -3447,6 +3462,7 @@ async function ftue(ev, arg) {
 
 // back from away: the app paid the time away (AwayClock) and hands the result here
 window.onOffline = o => {
+  track('offline_return', { away_min: Math.round((o.awayMs || 0) / 60000), paid: o.paidShort || '0' });
   if (!started || FT.step < 9) { heldOffline = o; return; }  // shown after the title and the guide
   if (L(o.paid) > -Infinity) { addWallet(L(o.paid)); showReturn(o); phone('ui.bonus', .4); }
   applyState(o.state); reconcile(o.state);

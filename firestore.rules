@@ -25,6 +25,10 @@ service cloud.firestore {
         && (resource == null || request.resource.data.scoreLog > resource.data.scoreLog);
       allow delete: if request.auth != null && request.auth.uid == uid;
     }
+    // Last week's settled result per player (written by the settleWeekly function only)
+    match /weekly/{board}/results/{uid} {
+      allow read: if request.auth != null && request.auth.uid == uid;
+    }
     match /{document=**} {
       allow read, write: if false;
     }

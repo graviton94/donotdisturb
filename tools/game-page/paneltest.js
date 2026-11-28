@@ -1,4 +1,4 @@
-// Opens the shade and every sheet, does one action in each: node tools/game-page/paneltest.js <outDir>
+// Opens the shade and every sheet, does one action in each. Run after /api/new?seed=5 and /api/cheat?level=25 (reset opens at Lv19). node tools/game-page/paneltest.js <outDir>
 const { chromium } = require('playwright');
 const out = process.argv[2]; require('fs').mkdirSync(out, { recursive: true });
 (async () => {

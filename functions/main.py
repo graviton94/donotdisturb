@@ -12,7 +12,7 @@ import urllib.error
 import urllib.request
 
 from firebase_admin import auth, firestore, initialize_app
-from firebase_functions import https_fn
+from firebase_functions import https_fn, scheduler_fn
 
 initialize_app()
 
@@ -102,5 +102,38 @@ def deleteAccount(req: https_fn.CallableRequest) -> dict:  # noqa: N802 (the nam
         y, wk, _ = (today - datetime.timedelta(weeks=w)).isocalendar()
         for league in range(5):
             db.collection('weekly').document(f'{y}-W{wk:02d}-L{league}').collection('scores').document(uid).delete()
+            db.collection('weekly').document(f'{y}-W{wk:02d}-L{league}').collection('results').document(uid).delete()
     auth.delete_user(uid)
     return {'ok': True}
+
+
+def _board(day: datetime.date) -> str:
+    y, w, _ = day.isocalendar()
+    return f'{y}-W{w:02d}-L0'
+
+
+def _tier(rank: int) -> str:
+    return 'first' if rank == 1 else 'top10' if rank <= 10 else 'top100' if rank <= 100 else 'joined'
+
+
+@scheduler_fn.on_schedule(schedule='10 0 * * 1', timezone=scheduler_fn.Timezone('Asia/Seoul'), region=REGION)
+def settleWeekly(event: scheduler_fn.ScheduledEvent) -> None:  # noqa: N802
+    """Monday 00:10 KST: rank last week's daily-challenge board once and leave each player their result
+    (weekly/{board}/results/{uid} = {rank, tier, of}); the app claims the reward through the core, once per board."""
+    db = firestore.client()
+    kst = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))).date()
+    board = _board(kst - datetime.timedelta(days=7))
+    ref = db.collection('weekly').document(board)
+    if (snap := ref.get()).exists and snap.to_dict().get('settled'):
+        return
+    docs = list(ref.collection('scores').order_by('scoreLog', direction=firestore.Query.DESCENDING).stream())
+    batch, n = db.batch(), 0
+    for rank, d in enumerate(docs, start=1):
+        batch.set(ref.collection('results').document(d.id), {'rank': rank, 'tier': _tier(rank), 'of': len(docs)})
+        n += 1
+        if n % 400 == 0:
+            batch.commit()
+            batch = db.batch()
+    batch.set(ref, {'settled': True, 'players': len(docs), 'at': firestore.SERVER_TIMESTAMP}, merge=True)
+    batch.commit()
+    print(f'settled {board}: {len(docs)} players')

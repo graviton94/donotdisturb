@@ -566,5 +566,10 @@
  "rank_me": "You",
  "rank_empty": "No scores yet · be the first",
  "rank_sign_in": "Sign in to join the ranking",
+ "rank_last_week": "My rank last week · of {0}",
+ "rank_tier_first": "1st",
+ "rank_tier_top10": "Top 10",
+ "rank_tier_top100": "Top 100",
+ "rank_tier_joined": "Joined",
  "rank_posted": "You're on this week's ranking!"
 }

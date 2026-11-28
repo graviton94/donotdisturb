@@ -231,6 +231,16 @@ class GameBridge(private val context: Context) {
     }
 
     @JavascriptInterface
+    fun rankResult(id: String, board: String) {
+        val act = activity ?: return cb("onRank", id, false, "unavailable", null)
+        val acc = account?.takeIf { it.enabled && it.uid != null } ?: return cb("onRank", id, false, "guest", null)
+        act.lifecycleScope.launch {
+            try { cb("onRank", id, true, "ok", acc.weeklyResult(board)) }
+            catch (e: CancellationException) { throw e } catch (e: Exception) { cb("onRank", id, false, "error", JSONObject().put("type", e.javaClass.simpleName)) }
+        }
+    }
+
+    @JavascriptInterface
     fun rankTop(id: String, board: String) {
         val act = activity ?: return cb("onRank", id, false, "unavailable", null)
         val acc = account?.takeIf { it.enabled } ?: return cb("onRank", id, false, "unavailable", null)
