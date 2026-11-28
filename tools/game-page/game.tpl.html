@@ -396,7 +396,7 @@ input[type=range]{accent-color:var(--m-primary)}
 #shade .grid{grid-template-columns:repeat(2,1fr);gap:8px;margin:16px 0 12px}#shade .grid>.tile:last-child:nth-child(odd){grid-column:1/-1}
 #sheet .book-hero{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:20px;background:var(--g-card);border:1px solid var(--g-line);margin-bottom:10px}#sheet .book-hero b{font:900 30px/1 var(--font)}#sheet .book-hero .bk{flex:1;min-width:0}
 #sheet .book-g{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:6px 0 14px}#sheet .book-i{display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 2px;border-radius:14px;background:var(--g-card);border:1px solid var(--g-line);font:600 11px/1.2 var(--font);color:inherit;min-width:0}
-#sheet .book-i span{max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#sheet .book-i>img,#sheet .book-i>.fr{width:44px;height:44px;border-radius:11px;flex:none;position:relative}#sheet .book-i.lock>img{filter:brightness(0);opacity:.28}@media (prefers-color-scheme: dark){#sheet .book-i.lock>img{filter:brightness(0) invert(1);opacity:.22}}#sheet .book-i.lock span{opacity:.55}#sheet .book-i.seen{opacity:.75}#sheet .book-i.own{border-color:rgba(255,200,90,.45)}
+#sheet .book-i span{max-width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#sheet .book-i>img,#sheet .book-i>.fr{width:44px;height:44px;border-radius:11px;flex:none;position:relative}#sheet .book-i.lock>img{filter:brightness(0);opacity:.28}@media (prefers-color-scheme: dark){#sheet .book-i.lock>img{filter:brightness(0) invert(1);opacity:.22}}#sheet .book-i.lock span{opacity:.55}#sheet .book-i{position:relative}#sheet .book-i.seen>img,#sheet .book-i.seen>.fr{filter:grayscale(.85);opacity:.6}#sheet .book-i .bdg{position:absolute;font-style:normal;font:800 9.5px/1 var(--font);border-radius:999px}#sheet .book-i .bdg.own{top:4px;right:6px;width:16px;height:16px;display:grid;place-items:center;background:#FFB020;color:#3A2400}#sheet .book-i .bdg.buy{top:36px;left:50%;transform:translateX(-50%);padding:3px 6px;background:#2E6BE6;color:#fff;white-space:nowrap}#sheet .book-i.own{border-color:rgba(255,200,90,.45)}
 #shade .tile{flex-direction:row;justify-content:flex-start;gap:clamp(8px,2.6vw,12px);height:64px;padding:0 clamp(10px,3.4vw,14px);border-radius:22px;text-align:left;
  background:var(--g-card);border:1px solid var(--g-line);color:var(--m-on-surface);box-shadow:inset 0 1px 0 var(--g-hi);transition:background .2s var(--ease-std)}
 #shade .tile span.c{width:auto;height:auto;background:none!important;box-shadow:none!important;color:inherit}
@@ -2514,6 +2514,7 @@ window.onBack = () => {
   return true;
 };
 async function openShade() {
+  $('offer').classList.remove('on');
   if (!canOpenShade()) return;  // the guide owns the screen until it asks for the shade
   await loadPanel(); renderShade();
   shadeSettle(true);
@@ -2638,7 +2639,7 @@ shadeEl.addEventListener('pointerup', shadeUp); shadeEl.addEventListener('pointe
 
 async function openSheet(kind) {
   sheetKind = kind; if (!P || !P.bm) await loadPanel();
-  shadeEl.classList.remove('open'); scrimEl.classList.add('open');
+  shadeEl.classList.remove('open'); scrimEl.classList.add('open'); $('offer').classList.remove('on');  // the board's ad offer must not float over a sheet
   renderSheet(); sheetEl.classList.add('open'); sfx.snap(); ftue('sheet', kind);
 }
 // ---- in-run progression (balance v1.4): pro versions, board assists, event cards ----
@@ -2684,7 +2685,8 @@ function renderBook(b) {
     + tiers.map(t => { const list = apps.filter(a => a.tier === t); const n = list.filter(a => a.owned).length;
       return `<div class="h3">${$t('tier_2', t)} <span class="note">${n}/${list.length}</span></div><div class="book-g">${list.map(a => {
         const lock = !a.owned && !a.open, cls = a.owned ? 'own' : lock ? 'lock' : 'seen';
-        return `<button class="book-i ${cls}" data-book="${a.id}" data-lv="${a.minResets > P.resets ? 'r' + a.minResets : a.unlockLevel}">${ico(a.id)}<span>${lock ? '???' : a.name}</span></button>`; }).join('')}</div>`; }).join('');
+        const tag = a.owned ? '<i class="bdg own">✓</i>' : !lock && a.price && geq(P.state.wallet, a.price) ? `<i class="bdg buy">${$t('book_can_buy')}</i>` : '';
+        return `<button class="book-i ${cls}" data-book="${a.id}" data-lv="${a.minResets > P.resets ? 'r' + a.minResets : a.unlockLevel}">${ico(a.id)}${tag}<span>${lock ? '???' : a.name}</span></button>`; }).join('')}</div>`; }).join('');
   b.querySelectorAll('[data-book]').forEach(x => x.addEventListener('click', () => {
     if (!x.classList.contains('lock')) return appDetail(x.dataset.book);
     const lv = x.dataset.lv; sfx.snap(); toast(lv[0] === 'r' ? $t('book_opens_reset', lv.slice(1)) : $t('book_opens_lv', lv));
@@ -3150,7 +3152,7 @@ const offerEl = $('offer');
 let offerT = null;
 async function offerDouble(total) {
   if (chal) return;  // the challenge board is a side run: no ad offers on it
-  const m = await api('bm'); const ad = m.ads.find(a => a.id === 'BestDouble'); if (!ad || ad.left <= 0 || m.state.level < 20) return;
+  const m = await api('bm'); const ad = m.ads.find(a => a.id === 'BestDouble'); if (!ad || ad.left <= 0 || m.state.level < 20 || scrimEl.classList.contains('open')) return;
   offerEl.innerHTML = (m.passActive ? $t('pass_perk') : `<img src="img/ui/ad.webp" style="width:22px;vertical-align:-5px"> ${$t('watch_ad')} `) + $t('best_2', fmtL(total)); offerEl.classList.add('on');
   clearTimeout(offerT); offerT = setTimeout(() => offerEl.classList.remove('on'), 5000);
   offerEl.onclick = async () => { offerEl.classList.remove('on'); if (!m.passActive && !(await fakeAd())) return;
