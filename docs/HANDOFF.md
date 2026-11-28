@@ -46,7 +46,7 @@ keystore/              sideload.jks.gpg · upload.jks.gpg (GPG 잠금, README.md
   - `core/WebSession.kt`: 양쪽이 **추가만** 한다
 - **화면 ↔ 코어 계약**: WebSession JSON. 새 필드는 `docs/balance/api-changes.md`에 적고, 큰 수는 `…Short` 짝을 함께 낸다.
 - **브라우저 테스트**
-  - 실행: `gradle -p core run --args="serve 8765 ../app/src/main/assets/game"` 후 `node tools/game-page/<paneltest|bmtest|eventtest|prestigetest|settingstest|bignumtest|ftuetest|metatest>.js <out>`
+  - 실행: `gradle -p core run --args="serve 8765 ../app/src/main/assets/game"` 후 `node tools/game-page/<paneltest|bmtest|eventtest|prestigetest|settingstest|bignumtest|ftuetest|metatest|booktest>.js <out>` (paneltest·bmtest: `/api/new?seed=5` + `/api/cheat?level=25` 먼저; booktest: Lv40 + 열린 앱 전부 `/api/buy`)
   - 사전 상태: `/api/new?seed=5`, 필요하면 `/api/cheat?level=N&apps=520,320`
 
 ## 4. 외부 서비스 연결 현황

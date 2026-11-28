@@ -47,6 +47,7 @@ fun serve(port: Int, root: File, initialSave: File? = null) {
             "setDeck" -> session.setDeck((q["apps"] ?: "").split(",").filter { it.isNotBlank() }, now)
             "buyBackup" -> session.buyBackup(q.getValue("item"), now)
             "buyPro" -> session.buyPro(q.getValue("app"), now)
+            "claimBook" -> session.claimBook(q.getValue("at").toInt(), now)
             "buyEvent" -> session.buyEvent(q.getValue("card"), now)
             "buyAssist" -> session.buyAssist(q.getValue("item"), now)
             "dnd" -> session.dnd(now)

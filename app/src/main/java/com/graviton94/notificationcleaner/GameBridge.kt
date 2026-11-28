@@ -95,6 +95,7 @@ class GameBridge(private val context: Context) {
             "setDeck" -> session.setDeck(a.optString("apps").split(",").filter { it.isNotBlank() }, t)
             "buyBackup" -> session.buyBackup(a.optString("item"), t)
             "buyPro" -> session.buyPro(a.optString("app"), t)
+            "claimBook" -> session.claimBook(a.optInt("at"), t)
             "buyEvent" -> session.buyEvent(a.optString("card"), t)
             "buyAssist" -> session.buyAssist(a.optString("item"), t)
             "dnd" -> session.dnd(t)
